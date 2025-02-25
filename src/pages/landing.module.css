@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #00d4ff;
+    --secondary-color: #ff00ff;
+    --background-gradient: radial-gradient(circle, #0b0033 0%, #000011 100%);
+    --text-color: #ffffff;
+    --highlight-color: #ffcc00;
+}
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color);
+    animation: glow 2s infinite alternate;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.navList li a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.navList li a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.section {
+    padding: 100px 20px;
+    max-width: 800px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--highlight-color);
+    text-shadow: 0 0 10px var(--highlight-color);
+}
+
+.section p, .section ul {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    margin-top: 50px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color);
+    }
+    to {
+        text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--secondary-color);
+    }
+}
+
+/* Background animation */
+.container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://source.unsplash.com/1600x900/?universe,stars,galaxy') no-repeat center center/cover;
+    opacity: 0.3;
+    z-index: -1;
+    animation: cosmicFlow 20s infinite linear;
+}
+
+@keyframes cosmicFlow {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
