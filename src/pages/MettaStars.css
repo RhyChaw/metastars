@@ -1,0 +1,205 @@
+.landing-container {
+    width: 95%;
+    padding: 20px;
+    margin: auto;
+    border-radius: 55px;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    margin: 20 auto;
+  }
+  
+  .hero-content {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .hero-image {
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+  }
+  
+  .hero-text {
+    width: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .join-btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .join-btn:hover {
+    background-color: #e68900;
+  }
+  
+  /* The cards */
+
+  .Focus-areas-name-title-12341234 {
+    color: white;
+    font-size: 96px;
+  }
+
+  .focus-areas {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .focus-cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+  }
+  
+  .focus-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .focus-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card-front {
+    background: white;
+  }
+  
+  .card-back {
+    background: #ff9800;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 8px 0;
+  }
+  
+  /* Initiatives */
+
+  .initiatives {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+  }
+  
+  .initiatives-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .initiatives-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .initiatives-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  .initiatives-tagline {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+  }
+  
+  .initiatives-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .initiatives-list li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    padding-left: 10px;
+    position: relative;
+  }
+  
+  .initiatives-list li::before {
+    content: "•";
+    color: #ffd700;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  .initiative-btn {
+    background: #ffd700;
+    color: #2b5876;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .initiative-btn:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+  }
+  
