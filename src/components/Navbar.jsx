@@ -9,9 +9,9 @@ const Navbar = () => {
                 <img src={Logo} alt="Metta Stars Foundation" height={250} width={150}/>
             </div>
             <ul className="navbar-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#join-us">Join us</a></li>
-                <li><a href="#contact-us">Contact us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/fill-form">Join us</a></li>
+                <li><a href="/contact-us">Contact us</a></li>
                 <li><a href="/blogs">Blogs</a></li>
             </ul>
         </nav>

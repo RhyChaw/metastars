@@ -1,13 +1,16 @@
 import React from "react";
 import "./MettaStars.css";
+import { useNavigate } from "react-router-dom";
 import Home1 from "../assets/home1.png";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+  const handleJoinClick = () => {
+    navigate('/fill-form');
+  };
   return (
     <>
-    <Navbar />
     <div className="landing-container">
     <header className="hero">
         <div className="hero-content">
@@ -21,7 +24,7 @@ const LandingPage = () => {
               concept of Metta—unconditional loving-kindness—we believe in empowering individuals 
               to lead balanced and meaningful lives through Financial Literacy, Mental Health, 
               and Spirituality.</p>
-            <button className="join-btn">Join Us</button>
+            <button className="join-btn" onClick={handleJoinClick}>Join Us</button>
             <h2>What we offer?</h2>
             <ul>
               <li>A compassionate space to learn, grow, and transform.</li>
@@ -117,9 +120,6 @@ const LandingPage = () => {
 
   <button className="initiative-btn">Join an Initiative Today</button>
 </section>
-
-      
-      <Footer />
     </div>
     </>
     
