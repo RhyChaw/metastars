@@ -1,7 +1,13 @@
 body {
     background: linear-gradient(to bottom, rgb(0, 0, 53), rgb(3, 175, 255), white, black);
-    min-height: 200vh; /* Ensure the body is tall enough to scroll */
     margin: 0;
     padding: 0;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }

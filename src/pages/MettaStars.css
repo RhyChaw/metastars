@@ -86,7 +86,7 @@
   }
   
   .focus-card:hover .card-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) translateX(-30px);
   }
   
   .card-front, .card-back {
@@ -201,5 +201,102 @@
   .initiative-btn:hover {
     background: #ffcc00;
     transform: scale(1.05);
+  }
+  
+  @media (max-width: 390px) {
+    .landing-container {
+      width: 100%;
+      padding: 10px;
+      border-radius: 30px;
+    }
+  
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .hero-content {
+      flex-direction: column;
+      height: auto;
+      
+    }
+  
+    .hero-image {
+      width: 100%;
+      height: 250px;
+      clip-path: none;
+    }
+  
+    .hero-text {
+      transform: translateX(-20px);
+      font-size: 20px;
+      padding: 20px;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .hero-text p {
+      padding: 5px;
+    }
+  
+    .join-btn {
+      font-size: 16px;
+      width: 80%;
+      align-self: center;
+      padding: 10px 20px;
+    }
+  
+    /* Focus areas */
+    .Focus-areas-name-title-12341234 {
+      font-size: 48px;
+    }
+  
+    .focus-cards {
+      gap: 20px;
+    }
+  
+    .focus-card {
+      width: 90%;
+      height: auto;
+      min-height: 350px;
+      margin-bottom: 50px;
+    }
+  
+    .focus-card:hover .card-inner {
+      transform: rotateY(180deg) translateX(0);
+    }
+  
+    /* Initiatives */
+    .initiatives {
+      padding: 30px 10px;
+    }
+  
+    .initiatives-title {
+      font-size: 1.5rem;
+    }
+  
+    .initiatives-section {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .initiatives-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .initiatives-tagline {
+      font-size: 0.9rem;
+    }
+  
+    .initiatives-list li {
+      font-size: 1rem;
+    }
+  
+    .initiative-btn {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+    }
   }
   
