@@ -9,10 +9,10 @@
     position: relative;
 }
 
-.navbarLogo img {
-    height: 180px;
+.navbarLogo img a {
+    height: 280px;
     width: 100px;
-    margin-top: 50px;
+    margin-top: 80px;
     overflow: hidden;
     backface-visibility: hidden;
 }

@@ -22,8 +22,9 @@ const Navbar = () => {
                         <li><a href="/mental-health">Mental Health</a></li>
                     </ul>
                 </li>
-
                 <li><a href="/fill-form">Join Us</a></li>
+                <li><a href="/admin">Admin</a></li>
+
             </ul>
         </nav>
     );

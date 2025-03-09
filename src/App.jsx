@@ -14,27 +14,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Form from './components/Form';
-import Loader from './components/Loader';
-import LOGO from './assets/logo.jpeg';
 
 // Admin imports
-import AdminDashboard from './admin/adminland';
+import AdminDashboard from './admin/AdminDashboard';
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  const [loadingComplete, setLoadingComplete] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer); // Cleanup timeout on unmount
-  }, []);
-
-  if (loading) {
-    return <Loader logo={LOGO} duration={2500} onComplete={() => setLoadingComplete(true)}/>; // Show loader first
-  }
 
   return (
     <Router>
