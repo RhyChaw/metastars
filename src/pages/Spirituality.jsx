@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Spirituality.module.css'; // Ensure this CSS file exists
-import SPIRITUALITY_IMAGE from '../assets/Spirituality.jpg'; // Import your image
+import SPIRITUALITY_IMAGE from '../assets/spirituality.jpg'; // Import your image
 
 const Spirituality = () => {
     return (
