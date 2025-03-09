@@ -1,6 +1,5 @@
 .container {
-    max-width: 700px;
-    width: 90%;
+    width: 100vw;
     margin: 5px;
     margin-bottom: 20px;
     margin-left: 20px;
@@ -10,12 +9,25 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
     justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
     text-align: center;
     color: #ff9800;
     margin-bottom: 20px;
+}
+
+.form {
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
 }
 
 .formGroup {

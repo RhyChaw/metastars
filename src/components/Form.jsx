@@ -4,21 +4,21 @@ import styles from "./Form.module.css";
 const Form = () => {
   return (
     <div className={styles.container}>
-      <h2>Volunteer Application Form</h2>
-      <form>
+      <h2 className={styles.formTitle}>Volunteer Application Form</h2>
+      <form className={styles.form}>
         {/* Name Field */}
         <div className={styles.formGroup}>
           <label>Name *</label>
           <div className={styles.nameFields}>
-            <input type="text" placeholder="First" required />
-            <input type="text" placeholder="Last" required />
+            <input type="text" placeholder="First" required className={styles.input} />
+            <input type="text" placeholder="Last" required className={styles.input} />
           </div>
         </div>
 
         {/* Email */}
         <div className={styles.formGroup}>
           <label>Email *</label>
-          <input type="email" required />
+          <input type="email" required className={styles.input} />
         </div>
 
         {/* Experience with Volunteering */}
@@ -63,7 +63,7 @@ const Form = () => {
               "Social Media Management",
               "Employment support",
             ].map((item, index) => (
-              <div key={index}>
+              <div key={index} className={styles.checkboxItem}>
                 <input type="checkbox" id={item} />
                 <label htmlFor={item}>{item}</label>
               </div>
@@ -88,7 +88,7 @@ const Form = () => {
           <div className={styles.radioGroup}>
             {["Niagara Region", "Halton Region", "Peel Region", "GTA"].map(
               (region, index) => (
-                <div key={index}>
+                <div key={index} className={styles.radioItem}>
                   <input type="radio" name="location" id={region} />
                   <label htmlFor={region}>{region}</label>
                 </div>
@@ -100,13 +100,13 @@ const Form = () => {
         {/* Phone Number */}
         <div className={styles.formGroup}>
           <label>Phone Number *</label>
-          <input type="tel" placeholder="+1 (123) 456-7890" required />
+          <input type="tel" placeholder="+1 (123) 456-7890" required className={styles.input} />
         </div>
 
         {/* Physical Limitations */}
         <div className={styles.formGroup}>
           <label>Are there any physical limitations or accommodations needed?</label>
-          <textarea rows="3"></textarea>
+          <textarea rows="3" className={styles.input}></textarea>
         </div>
 
         {/* How did you hear about us? */}
@@ -114,7 +114,7 @@ const Form = () => {
           <label>How did you hear about us?</label>
           <div className={styles.radioGroup}>
             {["Google", "Instagram", "Facebook"].map((source, index) => (
-              <div key={index}>
+              <div key={index} className={styles.radioItem}>
                 <input type="radio" name="hearAbout" id={source} />
                 <label htmlFor={source}>{source}</label>
               </div>
@@ -125,7 +125,7 @@ const Form = () => {
         {/* Emergency Contact */}
         <div className={styles.formGroup}>
           <label>Emergency Contact (Name & Number) *</label>
-          <input type="text" required />
+          <input type="text" required className={styles.input} />
         </div>
 
         {/* Submit Button */}

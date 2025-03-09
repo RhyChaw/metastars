@@ -24,6 +24,7 @@ body {
     min-height: 100vh;
     text-align: center;
     position: relative;
+    background-color: aliceblue;
 }
 
 .header {

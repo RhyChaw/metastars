@@ -1,0 +1,55 @@
+.loader_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.loader_logo {
+    width: 150px;
+    height: 150px;
+    animation: grow-shrink 1s ease-in-out forwards;
+    position: absolute;
+}
+
+/* Step 1: Logo grows and shrinks */
+@keyframes grow-shrink {
+    0% { transform: scale(3); opacity: 1; }
+    50% { transform: scale(5); }
+    100% { transform: scale(1); }
+}
+
+/* Step 2: Curved motion to navbar */
+.moving .loader_logo {
+    animation: moveToNavbar 1.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+@keyframes moveToNavbar {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        top: 50%;
+        left: 50%;
+    }
+    30% {
+        transform: translate(-40%, -60%) scale(0.9);
+        top: 30%;
+        left: 60%;
+    }
+    60% {
+        transform: translate(-20%, -30%) scale(0.7);
+        top: 15%;
+        left: 30%;
+    }
+    100% {
+        transform: translate(0, 0) scale(0.6);
+        top: 20px;
+        left: 50px; /* Adjust based on your navbar */
+    }
+}
