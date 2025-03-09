@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './land3.module.css'; // Make sure to create and style this CSS file
-import UNIVERSE from '../../public/universe.jpg'; // Import your image
+import UNIVERSE from '../assets/universe.jpg'; // Import your image
 
 const Land3 = () => {
     const handleClick = () => {

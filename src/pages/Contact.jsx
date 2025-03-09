@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Contact.module.css'; // Assuming your styles are here
-import UNIVERSE from '../../public/universe.jpg'; // Import your image
+import UNIVERSE from '../assets/universe.jpg'; // Import your image
 
 const Contact = () => {
     const [formData, setFormData] = useState({

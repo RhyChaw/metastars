@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MentalHealth.module.css'; // Ensure this CSS file exists
-import MENTAL_HEALTH_IMAGE from '../../public/mentalhealth.jpg'; // Import your image
+import MENTAL_HEALTH_IMAGE from '../assets/MentalHealth.jpg'; // Import your image
 
 const MentalHealth = () => {
     return (

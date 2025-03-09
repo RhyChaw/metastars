@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Finance.module.css'; // Ensure this CSS file exists
-import FINANCE_IMAGE from '../../public/finance.jpg'; // Import your image
+import FINANCE_IMAGE from '../assets/finance.jpg'; // Import your image
 
 const Finance = () => {
     return (
