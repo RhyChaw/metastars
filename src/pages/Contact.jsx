@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import styles from './Contact.module.css'; // Assuming your styles are here
-import UNIVERSE from '../assets/universe.jpg'; // Import your image
+import supabase from '../supabaseClient'; // Ensure correct import
+import styles from './Contact.module.css';
+import UNIVERSE from '../assets/universe.jpg';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -8,6 +9,9 @@ const Contact = () => {
         email: '',
         message: ''
     });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [successMessage, setSuccessMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -17,10 +21,23 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // You can add logic here to handle form submission
-        alert('Form submitted!');
+        setIsSubmitting(true);
+
+        const { data, error } = await supabase
+            .from('contacted')
+            .insert([{ name: formData.name, email: formData.email, message: formData.message }]);
+
+        if (error) {
+            console.error('Error submitting form:', error.message);
+            alert('Error submitting form. Please try again.');
+        } else {
+            setSuccessMessage('Message sent successfully!');
+            setFormData({ name: '', email: '', message: '' }); // Reset form
+        }
+
+        setIsSubmitting(false);
     };
 
     return (
@@ -68,7 +85,10 @@ const Contact = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className={styles.submitButton}>Send Message</button>
+                    <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
+                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </button>
+                    {successMessage && <p className={styles.successMessage}>{successMessage}</p>}
                 </form>
             </div>
         </div>

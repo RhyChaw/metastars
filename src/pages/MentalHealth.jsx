@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './MentalHealth.module.css'; // Ensure this CSS file exists
 import MENTAL_HEALTH_IMAGE from '../assets/mentalhealth.jpg'; // Import your image
+import COMPASSION from '../assets/compassion.jpg'; // Import your image
+
 
 const MentalHealth = () => {
     return (
@@ -26,6 +28,14 @@ const MentalHealth = () => {
                     <h2>Self-Care</h2>
                     <p>Develop routines for a healthier mind.</p>
                 </div>
+            </div>
+
+            <div className={styles.quoteSection}>
+                <div className={styles.quoteBackground}></div>
+                <p className={styles.quoteText}>
+                <p className='italic'>[ Add Quote ]</p>
+                </p>
+                <img src={COMPASSION} alt="Inspiring Visual" className={styles.quoteImage} />
             </div>
         </div>
     );

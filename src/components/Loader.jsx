@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Loader.module.css";
 
-const Loader = ({ logo, duration = 2500, onComplete }) => {
+const Loader = ({ logo, duration = 2000, onComplete }) => {
   const [loading, setLoading] = useState(true);
   const [moving, setMoving] = useState(false);
 
@@ -9,7 +9,7 @@ const Loader = ({ logo, duration = 2500, onComplete }) => {
     // Start the transition after a short delay
     setTimeout(() => {
       setMoving(true);
-    }, duration - 1000);
+    }, duration);
 
     // Hide loader after animation
     setTimeout(() => {

@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.navbarLogo}>
                 <a href="/">
-                    <img src={Logo} alt="Metta Stars Foundation" height={80} width={60} />
+                    <img src={Logo} alt="Metta Stars Foundation" className={styles.noOverflow} />
                 </a>
             </div>
 
@@ -23,6 +23,7 @@ const Navbar = () => {
                     </ul>
                 </li>
                 <li><a href="/fill-form">Join Us</a></li>
+                <li><a href="/blogs">Blogs</a></li>
                 <li><a href="/admin">Admin</a></li>
 
             </ul>

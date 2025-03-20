@@ -12,3 +12,11 @@ body {
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
+
+.italic {
+    font-style: italic;
+}
+
+.blue {
+    color: blue;
+}

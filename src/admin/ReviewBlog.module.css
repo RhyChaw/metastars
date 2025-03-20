@@ -1,0 +1,41 @@
+/* Review Blog Page */
+.reviewContainer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reviewContainer h1 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+  }
+  
+  .reviewContainer h3 {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .reviewContainer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .publishButton {
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .publishButton:hover {
+    background-color: darkgreen;
+  }
+  

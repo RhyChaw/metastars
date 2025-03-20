@@ -7,6 +7,9 @@ import Contact from './pages/Contact';
 import Land2 from './pages/land2';
 import Land3 from './pages/land3';
 import Blogs from './pages/Blogs';
+import BlogDetails from './pages/BlogDetails';
+import SubmitBlog from './pages/SubmitBlog';
+import ReviewBlog from './admin/ReviewBlog';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -26,11 +29,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Land3 />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
+        <Route path="/submit-blog" element={<SubmitBlog />} />
         <Route path='/fill-form' element={<Form />} />
         <Route path='/spirituality' element={<Spirituality />} />
         <Route path='/financial-literacy' element={<Finance />} />
         <Route path='/mental-health' element={<MentalHealth />} />
-        <Route path='/admin' element={<AdminDashboard />} />
+        <Route path='/admin/*' element={<AdminDashboard />} />
+        <Route path="/admin/review/:id" element={<ReviewBlog />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />

@@ -9,6 +9,9 @@ const Footer = () => {
 
     return (
         <footer className={styles.footer}>
+            {/* <p className={styles.heading}>
+                <p className='italic'>Compassion isn’t just a word; it’s a movement. And you’re a part of it.</p>
+            </p> */}
             <h2 className={styles.heading}>Let’s Build Something Beautiful Together</h2>
             <p className={`${styles.paragraph} ${styles.fadeIn}`}>
                 We’d love to connect with you. Whether you have questions, want to collaborate, or seek guidance, reach out to us.

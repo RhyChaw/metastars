@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Finance.module.css'; // Ensure this CSS file exists
 import FINANCE_IMAGE from '../assets/Finance.jpg'; // Import your image
+import COMPASSION from '../assets/compassion.jpg'; // Import your image
 
 const Finance = () => {
     return (
@@ -27,6 +28,15 @@ const Finance = () => {
                     <p>Plan for a secure future.</p>
                 </div>
             </div>
+
+            <div className={styles.quoteSection}>
+                            <div className={styles.quoteBackground}></div>
+                            <p className={styles.quoteText}>
+                            <p className='italic'>[ Add Quote ]</p>
+                            </p>
+                            <img src={COMPASSION} alt="Inspiring Visual" className={styles.quoteImage} />
+                        </div>
+
         </div>
     );
 };
