@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './MentalHealth.module.css'; // Ensure this CSS file exists
 import MENTAL_HEALTH_IMAGE from '../assets/mentalhealth.jpg'; // Import your image
 import COMPASSION from '../assets/compassion.jpg'; // Import your image
-
+import SeasonTree from '../assets/SeasonTree.jpeg'; // Import your image
 
 const MentalHealth = () => {
     return (
@@ -33,9 +33,9 @@ const MentalHealth = () => {
             <div className={styles.quoteSection}>
                 <div className={styles.quoteBackground}></div>
                 <p className={styles.quoteText}>
-                <p className='italic'>[ Add Quote ]</p>
+                <p className='italic smol'>Be patient with yourself. Nothing in nature blooms all year</p>
                 </p>
-                <img src={COMPASSION} alt="Inspiring Visual" className={styles.quoteImage} />
+                <img src={SeasonTree} alt="Inspiring Visual" className={styles.quoteImage} />
             </div>
         </div>
     );

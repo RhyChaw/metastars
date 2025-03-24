@@ -64,6 +64,7 @@ const Form = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.mw}>
       <h2 className={styles.formTitle}>Volunteer Application Form</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
@@ -81,9 +82,11 @@ const Form = () => {
 
         <div className={styles.formGroup}>
           <label>Do you have any experience with volunteering? *</label>
-          <div className={styles.radioGroup}>
+          <div className={styles.radioItem}>
             <input type="radio" name="experience" value="Yes" onChange={handleChange} />
             <label>Yes</label>
+          </div>
+          <div className={styles.radioItem}>
             <input type="radio" name="experience" value="No" onChange={handleChange} />
             <label>No</label>
           </div>
@@ -102,7 +105,7 @@ const Form = () => {
         <div className={styles.formGroup}>
           <label>I prefer to volunteer in *</label>
           <div className={styles.checkboxGroup}>
-            {["Photography, Videography", "Web design and development", "Content Writing", "Graphic design", "Mentorship support", "Event Management & Support", "Decorations at Events", "Art, Craft, Face Painting, Henna, etc.", "Cultural, music and fine arts", "Fund raising", "Social Media Management", "Employment support"].map((item, index) => (
+            {["Photography, Videography", "Web design and development", "Content Writing", "Graphic design", "Mentorship support", "Event Management & Support", "Decorations at Events", "Cultural, music and fine arts", "Fund raising", "Social Media Management", "Employment support"].map((item, index) => (
               <div key={index} className={styles.checkboxItem}>
                 <input type="checkbox" name="preferredAreas" value={item} onChange={handleChange} />
                 <label>{item}</label>
@@ -113,9 +116,11 @@ const Form = () => {
 
         <div className={styles.formGroup}>
           <label>Can you drive? *</label>
-          <div className={styles.radioGroup}>
+          <div className={styles.radioItem}>
             <input type="radio" name="canDrive" value="Yes" onChange={handleChange} />
             <label>Yes</label>
+          </div>
+          <div className={styles.radioItem}>
             <input type="radio" name="canDrive" value="No" onChange={handleChange} />
             <label>No</label>
           </div>
@@ -123,7 +128,7 @@ const Form = () => {
 
         <div className={styles.formGroup}>
           <label>I live in *</label>
-          {["Niagara Region", "Halton Region", "Peel Region", "GTA"].map((region, index) => (
+          {["Niagara Region", "Halton Region", "Peel Region", "GTA", "KWC"].map((region, index) => (
             <div key={index} className={styles.radioItem}>
               <input type="radio" name="location" value={region} onChange={handleChange} />
               <label>{region}</label>
@@ -158,6 +163,7 @@ const Form = () => {
 
         <button type="submit" className={styles.submitButton}>Submit Application</button>
       </form>
+      </div>
     </div>
   );
 };

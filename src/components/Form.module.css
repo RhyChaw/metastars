@@ -1,56 +1,64 @@
 .container {
     width: 100vw;
-    margin: 5px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    padding: 20px;
-    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     font-family: 'Poppins', sans-serif;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
 }
 
-h2 {
+.mw {
+    max-width: 800px;
+    margin: auto;
+}
+.formTitle {
     text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
     color: #007BFF;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .form {
-    width: 80%;
-    max-width: 1000px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .formGroup {
-    margin-bottom: 15px;
-    background-color: #ebebeb;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F9FA;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #007BFF;
 }
 
 label {
     font-weight: 600;
-    display: block;
-    margin-bottom: 5px;
-    color: #444;
+    color: #333;
+    margin-bottom: 8px;
 }
 
 input,
-textarea {
+textarea,
+select {
     width: 95%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
     border-radius: 6px;
     outline: none;
+    transition: 0.3s ease;
+    background-color: white;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .nameFields {
@@ -59,36 +67,47 @@ textarea {
 }
 
 .nameFields input {
-    width: 50%;
+    flex: 1;
 }
 
-.radioGroup, .checkboxGroup {
+.selectGroup,
+.radioGroup,
+.checkboxGroup {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 25px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.radioGroup input,
-.checkboxGroup input {
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
+.selectGroup select,
+.radioItem,
+.checkboxItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radioItem input,
+.checkboxItem input {
+    width: 18px;
+    height: 18px;
+    accent-color: #007BFF;
 }
 
 .submitButton {
     width: 100%;
-    background: #007BFF;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
     color: white;
-    padding: 12px;
+    padding: 14px;
     border: none;
     border-radius: 6px;
-    font-size: 18px;
+    font-size: 1.2rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3;
+    transition: all 0.3s ease-in-out;
 }
 
 .submitButton:hover {
-    background: #007BFF;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }

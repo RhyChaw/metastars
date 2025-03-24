@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Spirituality.module.css'; // Ensure this CSS file exists
 import SPIRITUALITY_IMAGE from '../assets/spirituality.jpg'; // Import your image
 import COMPASSION from '../assets/compassion.jpg'; // Import your image
+import SeekSpir from '../assets/seekSpir.jpeg'; // Import your image
 
 
 const Spirituality = () => {
@@ -11,7 +12,7 @@ const Spirituality = () => {
                 <img src={SPIRITUALITY_IMAGE} alt="Spirituality" className={styles.heroImage} />
                 <div className={styles.heroText}>
                     <h1>Spirituality</h1>
-                    <p className='italic'>"You are not a human being searching for a spiritual experience, you are a spiritual being navigating through being human."</p>
+                    <p className='italic smol'>"You are not a human being searching for a spiritual experience, you are a spiritual being navigating through being human."</p>
                 </div>
             </div>
             <div className={styles.focusCards}>
@@ -32,9 +33,9 @@ const Spirituality = () => {
             <div className={styles.quoteSection}>
                             <div className={styles.quoteBackground}></div>
                             <p className={styles.quoteText}>
-                            <p className='italic'>[ Add Quote ]</p>
+                            <p className='italic'>What you seek is seeking you.</p>
                             </p>
-                            <img src={COMPASSION} alt="Inspiring Visual" className={styles.quoteImage} />
+                            <img src={SeekSpir} alt="Inspiring Visual" className={styles.quoteImage} />
                         </div>
 
         </div>

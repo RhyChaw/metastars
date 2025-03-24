@@ -67,55 +67,61 @@
 }
 
 /* Quote section */
-
 .quoteSection {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    text-align: left;
     padding: 60px 20px;
-    color: black;
+    color: white; /* White text to contrast with the image background */
     font-family: 'Poppins', sans-serif;
+    text-align: center;
     overflow: hidden;
-}
-
-.quoteText {
-    font-size: 28px;
-    font-weight: 600;
-    max-width: 50%;
-    z-index: 2;
-}
-
-.quoteImage {
-    width: 40%;
+    height: 400px; /* Adjust height as needed */
+    background: url('../assets/finlit.jpeg') no-repeat center center/cover; /* Set the background image */
     border-radius: 15px;
-    margin-left: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional for a soft shadow effect */
+}
+
+.quoteContent {
     z-index: 2;
+    max-width: 70%; /* Controls width of the quote */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.quoteBackground {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(0,123,255,0.2) 0%, rgba(0,0,0,0) 80%);
-    animation: pulseEffect 3s infinite alternate;
+.quoteContent p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff; /* Ensure text color is white */
+    margin: 0;
+    font-style: italic; /* Apply italic style to the quote */
 }
 
-@keyframes pulseEffect {
-    0% { transform: scale(1); opacity: 0.7; }
-    100% { transform: scale(1.1); opacity: 1; }
+/* Add some animation to the quote (Optional) */
+.quoteContent p {
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .quoteSection {
         flex-direction: column;
-        text-align: center;
+        height: auto; /* Adjust height for smaller screens */
     }
 
-    .quoteText, .quoteImage {
-        max-width: 90%;
+    .quoteContent {
+        max-width: 90%; /* Adjust quote width for small screens */
+        padding: 15px;
+    }
+
+    .quoteContent p {
+        font-size: 1.2rem; /* Smaller text on smaller screens */
     }
 }
-

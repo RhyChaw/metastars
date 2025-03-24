@@ -16,15 +16,14 @@ const Footer = () => {
             <p className={`${styles.paragraph} ${styles.fadeIn}`}>
                 We’d love to connect with you. Whether you have questions, want to collaborate, or seek guidance, reach out to us.
             </p>
-            <p className={styles.contact}>
+            {/* <p className={styles.contact}>
                 Email: <a href="mailto:contact@mettastars.org" className={styles.link}>contact@mettastars.com</a>
-            </p>
+            </p> */}
             <p className={styles.paragraph}>
-                For IT inquiries, please contact <a href='https://linkedin.com/in/rhychaw' className={styles.link}>Rhythm Chawla</a>
             </p>
-            <p className={styles.location}>
+            {/* <p className={styles.location}>
                 Location: <span className={styles.highlight}>Waterloo, ON</span>
-            </p>
+            </p> */}
 
             <div className={styles.socials}>
                 <span className={styles.highlight}>@MettaStars</span>
@@ -44,6 +43,24 @@ const Footer = () => {
             <button className={styles.button} onClick={handleMessageSend}>
                 Send Us a Message
             </button>
+            <div className={styles.flexDown}>
+                <p className={styles.contact}>
+                    <a href='/privacy'>Privacy policy |</a>     
+                </p>
+                <p className={styles.contact}>
+                    <a href='/tnc'> Terms & Conditions |</a>  
+                </p>  
+                <p className={styles.contact}>
+                    <a href='/aboutMS'>About us</a>
+                </p>
+                </div>
+            
+            <p className={styles.contact}>
+                ©MettaStars 2025, all rights reserved.
+            </p>
+            <p>
+                Site created by <a href='https://linkedin.com/in/rhychaw' className={styles.link}>Rhythm Chawla</a>
+            </p>
         </footer>
     );
 };

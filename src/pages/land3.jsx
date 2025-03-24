@@ -28,14 +28,15 @@ const Land3 = () => {
   return (
     <div className={styles.landingPage}>
       <div className={styles.heroSection}>
-        <img src={UNIVERSE} alt="UNIVERSE" className={styles.heroImage} />
-        <div className={styles.heroText}>
-          <h2>Welcome to Metta Stars</h2>
-          <h4>Life can be tough, but no one should have to navigate it alone. Let’s grow together.</h4>
-          <h4>Whether you're here to learn, grow, or give back, you’re in the right place.</h4>
-          <button className={styles.heroBtn} onClick={handleClick}>Get Started</button>
-        </div>
+      <img src={UNIVERSE} alt="UNIVERSE" className={styles.heroImage} />
+      <div className={styles.heroOverlay}></div>
+      <div className={styles.heroText}>
+        <h1 className={styles.fadeIn}>Welcome to <br/>
+          <span className={styles.headline}>Metta Stars</span>
+        </h1>
+        <button className={styles.heroBtn} onClick={handleClick}>Get Started</button>
       </div>
+    </div>
 
       {/* Focus Cards */}
       <div className={styles.focusCards}>

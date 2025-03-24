@@ -30,13 +30,10 @@ const Finance = () => {
             </div>
 
             <div className={styles.quoteSection}>
-                            <div className={styles.quoteBackground}></div>
-                            <p className={styles.quoteText}>
-                            <p className='italic'>[ Add Quote ]</p>
-                            </p>
-                            <img src={COMPASSION} alt="Inspiring Visual" className={styles.quoteImage} />
-                        </div>
-
+                <div className={styles.quoteContent}>
+                    <p className='italic'>{`"Financial freedom is available to those who learn about it and work for it."`}</p>
+                </div>
+            </div>
         </div>
     );
 };

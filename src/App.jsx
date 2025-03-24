@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
 // Page imports
 import Spirituality from './pages/Spirituality';
 import Finance from './pages/Finance';
@@ -10,6 +11,9 @@ import Blogs from './pages/Blogs';
 import BlogDetails from './pages/BlogDetails';
 import SubmitBlog from './pages/SubmitBlog';
 import ReviewBlog from './admin/ReviewBlog';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TNC from './pages/TNC';
+import AboutMS from './pages/AboutMS';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -38,6 +42,9 @@ function App() {
         <Route path='/admin/*' element={<AdminDashboard />} />
         <Route path="/admin/review/:id" element={<ReviewBlog />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/tnc' element={<TNC />} />
+        <Route path='/privacy' element={<PrivacyPolicy />} />
+        <Route path='/aboutMS' element={<AboutMS />} />
       </Routes>
       <Footer />
     </Router>
