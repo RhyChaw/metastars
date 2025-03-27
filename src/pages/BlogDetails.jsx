@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import styles from "./BlogDetails.module.css";
 
@@ -42,6 +43,8 @@ const BlogDetails = () => {
             <h1>{blog.title}</h1>
             <h3>By {blog.author}</h3>
             <p>{blog.content}</p>
+                                        <Link to="/submit-blog" className={styles.submitBlogButton}>Submit Your Own Blog</Link>
+            
         </div>
     );
 };

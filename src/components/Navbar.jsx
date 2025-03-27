@@ -21,6 +21,7 @@ const Navbar = () => {
                         <li><a href="/financial-literacy">Financial Literacy</a></li>
                         <li><a href="/mental-health">Mental Health</a></li>
                         <li><a href="/aboutMS">About Metta Stars</a></li>
+                        <li><a href="/team">The Team</a></li>
                     </ul>
                 </li>
                 <li><a href="/fill-form">Join Us</a></li>

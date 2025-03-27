@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './AboutMS.module.css';
-import DHAMMAWHEEL from '../assets/dhamma.png';
+import DHAMMAWHEEL from '../assets/dhamma.jpg';
 import CHAKRAS from '../assets/chakras.png';
 import LOGO from '../assets/logo.jpeg';
 
 function AboutMS() {
   return (
     <div className={styles.container}>
+      <div className={styles.mw1200}>
+
       {/* Hero Section */}
       <section className={styles.hero}>
         <h1>About Metta Stars</h1>
@@ -18,10 +20,13 @@ function AboutMS() {
         <div className={styles.content}>
           <h2>Who We Are</h2>
           <p>
-            Metta Stars Foundation was born from the belief that fulfillment lies in the harmony of financial stability, emotional resilience, and spiritual wisdom. Established in July 2024, we are a movement dedicated to empowering individuals with knowledge, strength, and compassion.
+          Metta Stars Foundation was born from the belief that fulfillment lies in the harmony of financial stability, emotional resilience, and spiritual wisdom. Established in July 2024, our movement is dedicated to empowering individuals with knowledge, strength, and compassion.
           </p>
           <p>
-            We recognize that wealth is more than money, health is more than the body, and wisdom is more than knowledge. Our holistic approach ensures that financial success does not come at the cost of mental peace, and spiritual growth remains connected to real-world responsibilities.
+          What started as a late-night conversation between two people, reflecting on the world’s struggles and the power of compassion, soon became a mission. 'What if we could do something? What if we could create real change?' From this heartfelt exchange, Metta Stars was born.
+          </p>
+          <p>
+          We recognize that wealth is more than money, health is more than the body, and wisdom is more than knowledge. Our holistic approach ensures that financial success does not come at the cost of mental peace, and spiritual growth remains connected to real-world responsibilities.
           </p>
         </div>
         <img src={LOGO} alt="Who We Are" className={styles.image} />
@@ -51,31 +56,36 @@ function AboutMS() {
         </div>
       </section>
 
-      {/* Eight Corners of Dhamma */}
-        <section className={styles.dhamma}>
-        <h2>The Eight Corners of Dhamma</h2>
-        
-        <div className={styles.dhammaContainer}>
-            <img src={DHAMMAWHEEL} alt="Dhamma Wheel" className={styles.dhammaImage} />
+    </div>
 
+
+    <section className={styles.dhamma}>
+    <h1 className={styles.dhaamaTitle}>The Eight Corners of Dhamma</h1>
+
+    <div className={styles.dhammaContainer}>
+        <div className={styles.dhammaGrid}>
             {[
-            { title: "Right Understanding", desc: "Seeing life with clarity, integrating financial, mental, and spiritual well-being." },
-            { title: "Right Intent", desc: "Acting with purpose, integrity, and commitment to growth." },
-            { title: "Right Speech", desc: "Using words to uplift and inspire positive connections." },
-            { title: "Right Action", desc: "Making decisions aligned with ethical values and the greater good." },
-            { title: "Right Livelihood", desc: "Pursuing careers that create prosperity without harm." },
-            { title: "Right Effort", desc: "Developing perseverance, discipline, and self-improvement." },
-            { title: "Right Mindfulness", desc: "Practicing awareness to navigate life with wisdom and balance." },
-            { title: "Right Concentration", desc: "Focusing on meaningful goals without distractions." }
+                { title: "Right Understanding", desc: "Seeing life with clarity, integrating financial, mental, and spiritual well-being." },
+                { title: "Right Intent", desc: "Acting with purpose, integrity, and commitment to growth." },
+                { title: "Right Speech", desc: "Using words to uplift and inspire positive connections." },
+                { title: "Right Action", desc: "Making decisions aligned with ethical values and the greater good." },
+                { title: "Right Livelihood", desc: "Pursuing careers that create prosperity without harm." },
+                { title: "Right Effort", desc: "Developing perseverance, discipline, and self-improvement." },
+                { title: "Right Mindfulness", desc: "Practicing awareness to navigate life with wisdom and balance." },
+                { title: "Right Concentration", desc: "Focusing on meaningful goals without distractions." }
             ].map((item, index) => (
-            <div key={index} className={`${styles.dhammaItem} ${styles[`pos${index + 1}`]}`}>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-            </div>
+                <div key={index} className={styles.dhammaItem}>
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                </div>
             ))}
         </div>
-        </section>
 
+        <img src={DHAMMAWHEEL} alt="Dhamma Wheel" className={styles.dhammaImage} />
+    </div>
+</section>
+          
+<div className={styles.mw1200}>
 
       {/* Join the Metta Movement */}
       <section className={styles.join}>
@@ -83,6 +93,8 @@ function AboutMS() {
         <p>Whether you seek financial independence, mental clarity, or spiritual depth, embark on this journey with us.</p>
         <button className={styles.joinButton}>Get Involved</button>
       </section>
+      </div>
+
     </div>
   );
 }
