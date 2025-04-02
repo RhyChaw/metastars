@@ -39,19 +39,19 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-
+ 
             <button className={styles.button} onClick={handleMessageSend}>
                 Send Us a Message
             </button>
             <div className={styles.flexDown}>
                 <p className={styles.contact}>
-                    <a href='/privacy'>Privacy policy |</a>     
+                    <a href='/privacy' className={styles.link}>Privacy policy |</a>     
                 </p>
                 <p className={styles.contact}>
-                    <a href='/tnc'> Terms & Conditions |</a>  
+                    <a href='/tnc' className={styles.link}> Terms & Conditions |</a>  
                 </p>  
                 <p className={styles.contact}>
-                    <a href='/aboutMS'>About us</a>
+                    <a href='/aboutMS' className={styles.link}>About us</a>
                 </p>
                 </div>
             

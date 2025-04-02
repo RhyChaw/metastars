@@ -43,12 +43,17 @@ const Contact = () => {
     return (
         <div className={styles.landingPage}>
             <div className={styles.heroSection}>
-                <img src={UNIVERSE} alt="UNIVERSE" className={styles.heroImage} />
                 <div className={styles.heroText}>
-                    <h1>Contact us</h1>
-                    <h2>[ Add text ]</h2>
+                    <h1 className={styles.heroTextAnimate}>Contact us</h1>
+                    <p className={styles.heroTextAnimate}>
+                        We’d love to hear from you! Whether you have questions, feedback, or just want to say hi, feel free to reach out.
+                    </p>
+                </div>
+                <div className={styles.heroImageContainer}>
+                    <img src={UNIVERSE} alt="UNIVERSE" className={styles.heroImage} />
                 </div>
             </div>
+
 
             <div className={styles.formContainer}>
                 <form onSubmit={handleSubmit} className={styles.contactForm}>

@@ -45,6 +45,7 @@
     padding-left: 5px;
 }
 
+
 .link {
     color: #007BFF;
     text-decoration: none;
@@ -55,6 +56,10 @@
 .link:hover {
     text-decoration: underline;
     color: #0096FF;
+}
+
+.link:visited {
+    color: #007BFF; /* Ensures the visited link color remains the same */
 }
 
 .highlight {

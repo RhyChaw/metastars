@@ -59,7 +59,7 @@ const Blogs = () => {
                                         <p className={styles.blogAuthor}>By {blog.author}</p>
                                         <p className={styles.blogDescription}>{blog.description}</p>
                                         <Link to={`/blog/${blog.id}`} className={styles.readMoreButton}>Read More</Link>
-                                        <Link to="/submit-blog" className={styles.submitBlogButton}>Submit Your Own Blog</Link>
+                                        {/* <Link to="/submit-blog" className={styles.submitBlogButton}>Submit Your Own Blog</Link> */}
 
                                     </div>
                                 ))}

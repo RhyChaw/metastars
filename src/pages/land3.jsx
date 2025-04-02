@@ -2,61 +2,79 @@ import React, { useEffect, useState } from 'react';
 import styles from './land3.module.css'; // Make sure to create and style this CSS file
 import UNIVERSE from '../assets/universe.jpg'; // Import your image
 import COMPASSION from '../assets/compassion.mp4'; // Import your video
-import Loader from '../components/Loader';
-import LOGO from '../assets/logo.jpeg';
+import finCard from '../assets/finCard.jpg'; // Financial Literacy card image
+import mentalCard from '../assets/mentalCard.jpg'; // Mental Health card image
+import spiritCard from '../assets/spiritCard.jpg'; // Spirituality card image
 
 const Land3 = () => {
   const handleClick = () => {
     window.location.href = '/fill-form';
-  }
+  };
+
+  const focusCardsData = [
+    {
+      title: 'Financial Literacy',
+      image: finCard,
+      points: [
+        'Understanding budgeting & saving',
+        'Managing debt wisely',
+        'Planning for financial freedom'
+      ]
+    },
+    {
+      title: 'Mental Health',
+      image: mentalCard,
+      points: [
+        'Building emotional resilience',
+        'Self-discovery & mindfulness',
+        'Creating a support network'
+      ]
+    },
+    {
+      title: 'Spirituality',
+      image: spiritCard,
+      points: [
+        'Finding inner peace',
+        'Exploring different perspectives',
+        'Living with purpose'
+      ]
+    }
+  ];
 
   return (
     <div className={styles.landingPage}>
       <div className={styles.heroSection}>
-        <img src={UNIVERSE} alt="UNIVERSE" className={styles.heroImage} />
-        <div className={styles.heroOverlay}></div>
-        <div className={styles.heroText}>
-          <h1 className={styles.fadeIn}>Welcome to <br/>
-            <span className={styles.headline}>Metta Stars</span>
-          </h1>
-          <button className={styles.heroBtn} onClick={handleClick}>Get Started</button>
+        <div className={styles.heroTextContainer}>
+          <div className={styles.heroText}>
+            <h1 className={styles.fadeIn}>
+              Welcome to <br />
+              <span className={styles.headline}>Metta Stars</span>
+            </h1>
+            <button className={styles.heroBtn} onClick={handleClick}>
+              Get Started
+            </button>
+          </div>
+        </div>
+
+        <div className={styles.heroImageContainer}>
+          <img src={UNIVERSE} alt="UNIVERSE" className={styles.heroImage} />
+          <div className={styles.heroOverlay}></div>
         </div>
       </div>
 
       {/* Focus Cards */}
       <div className={styles.focusCards}>
-        {[{
-          title: "Financial Literacy",
-          points: [
-            "Understanding budgeting & saving",
-            "Managing debt wisely",
-            "Planning for financial freedom"
-          ]
-        }, {
-          title: "Mental Health",
-          points: [
-            "Building emotional resilience",
-            "Self-discovery & mindfulness",
-            "Creating a support network"
-          ]
-        }, {
-          title: "Spirituality",
-          points: [
-            "Finding inner peace",
-            "Exploring different perspectives",
-            "Living with purpose"
-          ]
-        }].map((item, index) => (
+        {focusCardsData.map((item, index) => (
           <div className={styles.card} key={index}>
-            <div className={styles.cardFront}>
+            <div className={styles.cardFront} style={{ backgroundImage: `url(${item.image})` }}>
               <h2>{item.title}</h2>
+            </div>
+            <div className={styles.cardBack}>
               <ul>
                 {item.points.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
               </ul>
-            </div>
-            <div className={styles.cardBack}>
               <button className={styles.heroBtn}>Learn more</button>
             </div>
           </div>
@@ -64,16 +82,18 @@ const Land3 = () => {
       </div>
 
       <div className={styles.quoteSection}>
-        <video 
-          src={COMPASSION} 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
+        <video
+          src={COMPASSION}
+          autoPlay
+          loop
+          muted
+          playsInline
           className={styles.quoteBackground}
         />
         <p className={styles.quoteText}>
-          <span className="italic">“Compassion isn’t just a word; it’s a movement. And you’re a part of it.”</span>
+          <span className="italic">
+            “Compassion isn’t just a word; it’s a movement. And you’re a part of it.”
+          </span>
         </p>
       </div>
     </div>
