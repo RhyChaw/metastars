@@ -141,6 +141,7 @@
 .seeMoreBtn:hover {
     background-color: #45a049;
 }
+
 /* Quote Section */
 .quoteSection {
     display: flex;
@@ -175,6 +176,36 @@
     background: radial-gradient(circle, rgba(0,123,255,0.2) 0%, rgba(0,0,0,0) 80%);
     animation: pulseEffect 3s infinite alternate;
 }
+
+
+.learnMoreButton {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.learnMoreButton:focus {
+    outline: none;
+}
+.learnMoreButton:active {
+    transform: scale(0.95);
+}
+.learnMoreButton:visited {
+    color: white;
+}
+.learnMoreButton:link {
+    color: white;
+}
+.learnMoreButton:focus {
+    outline: none;
+}
+.learnMoreButton:hover {
+    background: #0056b3;
+}
+
 
 @keyframes pulseEffect {
     0% { transform: scale(1); opacity: 0.7; }

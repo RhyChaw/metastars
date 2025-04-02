@@ -66,7 +66,7 @@ const Spirituality = () => {
                                         <li key={i}>{point}</li>
                                     ))}
                                 </ul>
-                                <button className={styles.seeMoreBtn}>See more</button>
+                                <button className={styles.learnMoreButton}>See more</button>
                             </div>
                         </div>
                     </div>
@@ -74,11 +74,13 @@ const Spirituality = () => {
             </div>
 
             <div className={styles.quoteSection}>
-                <img src={SeekSpir} alt="Inspiring Visual" className={styles.blendedImage} />
-                <div className={styles.floatingQuote}>
-                    <p className='italic'>What you seek is seeking you.</p>
-                </div>
+                <div className={styles.quoteBackground}></div>
+                <p className={styles.quoteText}>
+                    <em>"What you seek is seeking you."</em>
+                </p>
+                <img src={SeekSpir} alt="Inspiring Visual" className={styles.quoteImage} />
             </div>
+
         </div>
     );
 };

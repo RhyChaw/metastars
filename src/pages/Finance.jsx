@@ -4,6 +4,7 @@ import FINANCE_IMAGE from '../assets/Financee.jpg'; // Import your image
 import BudgetCard from '../assets/budgetingCard.jpg'; // Import your image
 import PassiveIncomeCard from '../assets/passiveIncomeCard.jpg'; // Import your image
 import FinancialIndependenceCard from '../assets/FinDependance.jpg'; // Import your image
+import FinLit from '../assets/finlit.jpeg'; // Import your image
 
 const cardData = [
   {
@@ -54,17 +55,14 @@ const Finance = () => {
       </div>
 
         {/* Quote Section */}
-    <div className={styles.quoteSection}>
-        <div className={styles.imageContainer}>
-            <img src="../assets/finlit.jpeg" alt="Finance Background" className={styles.backgroundImage} />
-        </div>
-        <div className={styles.quoteContent}>
-            <p className="italic">
-            {`"It's not about how much money you make, but how much you keep, how hard it works for you, and how many generations you keep it for."`}
-            </p>
-            <p>- Robert Kiyosaki</p>
-        </div>
-    </div>
+
+     <div className={styles.quoteSection}>
+                    <div className={styles.quoteBackground}></div>
+                    <p className={styles.quoteText}>
+                        <em>"It's not about how much money you make, but how much you keep, how hard it works for you, and how many generations you keep it for." ~ Robert Kiyosaki</em>
+                    </p>
+                    <img src={FinLit} alt="Inspiring Visual" className={styles.quoteImage} />
+                </div>
 
     </div>
   );

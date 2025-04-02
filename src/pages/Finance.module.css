@@ -52,6 +52,7 @@
     height: 350px;
     perspective: 1000px;
     cursor: pointer;
+
 }
 
 .cardInner {
@@ -91,6 +92,8 @@
     font-size: 1rem;
     padding: 10px;
     color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 .cardImage {
@@ -121,60 +124,69 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.learnMoreButton {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.learnMoreButton:focus {
+    outline: none;
+}
+.learnMoreButton:active {
+    transform: scale(0.95);
+}
+.learnMoreButton:visited {
+    color: white;
+}
+.learnMoreButton:link {
+    color: white;
+}
+.learnMoreButton:focus {
+    outline: none;
+}
+.learnMoreButton:hover {
+    background: #0056b3;
+}
+
+
 /* Quote Section */
 .quoteSection {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    text-align: left;
     padding: 60px 20px;
-    color: white;
+    color: black;
     font-family: 'Poppins', sans-serif;
-    text-align: center;
+    overflow: hidden;
     margin-top: 5rem;
-    height: 400px;
-    position: relative;
+}
+
+.quoteText {
+    font-size: 28px;
+    font-weight: 600;
+    max-width: 50%;
+    z-index: 2;
+}
+
+.quoteImage {
+    width: 40%;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    margin-left: 30px;
+    z-index: 2;
 }
 
-/* Image Container */
-.imageContainer {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-}
-
-/* Background Image */
-.backgroundImage {
-    background: url('../assets/finlit.jpeg') no-repeat center center;
+.quoteBackground {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* Quote Content */
-.quoteContent {
-    z-index: 2;
-    flex: 1;
-    max-width: 40%;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-}
-
-.quoteContent p {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fff;
-    margin: 0;
-    font-style: italic;
-    animation: fadeIn 3s ease-in-out;
+    background: radial-gradient(circle, rgba(0,123,255,0.2) 0%, rgba(0,0,0,0) 80%);
+    animation: pulseEffect 3s infinite alternate;
 }
 
 /* Fade-in Animation */
