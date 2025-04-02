@@ -1,80 +1,73 @@
 import React from 'react';
 import styles from './Finance.module.css'; // Ensure this CSS file exists
-import FINANCE_IMAGE from '../assets/Finance.jpg'; // Import your image
-// import MONEY_GROWTH from '../assets/moneyGrowth.jpg'; // Additional Finance-related images
-// import FINLIT_BG from '../assets/finlit.jpeg'; // Background image for quote section
+import FINANCE_IMAGE from '../assets/Financee.jpg'; // Import your image
+import BudgetCard from '../assets/budgetingCard.jpg'; // Import your image
+import PassiveIncomeCard from '../assets/passiveIncomeCard.jpg'; // Import your image
+import FinancialIndependenceCard from '../assets/FinDependance.jpg'; // Import your image
+
+const cardData = [
+  {
+    title: "Budgeting",
+    image: BudgetCard,
+    description: "Manage your finances and budget for the future accordingly",
+  },
+  {
+    title: "Financial Independence",
+    image: FinancialIndependenceCard,
+    description: "Achieve long-term financial security through smart planning.",
+  },
+  {
+    title: "Passive Income",
+    image: PassiveIncomeCard,
+    description: "Learn how to make money work for you while you sleep.",
+  },
+];
 
 const Finance = () => {
-    return (
-        <div className={styles.landingPage}>
-            {/* Hero Section */}
-            <div className={styles.heroSection}>
-                <img src={FINANCE_IMAGE} alt="Finance" className={styles.heroImage} />
-                <div className={styles.heroText}>
-                    <h1>Finance</h1>
-                    <h2>Mastering financial literacy and independence.</h2>
-                    <h2>Understanding money is the key to freedom.</h2>
-                </div>
-            </div>
-
-            {/* Focus Areas with Flip Cards */}
-            <div className={styles.focusCards}>
-                <div className={styles.card}>
-                    <div className={styles.cardInner}>
-                        <div className={styles.cardFront}>
-                            <h2>Investing</h2>
-                        </div>
-                        <div className={styles.cardBack}>
-                            <p>Grow wealth through stocks, real estate, and passive income.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={styles.card}>
-                    <div className={styles.cardInner}>
-                        <div className={styles.cardFront}>
-                            <h2>Budgeting</h2>
-                        </div>
-                        <div className={styles.cardBack}>
-                            <p>Track expenses, cut unnecessary spending, and save efficiently.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={styles.card}>
-                    <div className={styles.cardInner}>
-                        <div className={styles.cardFront}>
-                            <h2>Financial Independence</h2>
-                        </div>
-                        <div className={styles.cardBack}>
-                            <p>Achieve long-term financial security through smart planning.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={styles.card}>
-                    <div className={styles.cardInner}>
-                        <div className={styles.cardFront}>
-                            <h2>Passive Income</h2>
-                        </div>
-                        <div className={styles.cardBack}>
-                            <p>Learn how to make money work for you while you sleep.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Quote Section */}
-            <div className={styles.quoteSection}>
-                <div className={styles.quoteContent}>
-                    <p className="italic">
-                        {`"It's not about how much money you make, but how much you keep, how hard it works for you, and how many generations you keep it for."`}
-                    </p>
-                    <p>- Robert Kiyosaki</p>
-                </div>
-            </div>
+  return (
+    <div className={styles.landingPage}>
+      {/* Hero Section */}
+      <div className={styles.heroSection}>
+        <img src={FINANCE_IMAGE} alt="Finance" className={styles.heroImage} />
+        <div className={styles.heroText}>
+          <h1>Finance</h1>
+          <p>Financial literacy is a tool that helps in building secure future</p>
         </div>
-    );
+      </div>
+
+      {/* Focus Areas with Flip Cards */}
+      <div className={styles.focusCards}>
+        {cardData.map((card, index) => (
+          <div key={index} className={styles.card}>
+            <div className={styles.cardInner}>
+              <div className={styles.cardFront}>
+                <img src={card.image} alt={card.title} className={styles.cardImage} />
+                <h2>{card.title}</h2>
+              </div>
+              <div className={styles.cardBack}>
+                <p>{card.description}</p>
+                <button className={styles.learnMoreButton}>Learn More</button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+        {/* Quote Section */}
+    <div className={styles.quoteSection}>
+        <div className={styles.imageContainer}>
+            <img src="../assets/finlit.jpeg" alt="Finance Background" className={styles.backgroundImage} />
+        </div>
+        <div className={styles.quoteContent}>
+            <p className="italic">
+            {`"It's not about how much money you make, but how much you keep, how hard it works for you, and how many generations you keep it for."`}
+            </p>
+            <p>- Robert Kiyosaki</p>
+        </div>
+    </div>
+
+    </div>
+  );
 };
 
 export default Finance;
