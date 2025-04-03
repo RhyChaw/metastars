@@ -65,11 +65,12 @@
 }
 
 .headline {
+    font-family: "Bugaki", sans-serif; /* Fallback to sans-serif */
     color: #085AC9;
-    font-size: 5rem; /* Slightly smaller */
+    font-size: 5rem;
     display: block;
-    margin-top: -10px; /* Bring closer to "Welcome to" */
 }
+
 /* Right Side - 70% (Image) */
 .heroImageContainer {
     width: 100% !important;
@@ -119,6 +120,7 @@
     flex-wrap: wrap;
     margin-bottom: 5rem;
     z-index: 4;
+    margin-top: 5rem;
   }
   
   .card {
