@@ -11,6 +11,13 @@ const Land3 = () => {
     window.location.href = '/fill-form';
   };
 
+  const handleLinkClick = (link) => {
+    return () => {
+      window.location.href = link;
+    };
+  };
+  
+
   const focusCardsData = [
     {
       title: 'Spirituality',
@@ -19,7 +26,8 @@ const Land3 = () => {
         'Finding inner peace',
         'Exploring different perspectives',
         'Living with purpose'
-      ]
+      ],
+      link: '/spirituality'
     },
     {
       title: 'Financial Literacy',
@@ -28,7 +36,8 @@ const Land3 = () => {
         'Understanding budgeting & saving',
         'Managing debt wisely',
         'Planning for financial freedom'
-      ]
+      ],
+      link: '/financial-literacy'
     },
     {
       title: 'Mental Health',
@@ -37,7 +46,8 @@ const Land3 = () => {
         'Building emotional resilience',
         'Self-discovery & mindfulness',
         'Creating a support network'
-      ]
+      ],
+      link: '/mental-health'
     }
   ];
 
@@ -74,7 +84,7 @@ const Land3 = () => {
                   <li key={i}>{point}</li>
                 ))}
               </ul>
-              <button className={styles.heroBtn}>Learn more</button>
+              <button className={styles.heroBtn} onClick={handleLinkClick(item.link)}>Learn more</button>
             </div>
           </div>
         ))}

@@ -269,27 +269,50 @@
         font-size: 1.6rem;
     }
 }
-
 /* Join Section */
 .join {
     text-align: center;
-    margin-top: 60px;
-    padding: 40px;
-    background: #f4f4f4;
-    border-radius: 10px;
+    margin-top: 80px;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.join h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.join p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 30px;
 }
 
 .joinButton {
-    background: #007BFF;
-    color: white;
+    background: white;
+    color: #007BFF;
     font-size: 1.2rem;
-    padding: 12px 20px;
+    padding: 14px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 .joinButton:hover {
     background: #0056b3;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.3);
 }
