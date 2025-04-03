@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AboutMS.module.css';
-import DHAMMAWHEEL from '../assets/dhamma.png';
+import DHAMMAWHEEL from '../assets/DharmaWheel.png';
 import CHAKRAS from '../assets/chakras.png';
 import LOGO from '../assets/logo.jpeg';
 

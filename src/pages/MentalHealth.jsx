@@ -67,7 +67,7 @@ const MentalHealth = () => {
                 <p className={styles.quoteText}>
                     <em>"Be patient with yourself. Nothing in nature blooms all year."</em>
                     <br />
-                    <em> ~ Cristina Smith</em>
+                    <em> - Cristina Smith</em>
                 </p>
                 <img src={SeasonTree} alt="Inspiring Visual" className={styles.quoteImage} />
             </div>
