@@ -5,6 +5,10 @@ import CHAKRAS from '../assets/chakras.png';
 import LOGO from '../assets/logo.jpeg';
 
 function AboutMS() {
+  const handleClick = () => {
+    window.location.href = '/fill-form';
+  }
+  
   return (
     <div className={styles.container}>
       <div className={styles.mw1200}>
@@ -88,7 +92,7 @@ function AboutMS() {
       <section className={styles.join}>
         <h2>Join the Metta Movement</h2>
         <p>Whether you seek financial independence, mental clarity, or spiritual depth, embark on this journey with us.</p>
-        <button className={styles.joinButton}>Get Involved</button>
+        <button className={styles.joinButton} onClick={() => handleClick()}>Join the Metta Stars Movement</button>
       </section>
       </div>
 

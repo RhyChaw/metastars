@@ -6,7 +6,7 @@ import SeasonTree from '../assets/SeasonTree.jpeg'; // Import your image
 // cards
 import StressCard from '../assets/stressManagementCard.jpg'; // Import your image
 import TherapyCard from '../assets/TherapyCard.jpg'; // Import your image
-import SelfCareCard from '../assets/selfCareCard.jpg'; // Import your image
+import SelfCareCard from '../assets/selfCareCardd.jpg'; // Import your image
 
 const MentalHealth = () => {
     const [flipped, setFlipped] = useState([false, false, false]);

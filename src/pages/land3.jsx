@@ -8,7 +8,7 @@ import spiritCard from '../assets/spiritCard.jpg'; // Spirituality card image
 
 const Land3 = () => {
   const handleClick = () => {
-    window.location.href = '/fill-form';
+    window.location.href = '/contact';
   };
 
   const handleLinkClick = (link) => {
