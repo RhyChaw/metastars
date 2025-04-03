@@ -192,6 +192,7 @@
     justify-content: center;
     align-items: center; /* Center the content */
     box-shadow: 0 10px 15px rgba(255, 217, 0, 0.3);
+    transition: all 0.3s ease;
 
 }
 
@@ -199,6 +200,7 @@
 .dhammaItem:hover {
     background: #f4f4f4;
     box-shadow: 0 10px 15px rgba(255, 217, 0, 0.9);
+    transform: scale(1.05) translateY(-5px); /* Slight lift effect */   
 }
 
 /* Dhamma Wheel Image */
