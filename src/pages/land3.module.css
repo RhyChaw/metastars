@@ -1,41 +1,47 @@
-.landingPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    min-height: 100vh;
-    background-color: #ffffff;
-    color: white;
-}
-
-/* Hero Section */
+/* Hero Section - Automatically Adapts to Image Height */
 .heroSection {
     display: flex;
+    align-items: stretch; /* Ensures both sections stay aligned */
     width: 100%;
-    height: 100vh;
+    height: auto; /* Adapts dynamically */
     overflow: hidden;
-    z-index: 3;
-
 }
 
-/* Left Side - 30% (Black Background & Text) */
+/* Left Side - Text Section */
 .heroTextContainer {
-    width: 30%;
+    flex: 0 0 30%; /* Keep it exactly 30% of the section */
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px;
+    height: auto; /* Adapt to image height */
+    z-index: 3;
 }
-
+/* Text Content */
 .heroText {
     color: white;
     text-align: left;
-    z-index: 2;
     max-width: 80%;
     animation: floatUp 1.5s ease-in-out forwards;
-    padding-left: 10rem;
+    padding-left: 5rem;
+}
+
+/* Right Side - Image */
+.heroImageContainer {
+    flex: 0 0 70%; /* Keep it exactly 70% of the section */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Allow it to adapt */
+}
+
+/* Image should be fully visible without shrinking */
+.heroImage {
+    max-width: 100%;
+    height: auto; /* Keeps aspect ratio */
+    object-fit: contain; /* Ensures full visibility */
 }
 
 /* Floating Animation */
@@ -66,24 +72,13 @@
 }
 /* Right Side - 70% (Image) */
 .heroImageContainer {
-    width: 75% !important;
+    width: 100% !important;
     position: relative;
-    height: 100vh; /* Ensure the image container takes the full height */
 }
 
 .heroImage {
     width: 100%;
-    height: 100%; /* Ensure the image covers the full container */
     object-fit: cover;
-}
-
-.heroOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
 }
 
 /* Button */
@@ -105,18 +100,6 @@
     box-shadow: 0px 0px 20px rgba(0, 150, 230, 0.8);
 }
 
-/* Blurred Overlay to Blend Image */
-.heroOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
-    backdrop-filter: blur(8px);
-    animation: blurToClear 2s ease-out forwards; /* Starts blurred, clears over 2 seconds */
-}
-
 /* Animation to transition from blur to clear */
 @keyframes blurToClear {
     0% {
@@ -134,8 +117,8 @@
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-    margin-top: 5rem;
     margin-bottom: 5rem;
+    z-index: 4;
   }
   
   .card {

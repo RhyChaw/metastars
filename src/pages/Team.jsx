@@ -19,6 +19,7 @@ const Team = () => {
         <img src={rahulImg} alt="Rahul Dhingra" className={styles.image} />
         <div className={styles.info}>
           <h3>Rahul Dhingra</h3>
+          <em>Founder | Director</em>
           <p>
           Rahul founded Metta Stars with a vision to bring financial literacy,
            mental well-being, and spirituality into people’s lives. His leadership 
@@ -37,6 +38,7 @@ const Team = () => {
         <img src={rhythmImg} alt="Rhythm Chawla" className={styles.image} />
         <div className={styles.info}>
           <h3>Rhythm Chawla</h3>
+          <em>IT Specialist</em>
           <p>
             A Computer Science enthusiast who played a key role in website development
             and design, ensuring a seamless and stunning user experience.

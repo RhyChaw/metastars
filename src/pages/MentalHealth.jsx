@@ -56,7 +56,7 @@ const MentalHealth = () => {
                 <img src={MENTAL_HEALTH_IMAGE} alt="Mental Health" className={styles.heroImage} />
                 <div className={styles.heroText}>
                     <h1>Mental Health</h1>
-                    <p className='italic smol'>Prioritizing emotional and psychological well-being.</p>
+                    <p className='italic smol'>Prioritizing and creating space for emotional and psychological well-being.</p>
                 </div>
             </div>
 
@@ -86,7 +86,7 @@ const MentalHealth = () => {
             <div className={styles.quoteSection}>
                 <div className={styles.quoteBackground}></div>
                 <p className={styles.quoteText}>
-                    <em>"Be patient with yourself. Nothing in nature blooms all year."</em>
+                    <em>"Be patient with yourself, Nothing in nature blooms all year."</em>
                     <br />
                     <em> - Cristina Smith</em>
                 </p>

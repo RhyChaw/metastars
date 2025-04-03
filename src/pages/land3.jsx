@@ -58,7 +58,6 @@ const Land3 = () => {
 
         <div className={styles.heroImageContainer}>
           <img src={UNIVERSE} alt="UNIVERSE" className={styles.heroImage} />
-          <div className={styles.heroOverlay}></div>
         </div>
       </div>
 
