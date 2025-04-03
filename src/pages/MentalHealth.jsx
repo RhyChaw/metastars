@@ -23,20 +23,35 @@ const MentalHealth = () => {
         { 
             front: 'Stress Management', 
             image: StressCard,
-            back: 'Techniques to handle stress like meditation and mindfulness.'
+            points: [
+                "Practice mindfulness and meditation",
+                "Exercise regularly to reduce tension",
+                "Use deep-breathing techniques"
+            ]
         },
         { 
             front: 'Therapy & Counseling', 
             image: TherapyCard,
-            back: 'Professional guidance to navigate mental health challenges.' },
+            points: [
+                "Seek professional guidance for emotional support",
+                "Engage in cognitive behavioral therapy (CBT)",
+                "Join support groups for shared experiences"
+            ]
+        },
         { 
             front: 'Self-Care', 
             image:  SelfCareCard,
-            back: 'Develop routines to support emotional well-being.' }
+            points: [
+                "Maintain a balanced sleep schedule",
+                "Engage in hobbies that bring joy",
+                "Set healthy boundaries in daily life"
+            ]
+        }
     ];
 
     return (
         <div className={styles.landingPage}>
+            {/* Hero Section */}
             <div className={styles.heroSection}>
                 <img src={MENTAL_HEALTH_IMAGE} alt="Mental Health" className={styles.heroImage} />
                 <div className={styles.heroText}>
@@ -45,23 +60,29 @@ const MentalHealth = () => {
                 </div>
             </div>
 
-           <div className={styles.focusCards}>
-                   {cardsData.map((item, index) => (
-                     <div className={styles.card} key={index}>
-                       <div 
-                         className={styles.cardFront} 
-                         style={{ backgroundImage: `url(${item.image})` }} // Fix: Correct image styling
-                       >
-                         <h2>{item.front}</h2>
-                       </div>
-                       <div className={styles.cardBack}>
-                            <h2>{item.back}</h2>
-                         <button className={styles.heroBtn}>Learn more</button>
-                       </div>
-                     </div>
-                   ))}
-                 </div>
+            {/* Focus Areas with Flip Cards */}
+            <div className={styles.focusCards}>
+                {cardsData.map((item, index) => (
+                    <div className={styles.card} key={index}>
+                        <div 
+                            className={styles.cardFront} 
+                            style={{ backgroundImage: `url(${item.image})` }} 
+                        >
+                            <h2>{item.front}</h2>
+                        </div>
+                        <div className={styles.cardBack}>
+                            <ul>
+                                {item.points.map((point, i) => (
+                                    <li key={i}>{point}</li>
+                                ))}
+                            </ul>
+                            <button className={styles.heroBtn}>Learn more</button>
+                        </div>
+                    </div>
+                ))}
+            </div>
 
+            {/* Quote Section */}
             <div className={styles.quoteSection}>
                 <div className={styles.quoteBackground}></div>
                 <p className={styles.quoteText}>
