@@ -36,112 +36,78 @@
 }
 
 /* Focus Cards with Flip Effect */
+/* Focus Cards Section */
 .focusCards {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 40px;
     flex-wrap: wrap;
     margin-top: 5rem;
     margin-bottom: 5rem;
-
-}
-
-.card {
+  }
+  
+  .card {
+    perspective: 1000px;
     width: 250px;
     height: 300px;
-    display: flex;
-    flex-direction: column;
-}
-
-.cardInner {
-    width: 100%;
-    height: 100%;
     position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-}
-
-.card:hover .cardInner {
-    transform: rotateY(180deg);
-}
-
-.cardFront {
-    position: relative; /* Allow the title to be positioned relative to the card */
-    background: rgba(255, 250, 240, 0.2);
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-grow: 1;
-}
-
-.cardFront h2 {
-    position: absolute; /* Position title absolutely within cardFront */
-    top: 50%; /* Vertically center the title */
-    left: 50%; /* Horizontally center the title */
-    transform: translate(-50%, -50%); /* Adjust position to center exactly */
-    font-size: 1.5rem; /* Adjust title size */
-    font-weight: bold; /* Make the title bold */
-    color: white; /* Set title color for better contrast */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional text shadow for better readability */
-}
-
-.cardFront, .cardBack {
-    position: absolute;
+    margin: 10px;
+  }
+  
+  .cardFront,
+  .cardBack {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    position: absolute;
     backface-visibility: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 250, 240, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 20px;
     text-align: center;
-}
-
-.cardBack {
-    transform: rotateY(180deg);
-    background: #e8d8c4;
-    color: black;
-    display: flex;
-    flex-direction: column;
-}
-
-.cardBack ul {
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .cardFront {
+    color: #fff;
+    background-size: cover; /* Ensure the image covers the entire card */
+    background-position: center; /* Center the image */
+    color: #fff; /* Ensure text is visible over the image */
+    transform: rotateY(0deg);
+  }
+  
+  .cardFront h2 {
+    margin-bottom: 10px;
+  }
+  
+  .cardFront ul {
     list-style-type: none;
     padding: 0;
-}
-
-.cardBack li {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-.cardImage {
-    width: 100%;
-    height: 100%; /* This makes the image take up the full height of the card */
-    object-fit: cover; /* Ensures the image maintains its aspect ratio and covers the area */
-    border-radius: 10px;
-}
-
-.seeMoreBtn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.seeMoreBtn:hover {
-    background-color: #45a049;
-}
-
+  }
+  
+  .cardFront li {
+    margin-bottom: 8px;
+  }
+  
+  .cardBack {
+    background-color: #efefef;
+    color: #000;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card:hover .cardFront {
+    transform: rotateY(-180deg);
+  }
+  
+  .card:hover .cardBack {
+    transform: rotateY(0deg);
+  }
+  
 /* Quote Section */
 .quoteSection {
     display: flex;
@@ -178,32 +144,22 @@
 }
 
 
-.learnMoreButton {
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+.heroBtn {
+    margin-top: 20px;
+    padding: 14px 30px;
+    font-size: 18px;
     font-weight: bold;
-    transition: background 0.3s;
-}
-.learnMoreButton:focus {
-    outline: none;
-}
-.learnMoreButton:active {
-    transform: scale(0.95);
-}
-.learnMoreButton:visited {
     color: white;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0096e6, blue);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
-.learnMoreButton:link {
-    color: white;
-}
-.learnMoreButton:focus {
-    outline: none;
-}
-.learnMoreButton:hover {
-    background: #0056b3;
+
+.heroBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 150, 230, 0.8);
 }
 
 

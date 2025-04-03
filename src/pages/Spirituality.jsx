@@ -51,27 +51,26 @@ const Spirituality = () => {
                 </div>
             </div>
 
-            <div className={styles.focusCards}>
-                {cardsData.map((card, index) => (
-                    <div className={styles.card} key={index}>
-                        <div className={styles.cardInner}>
-                            <div className={styles.cardFront}>
-                                <img src={card.image} alt={card.title} className={styles.cardImage} />
-                                <h2>{card.title}</h2>
-                            </div>
-                            <div className={styles.cardBack}>
-                                <h2>{card.title}</h2>
-                                <ul>
-                                    {card.points.map((point, i) => (
+             <div className={styles.focusCards}>
+                               {cardsData.map((item, index) => (
+                                 <div className={styles.card} key={index}>
+                                   <div 
+                                     className={styles.cardFront} 
+                                     style={{ backgroundImage: `url(${item.image})` }} // Fix: Correct image styling
+                                   >
+                                     <h2>{item.title}</h2>
+                                   </div>
+                                   <div className={styles.cardBack}>
+                                   <ul>
+                                        {item.points.map((point, i) => (
                                         <li key={i}>{point}</li>
-                                    ))}
-                                </ul>
-                                <button className={styles.learnMoreButton}>See more</button>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
+                                        ))}
+                                    </ul>
+                                     <button className={styles.heroBtn}>Learn more</button>
+                                   </div>
+                                 </div>
+                               ))}
+                             </div>
 
             <div className={styles.quoteSection}>
                 <div className={styles.quoteBackground}></div>

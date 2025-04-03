@@ -38,118 +38,95 @@
 }
 
 /* Focus Cards - Flip Animation */
+/* Focus Cards Section */
 .focusCards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
     margin-top: 5rem;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.2);
-    width: 250px;
-    height: 350px;
+    margin-bottom: 5rem;
+  }
+  
+  .card {
     perspective: 1000px;
-    cursor: pointer;
-
-}
-
-.cardInner {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    margin: 10px;
+  }
+  
+  .cardFront,
+  .cardBack {
     width: 100%;
     height: 100%;
-    text-align: center;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-}
-
-.card:hover .cardInner {
-    transform: rotateY(180deg);
-}
-
-.cardFront, .cardBack {
     position: absolute;
-    width: 100%;
-    height: 100%;
     backface-visibility: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.cardFront {
-    background: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: black;
-}
-
-.cardBack {
-    background: #cfd8dc;
-    transform: rotateY(180deg);
-    font-size: 1rem;
-    padding: 10px;
-    color: black;
-    display: flex;
     flex-direction: column;
-}
-
-.cardImage {
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     border-radius: 10px;
-}
+    padding: 20px;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .cardFront {
+    color: #fff;
+    background-size: cover; /* Ensure the image covers the entire card */
+    background-position: center; /* Center the image */
+    color: #fff; /* Ensure text is visible over the image */
+    transform: rotateY(0deg);
+  }
+  
+  .cardFront h2 {
+    margin-bottom: 10px;
+  }
+  
+  .cardFront ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cardFront li {
+    margin-bottom: 8px;
+  }
+  
+  .cardBack {
+    background-color: #efefef;
+    color: #000;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card:hover .cardFront {
+    transform: rotateY(-180deg);
+  }
+  
+  .card:hover .cardBack {
+    transform: rotateY(0deg);
+  }
+  
 
-.cardFront img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.card h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.5rem;
+.heroBtn {
+    margin-top: 20px;
+    padding: 14px 30px;
+    font-size: 18px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0096e6, blue);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-.learnMoreButton {
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-.learnMoreButton:focus {
-    outline: none;
-}
-.learnMoreButton:active {
-    transform: scale(0.95);
-}
-.learnMoreButton:visited {
-    color: white;
-}
-.learnMoreButton:link {
-    color: white;
-}
-.learnMoreButton:focus {
-    outline: none;
-}
-.learnMoreButton:hover {
-    background: #0056b3;
+.heroBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 150, 230, 0.8);
 }
 
 

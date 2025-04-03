@@ -45,22 +45,22 @@ const MentalHealth = () => {
                 </div>
             </div>
 
-            <div className={styles.focusCards}>
-                    {cardsData.map((card, index) => (
-                      <div key={index} className={styles.card}>
-                        <div className={styles.cardInner}>
-                          <div className={styles.cardFront}>
-                            <img src={card.image} alt={card.title} className={styles.cardImage} />
-                            <h2>{card.front}</h2>
-                          </div>
-                          <div className={styles.cardBack}>
-                            <p>{card.back}</p>
-                            <button className={styles.learnMoreButton}>Learn More</button>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+           <div className={styles.focusCards}>
+                   {cardsData.map((item, index) => (
+                     <div className={styles.card} key={index}>
+                       <div 
+                         className={styles.cardFront} 
+                         style={{ backgroundImage: `url(${item.image})` }} // Fix: Correct image styling
+                       >
+                         <h2>{item.front}</h2>
+                       </div>
+                       <div className={styles.cardBack}>
+                            <h2>{item.back}</h2>
+                         <button className={styles.heroBtn}>Learn more</button>
+                       </div>
+                     </div>
+                   ))}
+                 </div>
 
             <div className={styles.quoteSection}>
                 <div className={styles.quoteBackground}></div>
