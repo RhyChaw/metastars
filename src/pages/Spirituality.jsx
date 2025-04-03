@@ -76,6 +76,8 @@ const Spirituality = () => {
                 <div className={styles.quoteBackground}></div>
                 <p className={styles.quoteText}>
                     <em>"What you seek is seeking you."</em>
+                    <br />
+                    <em> ~ Rumi</em>    
                 </p>
                 <img src={SeekSpir} alt="Inspiring Visual" className={styles.quoteImage} />
             </div>
