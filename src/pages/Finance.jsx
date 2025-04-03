@@ -32,7 +32,7 @@ const Finance = () => {
         <img src={FINANCE_IMAGE} alt="Finance" className={styles.heroImage} />
         <div className={styles.heroText}>
           <h1>Finance</h1>
-          <p>Financial literacy is a tool that helps in building secure future</p>
+          <p className='italic smol'>Financial literacy is a tool that helps in building secure future</p>
         </div>
       </div>
 

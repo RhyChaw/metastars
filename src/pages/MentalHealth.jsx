@@ -41,7 +41,7 @@ const MentalHealth = () => {
                 <img src={MENTAL_HEALTH_IMAGE} alt="Mental Health" className={styles.heroImage} />
                 <div className={styles.heroText}>
                     <h1>Mental Health</h1>
-                    <h2>Prioritizing emotional and psychological well-being.</h2>
+                    <p className='italic smol'>Prioritizing emotional and psychological well-being.</p>
                 </div>
             </div>
 

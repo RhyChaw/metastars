@@ -13,6 +13,15 @@ const Land3 = () => {
 
   const focusCardsData = [
     {
+      title: 'Spirituality',
+      image: spiritCard,
+      points: [
+        'Finding inner peace',
+        'Exploring different perspectives',
+        'Living with purpose'
+      ]
+    },
+    {
       title: 'Financial Literacy',
       image: finCard,
       points: [
@@ -28,15 +37,6 @@ const Land3 = () => {
         'Building emotional resilience',
         'Self-discovery & mindfulness',
         'Creating a support network'
-      ]
-    },
-    {
-      title: 'Spirituality',
-      image: spiritCard,
-      points: [
-        'Finding inner peace',
-        'Exploring different perspectives',
-        'Living with purpose'
       ]
     }
   ];

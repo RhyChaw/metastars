@@ -35,6 +35,7 @@
     z-index: 2;
     max-width: 80%;
     animation: floatUp 1.5s ease-in-out forwards;
+    padding-left: 10rem;
 }
 
 /* Floating Animation */
@@ -83,7 +84,6 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
-    animation: blurToClear 2s ease-out forwards; /* Add the animation for the overlay */
 }
 
 /* Button */

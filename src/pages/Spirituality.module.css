@@ -170,10 +170,11 @@
 }
 
 .quoteText {
-    font-size: 28px;
+    font-size: 48px;
     font-weight: 600;
     max-width: 50%;
     z-index: 2;
+    margin-left: 5rem;
 }
 
 .quoteImage {
@@ -181,6 +182,8 @@
     border-radius: 15px;
     margin-left: 30px;
     z-index: 2;
+    margin-left: 10rem;
+
 }
 
 .quoteBackground {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AboutMS.module.css';
-import DHAMMAWHEEL from '../assets/dhamma.jpg';
+import DHAMMAWHEEL from '../assets/dhamma.png';
 import CHAKRAS from '../assets/chakras.png';
 import LOGO from '../assets/logo.jpeg';
 
@@ -56,12 +56,11 @@ function AboutMS() {
         </div>
       </section>
 
-    </div>
 
 
     <section className={styles.dhamma}>
     <h1 className={styles.dhaamaTitle}>The Eight Corners of Dhamma</h1>
-
+    <img src={DHAMMAWHEEL} alt="Chakras" className={styles.chakrasImage} />
     <div className={styles.dhammaContainer}>
         <div className={styles.dhammaGrid}>
             {[
@@ -85,8 +84,6 @@ function AboutMS() {
     </div>
 </section>
           
-<div className={styles.mw1200}>
-
       {/* Join the Metta Movement */}
       <section className={styles.join}>
         <h2>Join the Metta Movement</h2>

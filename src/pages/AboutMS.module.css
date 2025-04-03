@@ -45,7 +45,7 @@
 }
 
 .image {
-    max-width: 50%;
+    max-width: 100%;
     border-radius: 10px;
 }
 
@@ -147,81 +147,126 @@
 /* Dhamma Section */
 .dhamma {
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-bottom: 80px;
     position: relative;
+    padding: 40px; /* Adjusted padding for better spacing */
+    background: #f1f1f1; /* Light background to blend with the rest */
+    border-radius: 15px; /* Rounded corners for a smoother look */
+    background-size: cover; /* Ensures the background image covers the whole section */
+    background-position: center center; /* Ensures the image stays centered */
+    height: 100%; /* Makes sure the section height is fully covered */
+    color: #333; /* Text color for contrast */
 }
 
 /* Container for Grid + Image */
 .dhammaContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
-    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap; /* Wrap items for mobile screens */
 }
 
-/* Dhamma Grid (2 columns, 4 rows, aligned left) */
+/* Dhamma Grid */
 .dhammaGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 equal rows */
     gap: 20px;
-    width: 20px; /* Takes 40% of screen width */
+    width: 100%; /* Use full width for the grid */
 }
 
-.dhaamaTitle {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: gold;
-}
-
-/* Dhamma Items */
+/* Dhamma Item */
 .dhammaItem {
-    background: #f8f9fa;
-    padding: 15px;
+    background: #ffffff;
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
     font-size: 1rem;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    width: 10vw;
+    display: flex; /* Allow flex properties */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the content */
+    box-shadow: 0 10px 15px rgba(255, 217, 0, 0.3);
+
 }
 
+/* Hover Effect for Dhamma Item */
 .dhammaItem:hover {
     background: #f4f4f4;
-    box-shadow: 0 5px 15px rgba(255, 217, 0, 0.5);
+    box-shadow: 0 10px 15px rgba(255, 217, 0, 0.9);
 }
 
 /* Dhamma Wheel Image */
 .dhammaImage {
-    width: 100vw !important;
-    height: 88vh;
-    object-fit: cover;
+    width: 40%; /* Limit width to avoid overwhelming text */
+    height: auto;
+    object-fit: contain;
     position: absolute;
     right: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
     z-index: -1;
+    border-radius: 10px;
+}
+
+.chakrasImage {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Title Styling */
+.dhaamaTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #b38c00;
+    text-align: center;
 }
 
 /* Responsive Design */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .dhammaContainer {
         flex-direction: column;
         align-items: center;
     }
 
     .dhammaGrid {
-        width: 90vw;
-        grid-template-columns: 1fr;
+        width: 90%;
+        grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+        grid-template-rows: repeat(4, 1fr); /* 4 rows on smaller screens */
+    }
+
+    .dhammaItem {
+        font-size: 1.1rem;
+        padding: 15px;
     }
 
     .dhammaImage {
-        width: 90vw;
-        height: auto;
+        width: 90%; /* Ensure image scales down nicely */
+    }
+
+    .dhaamaTitle {
+        font-size: 1.8rem; /* Slightly smaller title on smaller screens */
     }
 }
 
+@media (max-width: 480px) {
+    .dhammaItem {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .dhaamaTitle {
+        font-size: 1.6rem;
+    }
+}
 
 /* Join Section */
 .join {
