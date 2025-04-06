@@ -211,6 +211,7 @@
     object-fit: cover;
     /* filter: blur(3px); */
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a black tint */
 }
 
 .quoteText {

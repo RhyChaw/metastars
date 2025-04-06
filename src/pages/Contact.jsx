@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import supabase from '../supabaseClient'; // Ensure correct import
 import styles from './Contact.module.css';
-import UNIVERSE from '../assets/universe.jpg';
 
 const Contact = () => {
+    const [landUrl, setLandUrl] = useState('');
+    const [isReady, setIsReady] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: ''
     });
+
+    
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [successMessage, setSuccessMessage] = useState('');
@@ -40,6 +43,30 @@ const Contact = () => {
         setIsSubmitting(false);
     };
 
+    useEffect(() => {
+        const loadAssets = async () => {
+          try {
+            const [{ data: img }] = await Promise.all([
+              supabase.storage.from('asset').getPublicUrl('universe.webp'),
+            ]);
+    
+            if (img?.publicUrl) {
+              const image = new Image();
+              image.src = img.publicUrl;
+    
+              image.onload = () => {
+                setLandUrl(img.publicUrl);
+                setIsReady(true); // Render once image is fully loaded
+              };
+            }
+          } catch (error) {
+            console.error('Error loading media:', error);
+          }
+        };
+    
+        loadAssets();
+      }, []);
+
     return (
         <div className={styles.landingPage}>
             <div className={styles.heroSection}>
@@ -50,7 +77,7 @@ const Contact = () => {
                     </p>
                 </div>
                 <div className={styles.heroImageContainer}>
-                    <img src={UNIVERSE} alt="UNIVERSE" className={styles.heroImage} />
+                    <img src={landUrl} alt="UNIVERSE" className={styles.heroImage} />
                 </div>
             </div>
 

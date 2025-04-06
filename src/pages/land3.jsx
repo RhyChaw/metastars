@@ -1,33 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import styles from './land3.module.css';
-import finCard from '../assets/finCard.jpg';
-import mentalCard from '../assets/mentalCard.jpg';
-import spiritCard from '../assets/spiritCard.jpg';
 import supabase from '../supabaseClient';
 
 const Land3 = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [landUrl, setLandUrl] = useState('');
+  const [cardImages, setCardImages] = useState({
+    spirit: '',
+    fin: '',
+    mental: ''
+  });
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const loadAssets = async () => {
       try {
-        const [{ data: vid }, { data: img }] = await Promise.all([
+        const [
+          { data: vid },
+          { data: img },
+          { data: spirit },
+          { data: fin },
+          { data: mental }
+        ] = await Promise.all([
           supabase.storage.from('asset').getPublicUrl('compassion.mp4'),
           supabase.storage.from('asset').getPublicUrl('universe.webp'),
+          supabase.storage.from('asset').getPublicUrl('spiritCard.webp'),
+          supabase.storage.from('asset').getPublicUrl('finCard.webp'),
+          supabase.storage.from('asset').getPublicUrl('mentalCard.webp'),
         ]);
 
-        if (vid?.publicUrl && img?.publicUrl) {
-          const image = new Image();
-          image.src = img.publicUrl;
+        // Load background image first for LCP
+        const image = new Image();
+        image.src = img.publicUrl;
 
-          image.onload = () => {
-            setLandUrl(img.publicUrl);
-            setVideoUrl(vid.publicUrl);
-            setIsReady(true); // Render once image is fully loaded
-          };
-        }
+        image.onload = () => {
+          setLandUrl(img.publicUrl);
+          setVideoUrl(vid.publicUrl);
+          setCardImages({
+            spirit: spirit.publicUrl,
+            fin: fin.publicUrl,
+            mental: mental.publicUrl
+          });
+          setIsReady(true);
+        };
       } catch (error) {
         console.error('Error loading media:', error);
       }
@@ -42,19 +57,19 @@ const Land3 = () => {
   const focusCardsData = [
     {
       title: 'Spirituality',
-      image: spiritCard,
+      image: cardImages.spirit,
       points: ['Finding inner peace', 'Exploring different perspectives', 'Living with purpose'],
       link: '/spirituality'
     },
     {
       title: 'Financial Literacy',
-      image: finCard,
+      image: cardImages.fin,
       points: ['Understanding budgeting & saving', 'Managing debt wisely', 'Planning for financial freedom'],
       link: '/financial-literacy'
     },
     {
       title: 'Mental Health',
-      image: mentalCard,
+      image: cardImages.mental,
       points: ['Building emotional resilience', 'Self-discovery & mindfulness', 'Creating a support network'],
       link: '/mental-health'
     }
@@ -98,7 +113,10 @@ const Land3 = () => {
       <div className={styles.focusCards}>
         {focusCardsData.map((item, index) => (
           <div className={styles.card} key={index}>
-            <div className={styles.cardFront} style={{ backgroundImage: `url(${item.image})` }}>
+            <div
+              className={styles.cardFront}
+              style={{ backgroundImage: `url(${item.image})` }}
+            >
               <h2>{item.title}</h2>
             </div>
             <div className={styles.cardBack}>
