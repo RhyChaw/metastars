@@ -32,7 +32,7 @@ const Land3 = () => {
       const { data, error } = supabase
         .storage
         .from('asset')
-        .getPublicUrl('universe.jpg');
+        .getPublicUrl('universe.webp');
 
       if (error) {
         console.error('Error fetching image:', error.message);
