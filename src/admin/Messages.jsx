@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import supabase from '../supabaseClient';
-import styles from './AdminDashboard.module.css';
+import styles from '../adminStyling/AdminDashboard.module.css'; // Create a CSS module for Sidebar styling
 
 const Messages = () => {
     const [messages, setMessages] = useState([]);

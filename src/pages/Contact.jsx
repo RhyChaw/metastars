@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import supabase from '../supabaseClient'; // Ensure correct import
-import styles from './Contact.module.css';
+import styles from '../styles/Contact.module.css';
 
 const Contact = () => {
     const [landUrl, setLandUrl] = useState('');

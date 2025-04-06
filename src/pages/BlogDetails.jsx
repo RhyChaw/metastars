@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import styles from "./TempBlog.module.css";
+import styles from "../styles/TempBlog.module.css";
 
 const blogData = [
     {

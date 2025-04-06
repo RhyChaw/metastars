@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Spirituality.module.css'; // Ensure this CSS file exists
+import styles from '../styles/Spirituality.module.css'; // Ensure this CSS file exists
 import SPIRITUALITY_IMAGE from '../assets/spirituality.jpg'; // Import your image
 import COMPASSION from '../assets/compassion.jpg'; // Import your image
 import SeekSpir from '../assets/seekSpir.jpeg'; // Import your image

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./Blogs.module.css";
+import styles from "../styles/Blogs.module.css";
 
 const blogData = [
     { id: 1, title: "Breaking Free from Financial Anxiety", author: "Jane Doe", description: "How I overcame financial anxiety and gained confidence in money management...", category: "Finance" },

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./AdminDashboard.module.css"; // Using the same CSS module
+import styles from '../adminStyling/AdminDashboard.module.css'; // Create a CSS module for Sidebar styling
 import supabase from "../supabaseClient";
 
 const Blogs = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MemberDetails.module.css';
+import styles from '../adminStyling/MemberDetails.module.css';
 
 const MemberDetails = ({ member, onClose }) => {
   return (

@@ -5,7 +5,6 @@ import Spirituality from './pages/Spirituality';
 import Finance from './pages/Finance';
 import MentalHealth from './pages/MentalHealth';
 import Contact from './pages/Contact';
-import Land2 from './pages/land2';
 import Land3 from './pages/land3';
 import Blogs from './pages/Blogs';
 import BlogDetails from './pages/BlogDetails';

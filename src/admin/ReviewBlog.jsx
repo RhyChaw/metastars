@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import styles from "./ReviewBlog.module.css";
+import styles from "../adminStyling/ReviewBlog.module.css";
 import supabase from "../supabaseClient";
 
 

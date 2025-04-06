@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './MentalHealth.module.css'; // Ensure this CSS file exists
+import styles from '../styles/MentalHealth.module.css'; // Ensure this CSS file exists
 import MENTAL_HEALTH_IMAGE from '../assets/mentalhealth.jpg'; // Import your image
 import SeasonTree from '../assets/SeasonTree.jpeg'; // Import your image
 

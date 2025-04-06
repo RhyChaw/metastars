@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './AdminDashboard.module.css'; // Create a CSS module for Sidebar styling
+import styles from '../adminStyling/AdminDashboard.module.css'; // Create a CSS module for Sidebar styling
 
 const Sidebar = ({ activeTab, onTabChange }) => {
   return (

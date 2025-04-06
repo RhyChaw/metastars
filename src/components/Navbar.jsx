@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './Navbar.module.css';
+import styles from '../compStyling/Navbar.module.css'; // Adjust the path as necessary
 import Logo from '../assets/logo.jpeg';
 import { Menu, X } from 'lucide-react'; // Using Lucide icons for hamburger
 

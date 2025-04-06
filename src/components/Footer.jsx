@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Footer.module.css';
+import styles from '../compStyling/Footer.module.css'; // Adjust the path as necessary
 import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {

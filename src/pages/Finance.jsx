@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Finance.module.css'; // Ensure this CSS file exists
+import styles from '../styles/Finance.module.css'; // Ensure this CSS file exists
 import FINANCE_IMAGE from '../assets/Financee.jpg'; // Import your image
 import BudgetCard from '../assets/budgetingCard.jpg'; // Import your image
 import PassiveIncomeCard from '../assets/passiveIncomeCard.jpg'; // Import your image

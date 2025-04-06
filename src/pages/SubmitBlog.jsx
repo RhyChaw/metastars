@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SubmitBlog.module.css";
+import styles from "../styles/SubmitBlog.module.css";
 import supabase from "../supabaseClient";
 
 const SubmitBlog = () => {

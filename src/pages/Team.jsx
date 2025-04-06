@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Team.module.css";
+import styles from "../styles/Team.module.css";
 import rahulImg from "../assets/rah.jpeg"; // Replace with actual image path
 import rhythmImg from "../assets/me.jpg"; // Replace with actual image path
 import { motion } from "framer-motion";

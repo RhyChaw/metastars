@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Loader.module.css";
+import styles from "../compStyling/Loader.module.css"; // Adjust the path as necessary
 
 const Loader = ({ logo, duration = 2000, onComplete }) => {
   const [loading, setLoading] = useState(true);

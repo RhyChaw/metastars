@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './land3.module.css';
+import styles from '../styles/land3.module.css';
 import supabase from '../supabaseClient';
 
 const Land3 = () => {

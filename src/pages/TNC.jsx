@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TNC.module.css';
+import styles from '../styles/TNC.module.css';
 
 function TNC() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Form.module.css";
+import styles from "../compStyling/Form.module.css"; // Adjust the path as necessary
 import supabase from "../supabaseClient"; // Import Supabase client
 
 const Form = () => {

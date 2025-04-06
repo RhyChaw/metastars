@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TempBlog.module.css'; // Assuming you're using CSS Modules
+import styles from '../styles/TempBlog.module.css'; // Assuming you're using CSS Modules
 
 function TempBlog() {
   return (

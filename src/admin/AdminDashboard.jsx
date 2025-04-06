@@ -3,7 +3,7 @@ import Sidebar from './Sidebar';
 import Messages from './Messages';
 import MemberDirectory from './MemberDirectory';
 import Blogs from './Blogs';
-import styles from './AdminDashboard.module.css';
+import styles from '../adminStyling/AdminDashboard.module.css';
 
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState('messages');
