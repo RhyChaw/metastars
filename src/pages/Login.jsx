@@ -77,7 +77,7 @@ const Login = () => {
         <div className={styles.container}>
             <div className={styles.loginBox}>
                 <h2 className={styles.title}>Admin Login</h2>
-                {error && <p className={styles.error}>{error}</p>}
+                {/* {error && <p className={styles.error}>{error}</p>} */}
                 <form onSubmit={handleLogin} className={styles.form}>
                     <input
                         type="email"
