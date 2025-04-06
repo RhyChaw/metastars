@@ -87,3 +87,78 @@
 .dropdown:hover .dropdownMenu {
     display: block;
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  @media (max-width: 400px) {
+    .navbar {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 10px 20px;
+      justify-content: space-between;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .navbarLinks {
+      flex-direction: column;
+      width: 100%;
+      background: white;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      z-index: 1000;
+      padding: 1rem 0;
+      border-top: 1px solid #ccc;
+    }
+  
+    .navbarLinks.active {
+      display: flex;
+    }
+  
+    .navbarLinks li {
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .dropdownMenu {
+      display: none;
+      flex-direction: column;
+      background: #f9f9f9;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  
+    .dropdownMenu.subActive {
+      display: flex;
+    }
+  
+    .dropdownBtn {
+      background: none;
+      border: none;
+      font-size: 17px;
+      font-weight: 500;
+      color: #333;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .dropdownMenu.subActive {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  

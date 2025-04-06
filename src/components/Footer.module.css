@@ -130,6 +130,7 @@
 }
 
 /* Responsive Design */
+/* Tablet and below */
 @media (max-width: 768px) {
     .footer {
         padding: 45px 18px;
@@ -140,7 +141,8 @@
     }
 
     .paragraph {
-        font-size: 17px;
+        font-size: 16px;
+        padding: 0 10px;
     }
 
     .button {
@@ -149,6 +151,49 @@
     }
 
     .icon {
-        font-size: 32px;
+        font-size: 30px;
+    }
+
+    .contact,
+    .location,
+    .socials {
+        font-size: 16px;
+    }
+}
+
+/* Small mobile (phones) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 35px 14px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .paragraph {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .button {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .icon {
+        font-size: 26px;
+    }
+
+    .contact,
+    .location,
+    .socials {
+        font-size: 15px;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .icons {
+        gap: 20px;
     }
 }

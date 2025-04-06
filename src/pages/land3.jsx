@@ -131,6 +131,18 @@ const Land3 = () => {
         ))}
       </div>
 
+      <div className={styles.aboutSection}>
+        <h2>Empowering Lives Through Wisdom</h2>
+        <p>
+          Empowering lives through financial wisdom, mental strength, and spiritual growth.
+          At Metta Stars Foundation, we believe true success isn’t just about wealth – it’s
+          about clarity, resilience, and purpose. Whether you're looking to take control of
+          your finances, build emotional strength, or find deeper meaning of life, we’re here
+          to support your journey.
+        </p>
+        <button className={styles.heroBtn} onClick={handleClick}>Get Started</button>
+      </div>
+
       <div className={styles.quoteSection}>
         <video
           src={videoUrl}

@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import Logo from '../assets/logo.jpeg';
+import { Menu, X } from 'lucide-react'; // Using Lucide icons for hamburger
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [aboutOpen, setAboutOpen] = useState(false);
+
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+    const toggleAbout = () => setAboutOpen(!aboutOpen);
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.navbarLogo}>
@@ -11,19 +18,26 @@ const Navbar = () => {
                 </a>
             </div>
 
-            <ul className={styles.navbarLinks}>
+            <div className={styles.hamburger} onClick={toggleMenu}>
+                {menuOpen ? <X size={30} /> : <Menu size={30} />}
+            </div>
+
+            <ul className={`${styles.navbarLinks} ${menuOpen ? styles.active : ''}`}>
                 <li><a href="/">Home</a></li>
 
                 <li className={styles.dropdown}>
-                    <a href="#" className={styles.dropdownBtn}>About</a>
-                    <ul className={styles.dropdownMenu}>
+                    <button className={styles.dropdownBtn} onClick={toggleAbout}>
+                        About
+                    </button>
+                    <ul className={`${styles.dropdownMenu} ${aboutOpen ? styles.subActive : ''}`}>
                         <li><a href="/spirituality">Spirituality</a></li>
                         <li><a href="/financial-literacy">Financial Literacy</a></li>
                         <li><a href="/mental-health">Mental Health</a></li>
-                        <li><a href="/aboutMS"> Metta Stars</a></li>
+                        <li><a href="/aboutMS">Metta Stars</a></li>
                         <li><a href="/team">The Team</a></li>
                     </ul>
                 </li>
+
                 <li><a href="/fill-form">Join Us</a></li>
                 <li><a href="/blogs">Blogs</a></li>
             </ul>
@@ -32,4 +46,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
- 
