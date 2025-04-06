@@ -55,8 +55,7 @@ const MemberDirectory = () => {
       {selectedMember && (
         <div className={styles.overlay}>
           <div className={styles.popup}>
-            <MemberDetails member={selectedMember} />
-            <button onClick={closeModal}>Close</button>
+            <MemberDetails member={selectedMember} onClose={closeModal}/>
           </div>
         </div>
       )}

@@ -1,22 +1,56 @@
 import React, { useEffect, useState } from 'react';
-import styles from './land3.module.css'; // Make sure to create and style this CSS file
-import UNIVERSE from '../assets/universe.jpg'; // Import your image
-import COMPASSION from '../assets/compassion.mp4'; // Import your video
-import finCard from '../assets/finCard.jpg'; // Financial Literacy card image
-import mentalCard from '../assets/mentalCard.jpg'; // Mental Health card image
-import spiritCard from '../assets/spiritCard.jpg'; // Spirituality card image
+import styles from './land3.module.css';
+import UNIVERSE from '../assets/universe.jpg';
+import finCard from '../assets/finCard.jpg';
+import mentalCard from '../assets/mentalCard.jpg';
+import spiritCard from '../assets/spiritCard.jpg';
+import supabase from '../supabaseClient';
 
 const Land3 = () => {
+  const [videoUrl, setVideoUrl] = useState('');
+  const [landUrl, setLandUrl] = useState('');
+
+  useEffect(() => {
+    const getVideoUrl = async () => {
+      const { data, error } = supabase
+        .storage
+        .from('asset')
+        .getPublicUrl('compassion.mp4');
+
+      if (error) {
+        console.error('Error fetching video:', error.message);
+      } else {
+        setVideoUrl(data.publicUrl);
+      }
+    };
+
+    getVideoUrl();
+  }, []);
+
+  useEffect(() => {
+    const getLandUrl = async () => {
+      const { data, error } = supabase
+        .storage
+        .from('asset')
+        .getPublicUrl('universe.jpg');
+
+      if (error) {
+        console.error('Error fetching image:', error.message);
+      } else {
+        setLandUrl(data.publicUrl);
+      }
+    };
+
+    getLandUrl();
+  }, []);
+
   const handleClick = () => {
     window.location.href = '/contact';
   };
 
-  const handleLinkClick = (link) => {
-    return () => {
-      window.location.href = link;
-    };
+  const handleLinkClick = (link) => () => {
+    window.location.href = link;
   };
-  
 
   const focusCardsData = [
     {
@@ -67,7 +101,7 @@ const Land3 = () => {
         </div>
 
         <div className={styles.heroImageContainer}>
-          <img src={UNIVERSE} alt="UNIVERSE" className={styles.heroImage} />
+          <img src={landUrl} alt="UNIVERSE" loading="lazy" className={styles.heroImage} />
         </div>
       </div>
 
@@ -90,15 +124,18 @@ const Land3 = () => {
         ))}
       </div>
 
+      {/* Quote Section with Dynamic Video */}
       <div className={styles.quoteSection}>
-        <video
-          src={COMPASSION}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className={styles.quoteBackground}
-        />
+        {videoUrl && (
+          <video
+            src={videoUrl}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={styles.quoteBackground}
+          />
+        )}
         <p className={styles.quoteText}>
           <span className="italic">
             “Compassion isn’t just a word; it’s a movement. And you’re a part of it.”

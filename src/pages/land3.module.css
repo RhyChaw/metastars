@@ -39,9 +39,10 @@
 
 /* Image should be fully visible without shrinking */
 .heroImage {
-    max-width: 100%;
+    width: 100%;
     height: auto; /* Keeps aspect ratio */
     object-fit: contain; /* Ensures full visibility */
+    aspect-ratio: 4 / 3; /* Prevent layout shift */
 }
 
 /* Floating Animation */
