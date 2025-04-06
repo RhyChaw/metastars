@@ -1,51 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import supabase from '../supabaseClient';
+import React from 'react';
 import styles from './MemberDetails.module.css';
 
-const MemberDetailsPage = ( onClose ) => {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const [member, setMember] = useState(null);
-
-  useEffect(() => {
-    const fetchMember = async () => {
-      const { data, error } = await supabase
-        .from('volunteers')
-        .select('*')
-        .eq('id', id)
-        .single();
-
-      if (error) {
-        console.error('Error fetching member details:', error);
-      } else {
-        setMember(data);
-      }
-    };
-
-    fetchMember();
-  }, [id]);
-
-  if (!member) return <p>Loading...</p>;
-
+const MemberDetails = ({ member }) => {
   return (
-    <div className={styles.overlay}>
-      <div className={styles.popup}>
-        <h2>{member.firstName} {member.lastName}</h2>
+    <div className={styles.container}>
+      <h2 className={styles.heading}>{member.firstName} {member.lastName}</h2>
+      <div className={styles.details}>
         <p><strong>Email:</strong> {member.email}</p>
         <p><strong>Phone:</strong> {member.phoneNumber}</p>
         <p><strong>Experience:</strong> {member.experience}</p>
         <p><strong>Availability:</strong> {member.availability}</p>
-        <p><strong>Preferred Areas:</strong> {Array.isArray(member.preferredAreas) ? member.preferredAreas.join(", ") : member.preferredAreas}</p>
-        <p><strong>Can Drive:</strong> {member.canDrive ? "Yes" : "No"}</p>
+        <p><strong>Preferred Areas:</strong> {member.preferredAreas}</p>
+        <p><strong>Can Drive:</strong> {member.canDrive ? 'Yes' : 'No'}</p>
         <p><strong>Location:</strong> {member.location}</p>
         <p><strong>Physical Limitations:</strong> {member.physicalLimitations}</p>
-        <p><strong>Heard About Us:</strong> {member.hearAbout}</p>
+        <p><strong>How did you hear about us?</strong> {member.hearAbout}</p>
         <p><strong>Emergency Contact:</strong> {member.emergencyContact}</p>
-        <button onClick={onClose}>Close</button>
       </div>
     </div>
   );
 };
 
-export default MemberDetailsPage;
+export default MemberDetails;

@@ -9,7 +9,7 @@ const MemberDirectory = () => {
 
   useEffect(() => {
     const fetchMembers = async () => {
-      const { data, error } = await supabase.from('volunteers').select('firstName, lastName, email, phoneNumber, experience, availability, preferredAreas, canDrive, location, physicalLimitations, hearAbout, emergencyContact');
+      const { data, error } = await supabase.from('volunteers').select('id, firstName, lastName, email, phoneNumber, experience, availability, preferredAreas, canDrive, location, physicalLimitations, hearAbout, emergencyContact');
       if (error) {
         console.error('Error fetching members:', error);
       } else {
@@ -18,6 +18,14 @@ const MemberDirectory = () => {
     };
     fetchMembers();
   }, []);
+
+  const handleSeeMore = (member) => {
+    setSelectedMember(member);
+  };
+
+  const closeModal = () => {
+    setSelectedMember(null);
+  };
 
   return (
     <div className={styles.memberDirectoryContainer}>
@@ -36,13 +44,22 @@ const MemberDirectory = () => {
               <td>{member.firstName} {member.lastName}</td>
               <td>{member.email}</td>
               <td>
-                <button onClick={() => setSelectedMember(member)}>See More</button>
+                <button onClick={() => handleSeeMore(member)}>See More</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      {selectedMember && <MemberDetails member={selectedMember} onClose={() => setSelectedMember(null)} />}
+
+      {/* Popup Modal for Member Details */}
+      {selectedMember && (
+        <div className={styles.overlay}>
+          <div className={styles.popup}>
+            <MemberDetails member={selectedMember} />
+            <button onClick={closeModal}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

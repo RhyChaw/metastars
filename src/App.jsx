@@ -29,6 +29,8 @@ import AdminRoute from './components/AdminRoute';
 import AdminDashboard from './admin/AdminDashboard';
 import TempBlog from './pages/TempBlog';
 import Team from './pages/Team';
+import MemberDirectory from './admin/MemberDirectory';
+import MemberDetails from './admin/MemberDetails';
 
 function App() {
 
@@ -57,6 +59,8 @@ function App() {
         <Route index element={<AdminDashboard />} />
         <Route path="review/:id" element={<ReviewBlog />} />
     </Route>
+
+    <Route path='/admin/member/:id' element={<MemberDetails />} />
 </Routes>
       <Footer />
     </Router>
