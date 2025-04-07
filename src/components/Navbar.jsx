@@ -27,7 +27,7 @@ const Navbar = () => {
 
                 <li className={styles.dropdown}>
                     <button className={styles.dropdownBtn} onClick={toggleAbout}>
-                        About
+                        About {aboutOpen ? '▲' : '▼'}
                     </button>
                     <ul className={`${styles.dropdownMenu} ${aboutOpen ? styles.subActive : ''}`}>
                         <li><a href="/spirituality">Spirituality</a></li>
