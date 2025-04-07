@@ -253,7 +253,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #E67732; /* or black, or white */
+    background-color: black; /* or black, or white */
     color: white;
     font-size: 1.5rem;
   }
