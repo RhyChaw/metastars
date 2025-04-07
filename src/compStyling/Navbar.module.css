@@ -52,9 +52,10 @@
 }
 
 /* Disable hover display for dropdown menu */
-.dropdown:hover .dropdownMenu {
+/* .dropdown:hover .dropdownMenu {
   display: none !important;
-}
+} */
+
 
 /* Dropdown Menu */
 .dropdownMenu {
@@ -121,6 +122,10 @@
     height: auto;
     padding: 10px 20px;
     justify-content: space-between;
+    max-width: 400px;
+    display: flex;
+    flex-direction: row !important;
+    height: 150px !important;
   }
 
   .hamburger {
@@ -153,13 +158,20 @@
   .dropdownMenu {
     display: none;
     flex-direction: column;
+    align-items: center;
     background: #f9f9f9;
     border-radius: 8px;
-    margin-top: 10px;
+    align-self: center;
+
   }
 
   .dropdownMenu.subActive {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    animation: fadeIn 0.3s ease-in-out;
+    align-self: center;
   }
 
   .dropdownBtn {

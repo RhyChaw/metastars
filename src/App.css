@@ -13,6 +13,11 @@ body {
     box-sizing: border-box;
 }
 
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 .italic {
     font-style: italic;
 }
@@ -26,4 +31,70 @@ body {
     src: url("./fonts/Bugaki.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+}
+
+/* Media Query for screens 400px and below */
+@media (max-width: 400px) {
+    body {
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 14px;
+        width: 100vw !important;
+        overflow-x: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 90%;
+        line-height: 1.2;
+        word-break: break-word;
+    }
+
+    p, span, a, div {
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+
+    .italic {
+        font-size: 14px;
+    }
+
+    .blue {
+        color: #0057b8; /* A lighter blue for mobile readability */
+    }
+
+    .container, .wrapper, .section {
+        width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button, input, select, textarea {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    nav, footer {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+    }
+
+    /* Example utility */
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .center-on-mobile {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
 }

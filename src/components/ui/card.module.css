@@ -1,0 +1,12 @@
+.card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+  }
+  
+  .cardContent {
+    padding: 1rem;
+  }
+  

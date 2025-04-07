@@ -1,0 +1,25 @@
+// DocxUploader.jsx
+import React, { useState } from "react";
+import mammoth from "mammoth";
+
+const DocxUploader = ({ onConvert }) => {
+  const [rawHTML, setRawHTML] = useState("");
+  const handleFileUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const arrayBuffer = await file.arrayBuffer();
+    const result = await mammoth.convertToHtml({ arrayBuffer });
+    setRawHTML(result.value); // You can see the raw HTML output
+    onConvert(result.value); // Pass it to parent
+  };
+
+  return (
+    <div>
+      <input type="file" accept=".docx" onChange={handleFileUpload} />
+      <div dangerouslySetInnerHTML={{ __html: rawHTML }} />
+    </div>
+  );
+};
+
+export default DocxUploader;

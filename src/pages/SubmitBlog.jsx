@@ -1,106 +1,123 @@
-import React, { useState } from "react";
-import styles from "../styles/SubmitBlog.module.css";
-import supabase from "../supabaseClient";
+import React, { useState } from 'react';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
+import { Button } from '../components/ui/button';
+import { Card, CardContent } from '../components/ui/card';
+import { Label } from '../components/ui/label';
+import { Switch } from '../components/ui/switch';
+import { Separator } from '../components/ui/separator';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../components/ui/tabs';
+import styles from '../styles/SubmitBlog.module.css';
 
-const SubmitBlog = () => {
-    const [formData, setFormData] = useState({
-        title: "",
-        author: "",
-        job: "",
-        content: "",
-        images: []
-    });
+const BlogEditor = () => {
+  const [title, setTitle] = useState('');
+  const [image, setImage] = useState(null);
+  const [content, setContent] = useState('');
+  const [tags, setTags] = useState('');
+  const [category, setCategory] = useState('General');
+  const [isPublished, setIsPublished] = useState(false);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({ ...prevState, [name]: value }));
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const applyMarkdown = (syntax) => {
+    const selectedText = window.getSelection().toString();
+    if (selectedText) {
+      setContent((prev) => prev.replace(selectedText, `${syntax}${selectedText}${syntax}`));
+    }
+  };
+
+  const handleSubmit = () => {
+    const blogData = {
+      title,
+      image,
+      content,
+      tags: tags.split(',').map(tag => tag.trim()),
+      category,
+      isPublished,
+      createdAt: new Date().toISOString(),
     };
+    console.log(blogData);
+    // Send blogData to backend or Firebase
+  };
 
-    const handleImageUpload = async (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
-        
-        const { data, error } = await supabase.storage
-            .from("blog-images")
-            .upload(`blog-${Date.now()}-${file.name}`, file);
-        
-        if (error) {
-            alert("Error uploading image: " + error.message);
-        } else {
-            const imageUrl = supabase.storage.from("blog-images").getPublicUrl(data.path);
-            setFormData(prevState => ({ ...prevState, images: [...prevState.images, imageUrl] }));
-        }
-    };
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.title}>Write a New Blog Post</h1>
+      <Card className="mb-6">
+        <CardContent className={styles.cardContent}>
+          <div>
+            <Label>Title</Label>
+            <Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Enter blog title" />
+          </div>
+          <div>
+            <Label>Upload Cover Image</Label>
+            <Input type="file" onChange={handleImageUpload} />
+            {image && <img src={image} alt="preview" className={styles.imagePreview} />}
+          </div>
+          <div>
+            <Label>Tags (comma-separated)</Label>
+            <Input value={tags} onChange={(e) => setTags(e.target.value)} placeholder="e.g. tech,react,personal" />
+          </div>
+          <div>
+            <Label>Category</Label>
+            <select className={styles.select} value={category} onChange={(e) => setCategory(e.target.value)}>
+              <option value="General">General</option>
+              <option value="Tech">Tech</option>
+              <option value="Personal">Personal</option>
+              <option value="Education">Education</option>
+              <option value="Inspiration">Inspiration</option>
+            </select>
+          </div>
+          <div className={styles.flexRow}>
+            <Label>Publish Now?</Label>
+            <Switch checked={isPublished} onCheckedChange={() => setIsPublished(!isPublished)} />
+          </div>
+        </CardContent>
+      </Card>
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        
-        const { data, error } = await supabase
-            .from("blogs")
-            .insert([{ ...formData, status: "Pending for review" }]);
-
-        if (error) {
-            alert("Error submitting blog: " + error.message);
-        } else {
-            alert("Blog submitted for review!");
-            setFormData({ title: "", author: "", job: "", content: "", images: [] });
-        }
-    };
-
-    return (
-        <div className={styles.submitBlogContainer}>
-            <h1 className={styles.headingPrimary}>Write & Preview Your Blog</h1>
-            <p className={styles.paragraph}>Format your blog and arrange images before submission.</p>
-            
-            <form onSubmit={handleSubmit} className={styles.submitBlogForm}>
-                <div className={styles.inputGroup}>
-                    <label htmlFor="title">Blog Title</label>
-                    <input type="text" id="title" name="title" value={formData.title} onChange={handleChange} required placeholder="Enter your blog title" />
-                </div>
-                
-                <div className={styles.inputGroup}>
-                    <label htmlFor="author">Author Name</label>
-                    <input type="text" id="author" name="author" value={formData.author} onChange={handleChange} required placeholder="Enter your name" />
-                </div>
-
-                <div className={styles.inputGroup}>
-                    <label htmlFor="job">Author Job</label>
-                    <input type="text" id="job" name="job" value={formData.job} onChange={handleChange} required placeholder="Your profession" />
-                </div>
-
-                <div className={styles.inputGroup}>
-                    <label htmlFor="content">Blog Content</label>
-                    <textarea 
-                        id="content"
-                        name="content"
-                        value={formData.content}
-                        onChange={handleChange}
-                        rows="10"
-                        placeholder="Write your blog here..."
-                    />
-                </div>
-                
-                <div className={styles.inputGroup}>
-                    <label>Upload Images</label>
-                    <input type="file" onChange={handleImageUpload} accept="image/*" />
-                </div>
-                
-                <button type="submit" className={styles.submitButton}>Submit for Review</button>
-            </form>
-
-            <div className={styles.previewSection}>
-                <h2>Live Preview</h2>
-                <h3>{formData.title}</h3>
-                <p><strong>{formData.author}</strong> - {formData.job}</p>
-                <div>{formData.content}</div>
-                <div className={styles.imagePreview}>
-                    {formData.images.map((img, index) => (
-                        <img key={index} src={img} alt={`Uploaded ${index}`} className={styles.previewImage} />
-                    ))}
-                </div>
+      <Tabs defaultValue="edit">
+        <TabsList className="mb-4">
+          <TabsTrigger value="edit">Edit</TabsTrigger>
+          <TabsTrigger value="preview">Preview</TabsTrigger>
+        </TabsList>
+        <TabsContent value="edit">
+          <div className="space-y-2">
+            <div className={styles.toolbar}>
+              <Button variant="outline" onClick={() => applyMarkdown('**')}>Bold</Button>
+              <Button variant="outline" onClick={() => applyMarkdown('_')}>Italic</Button>
+              <Button variant="outline" onClick={() => setContent(prev => prev + '\n![alt text](image-url)')}>Image</Button>
+              <Button variant="outline" onClick={() => setContent(prev => prev + '\n## Heading')}>Heading</Button>
             </div>
-        </div>
-    );
+            <Textarea
+              rows={10}
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              placeholder="Write your blog content here using markdown..."
+              className={styles.textarea}
+            />
+          </div>
+        </TabsContent>
+        <TabsContent value="preview">
+          <div className={styles.preview} dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br>') }} />
+        </TabsContent>
+      </Tabs>
+
+      <Separator className="my-6" />
+
+      <div className={styles.center}>
+        <Button onClick={handleSubmit} className={styles.publishButton}>Publish Blog</Button>
+      </div>
+    </div>
+  );
 };
 
-export default SubmitBlog;
+export default BlogEditor;

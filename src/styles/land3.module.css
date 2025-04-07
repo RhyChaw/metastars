@@ -1,3 +1,10 @@
+.landingPage {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
+    width: 100% !important;
+}
+
 /* Hero Section - Automatically Adapts to Image Height */
 .heroSection {
     display: flex;
@@ -130,6 +137,7 @@
     height: 300px;
     position: relative;
     margin: 10px;
+    transform-style: preserve-3d;
   }
   
   .cardFront,
@@ -225,12 +233,18 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .quoteSection {
-        padding: 40px 15px;
+      padding: 0 0px;
+      align-self: center;
     }
 
     .quoteText {
         font-size: 24px;
         max-width: 80%;
+    }
+
+    .quoteBackground {
+        filter: blur(2px);
+        padding: 0;
     }
 }
 
@@ -366,5 +380,63 @@
   .aboutSection .heroBtn {
     padding: 12px 30px;
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  
+
+  .heroSection {
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto; /* Allow it to adapt */
+    padding: 20px;  
+    width: 100%;
+    flex-direction: column-reverse;
+    background-color: black;
+
+  } 
+
+  .heroImageContainer {
+    height: auto; /* Keeps aspect ratio */
+    object-fit: cover; /* Ensures full visibility */
+    background-color: black;
+
+  }
+
+  .heroTextContainer, .heroImageContainer {
+    flex: 1 1 auto;
+    width: 100% !important;
+    padding: 25px 0;
+    background-color: black;
+  }
+
+  .heroTextContainer h1 {
+    font-size: 1.8rem; /* Adjust font size for mobile */
+    margin-bottom: 10px;
+    line-height: 1.1; /* Reduced spacing */
+  }
+
+  .focusCards {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #000000;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    min-height: 350px;
+  }
+
+  .heroText {
+    padding: 20px;
+    font-size: .1rem; /* Adjust font size for mobile */
+  }
+
+  .headline {
+    font-size: 3.5rem; /* Adjust font size for mobile */
   }
 }
