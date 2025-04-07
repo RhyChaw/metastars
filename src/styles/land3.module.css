@@ -366,7 +366,6 @@
     align-items: center !important;
     justify-content: center !important;
     height: auto; /* Allow it to adapt */
-    padding: 20px;  
     width: 100%;
     flex-direction: column-reverse;
     background-color: black;
@@ -412,7 +411,7 @@
   }
 
   .headline {
-    font-size: 3.5rem; /* Adjust font size for mobile */
+    font-size: 3rem; /* Adjust font size for mobile */
   }
 }
 
