@@ -1,11 +1,13 @@
 import { Navigate, Outlet } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import supabase from '../supabaseClient';
+import { useNavigate } from 'react-router-dom';
 
 const AdminRoute = () => {
     const [loading, setLoading] = useState(true);
     const [isAdmin, setIsAdmin] = useState(false);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const checkAdmin = async () => {
@@ -13,6 +15,7 @@ const AdminRoute = () => {
                 const { data: { user }, error: userError } = await supabase.auth.getUser();
                 
                 if (userError) {
+                    navigate('/login');
                     setError('Error fetching user data');
                     return;
                 }

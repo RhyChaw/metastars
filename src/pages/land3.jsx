@@ -110,6 +110,16 @@ const Land3 = () => {
         </div>
       </div>
 
+      {/* Our Mission */}
+            <section className={styles.mission}>
+              <h2>Our Mission</h2>
+              <ul>
+                <li><strong>Financial Knowledge:</strong> Educate individuals for long-term security and abundance.</li>
+                <li><strong>Mental Wellness:</strong> Promote emotional intelligence, resilience, and self-care.</li>
+                <li><strong>Spiritual Growth:</strong> Encourage mindfulness, compassion, and purpose-driven action.</li>
+              </ul>
+            </section>
+
       <div className={styles.focusCards}>
         {focusCardsData.map((item, index) => (
           <div className={styles.card} key={index}>
