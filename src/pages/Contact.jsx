@@ -11,8 +11,6 @@ const Contact = () => {
         message: ''
     });
 
-    
-
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [successMessage, setSuccessMessage] = useState('');
 
