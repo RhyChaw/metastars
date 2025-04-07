@@ -68,7 +68,7 @@ const Blogs = () => {
                             <p className={styles.noResults}>No blogs found.</p>
                         )}
                         
-                        <div className={styles.submitBlogSection}>
+                        <div className={styles.readMoreButton}>
                             <Link to="/submit-blog" className={styles.submitBlogButton}>Submit Your Own Blog</Link>
                         </div>
                     </div>
