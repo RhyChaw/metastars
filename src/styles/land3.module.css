@@ -12,6 +12,7 @@
     width: 100%;
     height: auto; /* Adapts dynamically */
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 /* Left Side - Text Section */
@@ -133,8 +134,8 @@
   
   .card {
     perspective: 1000px;
-    width: 250px;
-    height: 300px;
+    width: 350px;
+    height: 400px;
     position: relative;
     margin: 10px;
     transform-style: preserve-3d;
@@ -208,6 +209,7 @@
     overflow: hidden;
     height: auto;
     max-height: 400px;
+    min-height: 200px;
     border-top: 3px solid #000;
 }
 
@@ -278,115 +280,87 @@
     }
 
     
-    /* New design for the section with abstract blue and white art */
-.aboutSection {
-  background: linear-gradient(45deg, #00bfff, #ffffff, #1e90ff, #87cefa); /* Funky blue and white gradient */
-  background-size: 400% 400%; /* Make the gradient move */
-  animation: gradientBG 15s ease infinite; /* Animation for the gradient */
-  padding: 60px 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 5rem;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Funky Text */
-.aboutSection h2 {
-  font-size: 4rem;
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun and playful font */
-  font-weight: 900;
-  color: #003366; /* Dark blue color for contrast */
-  margin-bottom: 20px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-  position: relative;
-  z-index: 1;
-  animation: textAnimation 3s ease-in-out infinite;
-}
-
-@keyframes textAnimation {
-  0% { color: #003366; text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
-  50% { color: #1e90ff; text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); }
-  100% { color: #003366; text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
-}
-
-/* Paragraph Styling */
-.aboutSection p {
-  font-size: 1.5rem;
-  color: #003366;
-  line-height: 1.8;
-  margin-bottom: 40px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 400;
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Add some abstract shapes in the background */
-.aboutSection::before {
-  content: '';
-  position: absolute;
-  top: -30px;
-  left: -30px;
-  right: -30px;
-  bottom: -30px;
-  background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%200h8l4%208h8l-4%208h-8l-4-8z%22%20fill%3D%22%23B0E0E6%22/%3E%3C/svg%3E');
-  opacity: 0.1;
-  z-index: 0;
-  border-radius: 20px;
-}
-
-/* Button Styling */
-.aboutSection .heroBtn {
-  background-color: #003366;
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.aboutSection .heroBtn:hover {
-  background-color: #1e90ff;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .aboutSection h2 {
-    font-size: 2.5rem;
+/* NEW ABOUT SECTION */
+    .aboutSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 500px; /* Set height for the section */
+    margin-bottom: 5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* To keep content from spilling out */
+    background-color: #FEFEFE;
   }
-
-  .aboutSection p {
-    font-size: 1.2rem;
+  
+  .leftSide {
+    background-image: url(${backgroundUrl});
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: 100%;
   }
-
-  .aboutSection .heroBtn {
-    padding: 12px 30px;
-    font-size: 1.2rem;
+  
+  .rightSide {
+    padding: 20px;
+    width: 60%;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 20px;
   }
-}
-
-@media (max-width: 768px) {
+  
+  .rightSide h2 {
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    color: #003366;
+    margin-bottom: 20px;
+  }
+  
+  .rightSide p {
+    font-size: 1.25rem;
+    color: #003366;
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .aboutSection {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .leftSide {
+      width: 100%;
+      height: 300px;
+    }
+  
+    .rightSide {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .rightSide h2 {
+      font-size: 2.5rem;
+    }
+  
+    .rightSide p {
+      font-size: 1.2rem;
+    }
+  
+    .heroBtn {
+      padding: 12px 30px;
+      font-size: 1.2rem;
+    }
+  }
   
 
+/* Media queries */
+
+@media (max-width: 768px) { 
   .heroSection {
     flex-direction: column;
     align-items: center !important;
@@ -444,97 +418,85 @@
 
 
 
+/* MISSION SECTION */
 
-/* Mission Section */
 .mission {
-  background: linear-gradient(135deg, #007BFF, #0056b3); /* Blue gradient background */
-  color: white;  /* White text for contrast */
-  padding: 40px 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  text-align: center;
-  margin: 60px 0;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Title Styling */
-.mission h2 {
+.missionLeft {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.missionLogo {
+  max-width: 200px; /* You can adjust the size of the logo as needed */
+  height: auto;
+}
+
+.missionRight {
+  flex: 2;
+  padding-left: 40px;
+}
+
+.missionRight h2 {
   font-size: 2.5rem;
   font-family: 'Roboto', sans-serif;
-  letter-spacing: 2px;
+  color: #003366;
   margin-bottom: 20px;
-  color: #ffffff;
-  text-transform: uppercase;
   font-weight: 700;
-  position: relative;
 }
 
-.mission h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 50%;
-  height: 2px;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
-/* List Styling */
-.mission ul {
+.missionRight ul {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
-  font-family: 'Lora', serif;
+  margin: 0;
+}
+
+.missionRight li {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
   line-height: 1.8;
-  display: flex;
-  flex-direction: row;
 }
 
-.mission li {
-  font-size: 1.25rem;
-  font-weight: 500;
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle background for items */
-  padding: 12px 20px;
-  border-radius: 8px;
-  margin: 12px 0;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.missionRight li strong {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 10px;
 }
 
-/* Hover Effect on List Items */
-.mission li:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Lighter hover effect */
-  transform: translateY(-5px); /* Slight lift effect */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .mission {
-      padding: 30px 15px;
+    flex-direction: column;
+    text-align: center;
   }
 
-  .mission h2 {
-      font-size: 2rem;
+  .missionRight {
+    padding-left: 0;
+    margin-top: 20px;
   }
 
-  .mission li {
-      font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .mission {
-      padding: 20px;
+  .missionLogo {
+    max-width: 150px;
   }
 
-  .mission h2 {
-      font-size: 1.5rem;
+  .missionRight h2 {
+    font-size: 2rem;
   }
 
-  .mission li {
-      font-size: 1rem;
+  .missionRight li {
+    font-size: 1rem;
   }
 }

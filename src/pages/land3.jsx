@@ -4,6 +4,8 @@ import supabase from '../supabaseClient';
 
 const Land3 = () => {
   const [videoUrl, setVideoUrl] = useState('');
+  const [logo, setLogo] = useState('');
+  const [backgroundUrl, setBackgroundUrl] = useState('');
   const [landUrl, setLandUrl] = useState('');
   const [cardImages, setCardImages] = useState({
     spirit: '',
@@ -20,13 +22,17 @@ const Land3 = () => {
           { data: img },
           { data: spirit },
           { data: fin },
-          { data: mental }
+          { data: mental },
+          { data: background },
+          { data: logo }
         ] = await Promise.all([
           supabase.storage.from('asset').getPublicUrl('compassion.mp4'),
           supabase.storage.from('asset').getPublicUrl('universe.webp'),
           supabase.storage.from('asset').getPublicUrl('spiritCard.webp'),
           supabase.storage.from('asset').getPublicUrl('finCard.webp'),
           supabase.storage.from('asset').getPublicUrl('mentalCard.webp'),
+          supabase.storage.from('asset').getPublicUrl('bluebkg.webp'),
+          supabase.storage.from('asset').getPublicUrl('logo.webp')
         ]);
 
         // Load background image first for LCP
@@ -42,6 +48,8 @@ const Land3 = () => {
             mental: mental.publicUrl
           });
           setIsReady(true);
+          setBackgroundUrl(background.publicUrl);
+          setLogo(logo.publicUrl);
         };
       } catch (error) {
         console.error('Error loading media:', error);
@@ -111,14 +119,25 @@ const Land3 = () => {
       </div>
 
       {/* Our Mission */}
-            <section className={styles.mission}>
-              <h2>Our Mission</h2>
-              <ul>
-                <li><strong>Financial Knowledge:</strong> Educate individuals for long-term security and abundance.</li>
-                <li><strong>Mental Wellness:</strong> Promote emotional intelligence, resilience, and self-care.</li>
-                <li><strong>Spiritual Growth:</strong> Encourage mindfulness, compassion, and purpose-driven action.</li>
-              </ul>
-            </section>
+      <section className={styles.mission}>
+        <div className={styles.missionLeft}>
+          <img
+            src={logo}
+            alt="Metta Stars Logo"
+            className={styles.missionLogo}
+            loading="lazy"
+          />
+        </div>
+        <div className={styles.missionRight}>
+          <h2>Our Mission</h2>
+          <ul>
+            <li><strong>Financial Knowledge:</strong> Educate individuals for long-term security and abundance.</li>
+            <li><strong>Mental Wellness:</strong> Promote emotional intelligence, resilience, and self-care.</li>
+            <li><strong>Spiritual Growth:</strong> Encourage mindfulness, compassion, and purpose-driven action.</li>
+          </ul>
+        </div>
+      </section>
+
 
       <div className={styles.focusCards}>
         {focusCardsData.map((item, index) => (
@@ -142,16 +161,21 @@ const Land3 = () => {
       </div>
 
       <div className={styles.aboutSection}>
-        <h2>Empowering Lives Through Wisdom</h2>
-        <p>
-          Empowering lives through financial wisdom, mental strength, and spiritual growth.
-          At Metta Stars Foundation, we believe true success isn’t just about wealth – it’s
-          about clarity, resilience, and purpose. Whether you're looking to take control of
-          your finances, build emotional strength, or find deeper meaning of life, we’re here
-          to support your journey.
-        </p>
-        <button className={styles.heroBtn} onClick={handleClick}>Get Started</button>
+        <div className={styles.leftSide} style={{ backgroundImage: `url(${backgroundUrl})` }}></div>
+        <div className={styles.rightSide}>
+          <h2>Empowering Lives Through Wisdom</h2>
+          <p>
+            Empowering lives through financial wisdom, mental strength, and spiritual growth.
+            At Metta Stars Foundation, we believe true success isn’t just about wealth – it’s
+            about clarity, resilience, and purpose. Whether you're looking to take control of
+            your finances, build emotional strength, or find deeper meaning of life, we’re here
+            to support your journey.
+          </p>
+          <button className={styles.heroBtn} onClick={handleClick}>Get Started</button>
+        </div>
       </div>
+
+
 
       <div className={styles.quoteSection}>
         <video
