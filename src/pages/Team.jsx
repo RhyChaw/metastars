@@ -73,7 +73,7 @@ const Team = () => {
           <img src={teamImages.rhythm} alt="Rhythm Chawla" className={styles.image} />
           <div className={styles.info}>
             <h3>Rhythm Chawla</h3>
-            <em>Software Developer | Maheku's patidev hehe</em>
+            <em>Software Developer</em>
             <p>
               A Computer Science enthusiast who played a key role in website development
               and design, ensuring a seamless and stunning user experience.
