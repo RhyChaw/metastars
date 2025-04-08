@@ -30,6 +30,7 @@
 
 .navbarLinks li {
   position: relative;
+  z-index: 3;
 }
 
 .navbarLinks a {
@@ -74,6 +75,7 @@
   width: 200px;
   margin-top: 10px;
   width: 100%;
+  z-index: 200000000;
 
 }
 

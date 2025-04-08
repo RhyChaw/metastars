@@ -3,6 +3,7 @@ import styles from '../styles/AboutMS.module.css';
 import DHAMMAWHEEL from '../assets/DharmaWheel.png';
 import CHAKRAS from '../assets/chakras.png';
 import LOGO from '../assets/logo.jpeg';
+import SLOGAN from '../assets/slogan.webp';
 
 function AboutMS() {
   const handleClick = () => {
@@ -36,7 +37,12 @@ function AboutMS() {
         <img src={LOGO} alt="Who We Are" className={styles.image} />
       </section>
 
-      
+      {/* <section className={styles.section}>
+        <div className={styles.content}>
+          <h2>Our Slogan</h2>
+          <img src={SLOGAN} alt="Our Slogan" className={styles.sloganImage} height={300} width={250}/>
+        </div>
+      </section> */}
 
       {/* The Meaning of Metta */}
       <section className={styles.section}>

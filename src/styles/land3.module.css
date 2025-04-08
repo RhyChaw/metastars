@@ -431,11 +431,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 50px 30px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  /* border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); */
 }
 
 .missionLeft {
@@ -446,7 +446,7 @@
 }
 
 .missionLogo {
-  max-width: 200px; /* You can adjust the size of the logo as needed */
+  max-width: 250px; /* You can adjust the size of the logo as needed */
   height: auto;
 }
 

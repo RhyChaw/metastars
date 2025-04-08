@@ -6,7 +6,7 @@ function PrivacyPolicy() {
     <div className={styles.container}>
         <div className={styles.mw}>
       <h1 className={styles.heading}>Privacy Policy</h1>
-      <p className={styles.updated}>Last Updated: August 2024</p>
+      <p className={styles.updated}>Last Updated: March 2025</p>
       
       <section className={styles.section}>
         <h2>1. Introduction</h2>
@@ -70,7 +70,7 @@ function PrivacyPolicy() {
       
       <section className={styles.section}>
         <h2>10. Contact Us</h2>
-        <p>If you have any questions or concerns regarding this Privacy Policy or our data practices, please do not hesitate to contact us at <strong>privacy@mettastars.org</strong>. We are committed to addressing any inquiries you may have in a timely and efficient manner.</p>
+        <p>If you have any questions or concerns regarding this Privacy Policy or our data practices, please do not hesitate to contact us at <strong>mettastars@outlook.com</strong>. We are committed to addressing any inquiries you may have in a timely and efficient manner.</p>
       </section>
       </div>
     </div>

@@ -22,6 +22,10 @@ body {
     font-style: italic;
 }
 
+.smol {
+    font-size: 0.8em;
+}
+
 .blue {
     color: blue;
 }

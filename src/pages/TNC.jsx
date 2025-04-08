@@ -6,7 +6,7 @@ function TNC() {
     <div className={styles.container}>
         <div className={styles.mw}>
       <h1 className={styles.heading}>Terms and Conditions</h1>
-      <p className={styles.updated}>Last Updated: August 2024</p>
+      <p className={styles.updated}>Last Updated: March 2025</p>
       
       <section className={styles.section}>
         <h2>1. Introduction</h2>
@@ -35,7 +35,7 @@ function TNC() {
       
       <section className={styles.section}>
         <h2>4. Privacy Policy</h2>
-        <p>We take your privacy seriously and are committed to protecting your personal information. Please review our <a href="/privacy-policy" className={styles.link}>Privacy Policy</a> for detailed information regarding the collection, use, and protection of your personal data while using our Service.</p>
+        <p>We take your privacy seriously and are committed to protecting your personal information. Please review our <a href="/privacy" className={styles.link}>Privacy Policy</a> for detailed information regarding the collection, use, and protection of your personal data while using our Service.</p>
         <p>By using the Service, you consent to the collection and use of your data as described in our Privacy Policy. If you do not agree to the terms of our Privacy Policy, please do not use the Service.</p>
       </section>
       
@@ -70,7 +70,7 @@ function TNC() {
       
       <section className={styles.section}>
         <h2>10. Contact Us</h2>
-        <p>If you have any questions, concerns, or comments regarding these Terms and Conditions, please contact us at <a href="mailto:support@mettastars.org" className={styles.link}>support@mettastars.org</a>.</p>
+        <p>If you have any questions, concerns, or comments regarding these Terms and Conditions, please contact us at <a href="mailto:mettastars@outlook.com" className={styles.link}>mettastars@outlook.com</a>.</p>
       </section>
       </div>
     </div>
