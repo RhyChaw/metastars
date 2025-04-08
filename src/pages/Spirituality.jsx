@@ -118,7 +118,7 @@ const Spirituality = () => {
                     </div>
                 ))}
             </div>
-
+ 
             <div className={styles.quoteSection}>
                 <div className={styles.quoteBackground}></div>
                 <p className={styles.quoteText}>

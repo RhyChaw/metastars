@@ -25,6 +25,7 @@
   display: flex;
   gap: 30px;
   list-style: none;
+  align-items: center;
 }
 
 .navbarLinks li {
@@ -49,6 +50,8 @@
 .dropdown {
   position: relative;
   z-index: 200000000;
+  width: 200px;
+  margin-right: -120px;
 }
 
 /* Disable hover display for dropdown menu */
@@ -68,7 +71,7 @@
   list-style: none;
   padding: 10px 0;
   border-radius: 10px;
-  /* width: 200px; */
+  width: 200px;
   margin-top: 10px;
   width: 100%;
 
@@ -108,7 +111,7 @@
 .dropdownMenu.subActive {
   display: block;
   animation: fadeIn 0.3s ease-in-out;
-  width: 250px;
+  width: 250px !important;
 }
 
 .dropdownMenu.subActive li a {

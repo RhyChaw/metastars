@@ -145,7 +145,6 @@
     font-weight: 600;
     max-width: 50%;
     z-index: 2;
-    margin-left: 5rem;
 }
 
 .quoteImage {
@@ -203,15 +202,9 @@
       width: 100%;
   }
 
-  .quoteText {
+    .quoteText {
       font-size: 24px;
       max-width: 90%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-self: center;
-      text-align: center;
-
   }
 
   .quoteImage {

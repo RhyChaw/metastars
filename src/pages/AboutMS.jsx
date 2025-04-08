@@ -18,9 +18,9 @@ function AboutMS() {
         <h1>About Metta Stars</h1>
         <p>Empowering lives with financial wisdom, mental well-being, and spiritual depth.</p>
       </section>
-
+ 
       {/* Who We Are */}
-      <section className={styles.section}>
+      <section className={styles.section2}>
         <div className={styles.content}>
           <h2>Who We Are</h2>
           <p>
@@ -82,9 +82,9 @@ function AboutMS() {
           
       {/* Join the Metta Movement */}
       <section className={styles.join}>
-        <h2>Join the Metta Movement</h2>
+        <h2>Join the Metta Stars Movement</h2>
         <p>Whether you seek financial independence, mental clarity, or spiritual depth, embark on this journey with us.</p>
-        <button className={styles.joinButton} onClick={() => handleClick()}>Join the Metta Stars Movement</button>
+        <button className={styles.joinButton} onClick={() => handleClick()}>Get involved</button>
       </section>
       </div>
 

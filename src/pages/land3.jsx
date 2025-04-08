@@ -117,7 +117,7 @@ const Land3 = () => {
           />
         </div>
       </div>
-
+ 
       {/* Our Mission */}
       <section className={styles.mission}>
         <div className={styles.missionLeft}>
