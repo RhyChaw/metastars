@@ -43,7 +43,8 @@ const Spirituality = () => {
     });
     const [landUrl, setLandUrl] = useState('');
     const [isReady, setIsReady] = useState(false);
-
+    const [backgroundUrl, setBackgroundUrl] = useState('');
+    const handleClick = () => window.location.href = '/contact';
     useEffect(() => {
         const loadAssets = async () => {
             try {
@@ -52,13 +53,15 @@ const Spirituality = () => {
                     { data: meditationImage },
                     { data: philosophyImage },
                     { data: wellBeingImage },
-                    { data: seekSpirImage }
+                    { data: seekSpirImage },
+                    { data: backgroundImage }
                 ] = await Promise.all([
                     supabase.storage.from('asset').getPublicUrl('spirituality.webp'),
                     supabase.storage.from('asset').getPublicUrl('meditationCard.webp'),
                     supabase.storage.from('asset').getPublicUrl('philCard.webp'),
                     supabase.storage.from('asset').getPublicUrl('wellBeingCard.webp'),
-                    supabase.storage.from('asset').getPublicUrl('seekSpir.webp')
+                    supabase.storage.from('asset').getPublicUrl('seekSpir.webp'),
+                    supabase.storage.from('asset').getPublicUrl('bluebkg.webp')
                 ]);
 
                 // Set state after fetching all assets
@@ -68,9 +71,10 @@ const Spirituality = () => {
                     meditation: meditationImage.publicUrl,
                     philosophy: philosophyImage.publicUrl,
                     wellbeing: wellBeingImage.publicUrl,
-                    seekSpir: seekSpirImage.publicUrl
+                    seekSpir: seekSpirImage.publicUrl,
+                    backgroundUrl: backgroundImage.publicUrl
                 });
-
+                setBackgroundUrl(backgroundImage.publicUrl);
                 setIsReady(true);
             } catch (error) {
                 console.error('Error loading media:', error);
@@ -95,6 +99,27 @@ const Spirituality = () => {
                 <div className={styles.heroText}>
                     <h1>Spirituality</h1>
                     <p className="italic smol">"You are not a human being searching for a spiritual experience, you are a spiritual being navigating through being human."</p>
+                </div>
+            </div>
+
+            <div className={styles.aboutSection}>
+                <div className={styles.leftSide}></div>
+                <div className={styles.rightSide}>
+                    <h2>Empowering Lives Through Spirituality</h2>
+                    <p>
+                    Come Home to Yourself. Spirituality isn’t about perfection – it’s about connection.
+                    It’s the quiet strength behind every storm, the deeper “why” behind your journey.
+                    At Metta Stars, we blend ancient teachings with modern insight to help you reconnect
+                    – with yourself, with others, and with life itself.
+                    We tap into a circle of credible spiritual guides, mentors, and lived experiences –
+                    so the support you receive is grounded, diverse, and authentic. This is a safe space
+                    to ask questions, explore truth, and grow into the person you were always meant to be.
+                    </p>
+                    <div className='align-center'>
+                        <button className={styles.secondaryBtn} onClick={handleClick}>Start Your Journey</button>
+                        <button className={styles.secondaryBtn} onClick={() => alert('Learn more about us!')}>                   Discover More
+                        </button>
+                    </div>
                 </div>
             </div>
 
