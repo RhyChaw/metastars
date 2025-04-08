@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        setAboutOpen(false); // close dropdown when toggling main menu
+        setAboutOpen(false);
     };
 
     const toggleAbout = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
                 {menuOpen ? <X size={30} /> : <Menu size={30} />}
             </div>
 
-            <ul className={`${styles.navbarLinks} ${menuOpen ? styles.active : ''}`}>
+            <ul className={`${styles.navbarLinks} ${menuOpen ? styles.active : ''} ${aboutOpen ? styles.submenuActive : ''}`}>
                 <li><a href="/" onClick={closeAllMenus}>Home</a></li>
 
                 <li className={styles.dropdown}>
@@ -49,7 +49,7 @@ const Navbar = () => {
                     </ul>
                 </li>
 
-                <li><a href="/fill-form" onClick={closeAllMenus}>Join Us</a></li>
+                <li><a href="/fill-form" onClick={closeAllMenus} className={styles.higherZ}>Join Us</a></li>
                 <li><a href="/blogs" onClick={closeAllMenus}>Blogs</a></li>
             </ul>
         </nav>

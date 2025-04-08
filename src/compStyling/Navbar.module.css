@@ -23,14 +23,14 @@
 /* Nav Links */
 .navbarLinks {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   list-style: none;
   align-items: center;
 }
 
 .navbarLinks li {
   position: relative;
-  z-index: 3;
+  width: 120px;
 }
 
 .navbarLinks a {
@@ -51,15 +51,13 @@
 .dropdown {
   position: relative;
   z-index: 200000000;
-  width: 200px;
-  margin-right: -120px;
+  position: relative;
 }
 
 /* Disable hover display for dropdown menu */
 /* .dropdown:hover .dropdownMenu {
   display: none !important;
 } */
-
 
 /* Dropdown Menu */
 .dropdownMenu {
@@ -72,18 +70,19 @@
   list-style: none;
   padding: 10px 0;
   border-radius: 10px;
-  width: 200px;
+  width: 220px ; /* Increased from 200px */
   margin-top: 10px;
-  width: 100%;
-  z-index: 200000000;
+  overflow-x: scroll;
+}
 
+.dropdownMenu ul {
+  width: 230px;
 }
 
 .dropdownMenu li a {
   color: black;
   display: block;
-  width: 200px !important;
-  overflow-x: hidden;
+  width: 100%;
   text-align: left;
   padding: 10px 20px;
 }
@@ -113,12 +112,6 @@
 .dropdownMenu.subActive {
   display: block;
   animation: fadeIn 0.3s ease-in-out;
-  width: 250px !important;
-}
-
-.dropdownMenu.subActive li a {
-  width: 150px;
-  padding: 10px 20px;
 }
 
 /* Hamburger Menu */
@@ -134,10 +127,8 @@
     height: auto;
     padding: 10px 20px;
     justify-content: space-between;
-    max-width: 400px;
     display: flex;
     flex-direction: row !important;
-    height: 150px !important;
   }
 
   .hamburger {
@@ -170,20 +161,13 @@
   .dropdownMenu {
     display: none;
     flex-direction: column;
-    align-items: center;
     background: #f9f9f9;
     border-radius: 8px;
-    align-self: center;
-
+    margin-top: 10px;
   }
 
   .dropdownMenu.subActive {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    animation: fadeIn 0.3s ease-in-out;
-    align-self: center;
   }
 
   .dropdownBtn {

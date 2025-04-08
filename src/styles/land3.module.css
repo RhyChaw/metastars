@@ -51,6 +51,7 @@
     height: auto; /* Keeps aspect ratio */
     object-fit: contain; /* Ensures full visibility */
     aspect-ratio: 4 / 3; /* Prevent layout shift */
+    object-position: left;
 }
 
 /* Floating Animation */
@@ -247,7 +248,6 @@
     }
 
     .quoteBackground {
-        filter: blur(2px);
         padding: 0;
     }
 }
@@ -294,15 +294,35 @@
     overflow: hidden; /* To keep content from spilling out */
     background-color: #FEFEFE;
   }
-  
+
   .leftSide {
-    background-image: url(${backgroundUrl});
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center top !important;
     width: 40%;
     height: 100%;
+    animation: scrollImage 10s linear infinite !important;
+}
+
+.leftSide {
+  background-image: url(${backgroundUrl});
+  background-size: 200% 100%; /* Increase width of the image */
+  background-position: left center;  /* Start position at the left */
+  width: 40%;
+  height: 100%;
+  animation: scrollImage 10s linear infinite; /* Continuous scrolling animation */
+  background-repeat: no-repeat; /* Prevents repeating the background */
+}
+
+@keyframes scrollImage {
+  0% {
+      background-position: left center; /* Start at the left */
   }
-  
+  100% {
+      background-position: right center; /* Move to the right */
+  }
+}
+
+
   .rightSide {
     padding: 20px;
     width: 60%;
@@ -385,12 +405,17 @@
     width: 100% !important;
     padding: 25px 0;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .heroTextContainer h1 {
     font-size: 1.8rem; /* Adjust font size for mobile */
     margin-bottom: 10px;
     line-height: 1.1; /* Reduced spacing */
+    align-items: center;
+    text-align: center;
   }
 
   .focusCards {
@@ -419,6 +444,10 @@
     padding: 20px 10px;
     height: auto; /* Allow it to adapt */
     max-height: 400px;
+  }
+
+  .cardFront h2 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
   }
 }
 

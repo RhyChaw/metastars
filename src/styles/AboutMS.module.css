@@ -322,6 +322,10 @@
         font-size: 1.8rem;
     }
 
+    .content h2 {
+        font-size: 2rem;
+    }
+
     .hero p {
         font-size: 0.95rem;
     }

@@ -61,6 +61,17 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
+
+  .message p {
+    font-size: 1.2rem;
+    color: #555;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.message p.expanded {
+    max-height: 500px; /* Adjust as needed */
+}
+
   
   .message p, .blogPost p {
     font-size: 1.2rem;
@@ -87,3 +98,11 @@
     background-color: #fff;
   }
   
+  /* Optional: Add transitions for expanding/collapsing the message */
+.expandedMessage {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
