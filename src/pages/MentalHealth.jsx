@@ -137,6 +137,7 @@ const MentalHealth = () => {
             and tools that actually help. Through awareness, community, and compassion, we guide you toward resilience, 
             self-understanding, and emotional clarity. Healing begins with being seen.
           </p>
+          <strong>We see you. We feel you. We’re with you.</strong>
         </div>
       </div>
 

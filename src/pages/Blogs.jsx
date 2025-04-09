@@ -5,7 +5,7 @@ import styles from "../styles/Blogs.module.css";
 const blogData = [
     {
       path: "financialFree",
-      title: "Breaking Free from Financial Anxiety",
+      title: "Money makes the world go round",
       author: "Rahul Dhingra",
       description: "How I overcame financial anxiety and gained confidence in money management...",
       category: "Finance",
