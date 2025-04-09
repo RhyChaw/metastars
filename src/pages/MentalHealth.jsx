@@ -135,9 +135,9 @@ const MentalHealth = () => {
             you’re battling anxiety, burnout, or just feeling stuck, we’re here to remind you: you’re not alone.
             We collaborate with mental health professionals, therapists, and credible organizations to bring you insights 
             and tools that actually help. Through awareness, community, and compassion, we guide you toward resilience, 
-            self-understanding, and emotional clarity. Healing begins with being seen.
+            self-understanding, and emotional clarity. Healing begins with being seen.<strong> We see you. We feel you. We’re with you.</strong>
+
           </p>
-          <strong>We see you. We feel you. We’re with you.</strong>
         </div>
       </div>
 
