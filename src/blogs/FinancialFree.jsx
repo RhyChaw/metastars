@@ -13,7 +13,8 @@ function TempBlog() {
 
   const [teamImages, setTeamImages] = useState({
     rahul: '',
-    rhythm: ''
+    rhythm: '',
+    logo: '',
   });
 
   const [isReady, setIsReady] = useState(false);
@@ -23,15 +24,21 @@ function TempBlog() {
       try {
         const [
           { data: rahulImage },
-          { data: rhythmImage }
+          { data: rhythmImage },
+          { data: logo },
+          { data: standingMan },
         ] = await Promise.all([
           supabase.storage.from('asset').getPublicUrl('rah.webp'),
-          supabase.storage.from('asset').getPublicUrl('me.webp')
+          supabase.storage.from('asset').getPublicUrl('me.webp'),
+          supabase.storage.from('asset').getPublicUrl('logo.webp'),
+          supabase.storage.from('asset').getPublicUrl('standingMan.png'),
         ]);
 
         setTeamImages({
           rahul: rahulImage.publicUrl,
-          rhythm: rhythmImage.publicUrl
+          rhythm: rhythmImage.publicUrl,
+          logo: logo.publicUrl,
+          standingMan: standingMan.publicUrl,
         });
 
         setIsReady(true);
@@ -111,7 +118,7 @@ function TempBlog() {
       <h2 className={styles.subheading}>The Domino Effect: How Financial Anxiety Impacts Your Life</h2>
       <p className={styles.content}>Money stress affects mental health, relationships, and decision-making.</p>
       
-      <div className={styles.financialAnxietySigns}>
+      <div className={styles.sideBySide}>
         <div>
         <h3 className={styles.subsubheading}>Mental & Physical Health</h3>
         <p className={styles.content}>Stress about money can cause anxiety, depression, and even physical issues 
@@ -120,7 +127,7 @@ function TempBlog() {
         <h3 className={styles.subsubheading}>Personal Relationships</h3>
         <p className={styles.content}>Money problems are one of the leading causes of relationship issues. Whether 
           it’s arguing with your partner, feeling guilty about not supporting family, or isolating yourself from 
-          friends—you’re not alone in this.</p>
+          friends - you’re not alone in this.</p>
         
         <h3 className={styles.subsubheading}>Decision-Making & Confidence</h3>
         <p className={styles.content}>Financial stress clouds judgment. You might take a job you hate just for security,
@@ -140,38 +147,60 @@ function TempBlog() {
       <p className={styles.content}>The key isn’t to “fix” everything overnight. It’s about building financial resilience—block by block.</p>
       
       <h3 className={styles.subsubheading}>Accept & Reset</h3>
-      <p className={styles.content}>The hardest yet most powerful step is acceptance.</p>
+      <p className={styles.content}>The hardest yet most powerful step is acceptance. You are where you are, and that’s okay. The sooner you accept your reality without shame, the sooner you can create a plan to change it.</p>
       
       <h3 className={styles.subsubheading}>Small, Daily Wins</h3>
       <ul className={styles.list}>
-        <li>Check your bank account daily—just to build awareness.</li>
-        <li>Set tiny, achievable financial goals.</li>
-        <li>Create a budget that allows space for joy.</li>
+        <li>Check your bank account daily—just to build awareness. No judgment.</li>
+        <li>Set tiny, achievable financial goals (saving $10 a week, paying $5 extra toward debt).</li>
+        <li>Create a budget that doesn’t make you miserable. You need space for joy, even when saving.</li>
       </ul>
       
       <h3 className={styles.subsubheading}>Rewire Your Money Mindset</h3>
-      <p className={styles.content}>Stop associating money with fear. See it as a tool, not a monster.</p>
+      <ul className={styles.list}>
+        <li>Stop associating money with fear. See it as a tool, not a monster.</li>
+        <li>Replace "I can’t afford this" with "How can I afford this?"—it shifts your brain from limitation to possibility.</li>
+      </ul>
       
       <h3 className={styles.subsubheading}>Surround Yourself with the Right Voices</h3>
-      <p className={styles.content}>Talk about money with trusted friends—it removes shame.</p>
-      
+      <ul className={styles.list}>
+        <li>Follow financial educators who make money management simple.</li>
+        <li>Talk about money with trusted friends—it removes shame.</li>
+        <li>Read books on financial psychology (Your Money or Your Life is a great start).</li>
+      </ul>
+              
       <blockquote className={styles.quote}>
-        Deep Question: If your bank account reflected your self-worth, what would the balance be?
+        Deep Question: If your bank account reflected your self-worth, what would the balance be? <br />How can you change that?
       </blockquote>
       
       <div className={styles.horizontalLine} />
       <h2 className={styles.subheading}>My Story: From Anxiety to Action</h2>
-      <p className={styles.content}>
-        I’ve lived through financial chaos - multiple times. From being a student drowning in debt, running a business that didn’t pan out, 
-        to restarting my career from scratch, financial anxiety was my constant companion.
-      </p>
-      <p className={styles.content}>
-        I spent years avoiding my finances, hoping things would somehow get better. But nothing changed - until I did.
-      </p>
+
+      <div className={styles.sideBySide}>
+        <div>
+          <p className={styles.content}>
+            I’ve lived through financial chaos - multiple times. From being a student drowning in debt, running a business that didn’t pan out, 
+            to restarting my career from scratch, financial anxiety was my constant companion.
+          </p>
+          <p className={styles.content}>
+            I spent years avoiding my finances, hoping things would somehow get better. But nothing changed - until I did.
+          </p>
+          <p className={styles.content}>
+          The turning point? I accepted my reality. Instead of feeling ashamed, I treated my financial reset like a fresh start. I focused on small, consistent steps rather than overwhelming fixes. And little by little, I built my way up.
+          </p>
+          <p className={styles.content}>
+          I won’t say financial anxiety disappears overnight. But when you shift from fear to action, it loses its grip on you. You become stronger, wiser, and more in control. And that’s where real freedom begins.
+          </p>
+        </div>
+        <img src={teamImages.standingMan} alt='standing man' className={styles.standingMan} />
+      </div>
+        
       <div className={styles.horizontalLine} />
       <blockquote className={styles.quote}>
-        Final Thought: What’s Your Next Step? Financial anxiety doesn’t define you. Your actions do.
+        Final Thought: What’s Your Next Step? Financial anxiety doesn’t define you. Your actions do. <br />So, what’s one small step you’ll take today?
       </blockquote>
+
+      <img className={styles.logo} src={teamImages.logo} alt="Bottom Banner" />
       </div>
     </div>
   );

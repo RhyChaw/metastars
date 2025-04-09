@@ -9,7 +9,7 @@
 
 .container {
   width: 100%;
-  max-width: 900px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,6 +25,56 @@
   border-radius: 12px;
   object-fit: cover;
 }
+
+/* SIDE BY SIDE STUFF */
+
+.sideBySide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.sideBySide > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2C3E50;
+  margin-bottom: 20px;
+}
+
+.standingMan {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .sideBySide {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sideBySide > div {
+    order: 2;
+  }
+
+  .standingMan {
+    order: 1;
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+/* END OF SIDE BY SIDE STUFF */
 
 /* Title */
 .title {
