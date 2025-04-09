@@ -207,6 +207,49 @@
     margin: 10px;
     transform-style: preserve-3d;
   }
+
+  .cardBack {
+    background: linear-gradient(to bottom right, #ffffff, #e6f0fb);
+    color: #2C3E50;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .cardBack h3 {
+    font-size: 1.5rem;
+    color: #4A90E2;
+    margin-bottom: 10px;
+    align-self: center;
+  }
+  
+  .cardBack ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .cardBack li {
+    background: #F5F7FA;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #4A90E2;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .cardBack li:hover {
+    background: #e1ecf9;
+  }
+  
   
   .cardFront,
   .cardBack {
