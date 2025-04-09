@@ -2,6 +2,7 @@ import styles from './burnout.module.css';
 
 export default function BlogPage() {
   return (
+    <div className={styles.container}>
     <div className={styles.blogWrapper}>
       <header className={styles.header}>
         <h1>From Burnout to Balance</h1>
@@ -112,6 +113,7 @@ export default function BlogPage() {
           Let’s stop glorifying exhaustion and start choosing what feels good to live.
         </p>
       </section>
+    </div>
     </div>
   );
 }

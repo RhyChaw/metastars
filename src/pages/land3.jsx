@@ -130,9 +130,9 @@ const Land3 = () => {
           <h2>Our Mission</h2>
           <ul>
             <li>At Metta Stars, we are igniting a movement rooted in compassion, community, and lasting impact. Backed by over 15 years of collective experience and a trusted network of professionals, we are here to be a beacon of support in a world that often feels overwhelming and disconnected.            </li>
-            <li>Our mission is to bridge the gap between knowledge and humanity- to empower minds, uplift spirits, and guide hearts through life’s financial, emotional, and spiritual challenges. We believe in the healing power of connection, and we’re building a community where people feel seen, safe, and supported every step of the way.
+            <li>Our mission is to bridge the gap between knowledge and humanity - to empower minds, uplift spirits, and guide hearts through life’s financial, emotional, and spiritual challenges. We believe in the healing power of connection, and we’re building a community where people feel seen, safe, and supported every step of the way.
             </li>
-            <li>This is more than guidance. This is a revolution of care. A space where truth is shared, growth is nurtured, and no one is left behind. <strong>Together, we’re not just dreaming of a better world- We’re building it.</strong></li>
+            <li>This is more than guidance. This is a revolution of care. A space where truth is shared, growth is nurtured, and no one is left behind. <strong>Together, we’re not just dreaming of a better world - We’re building it.</strong></li>
           </ul>
         </div>
       </section>

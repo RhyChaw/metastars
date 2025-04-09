@@ -1,59 +1,116 @@
+.bigContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f8;
+  width: 100vw;
+}
+
 .container {
-    font-family: 'Segoe UI', sans-serif;
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
-    color: #333;
-    background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2.5rem 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  color: #333;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  color: #2e2e2e;
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* Enhanced Quote Style */
+.quote {
+  margin-top: 1.5rem;
+  font-style: italic;
+  background: #f4f8ff;
+  padding: 1.2rem 1.5rem;
+  border-left: 5px solid #4A90E2;
+  border-radius: 6px;
+  color: #444;
+}
+
+/* Highlight Text */
+.highlight {
+  font-weight: bold;
+  color: #b10000;
+}
+
+/* Refined Image Placeholder */
+.imagePlaceholder {
+  margin: 1.5rem 0;
+  height: 200px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-style: italic;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+}
+
+/* Final Block */
+.final {
+  text-align: center;
+  background-color: #f7f9fb;
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
   }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 2rem;
+
+  .header h1 {
+    font-size: 2rem;
   }
-  
-  .meta {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  .section {
-    margin-bottom: 2.5rem;
-  }
-  
+
   .section h2 {
-    color: #2e2e2e;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
   }
-  
+
+  .section p {
+    font-size: 1rem;
+  }
+
   .quote {
-    margin-top: 1rem;
-    font-style: italic;
-    background: #f9f9f9;
-    padding: 1rem;
-    border-left: 4px solid #ccc;
+    font-size: 1rem;
   }
-  
-  .highlight {
-    font-weight: bold;
-    color: #b10000;
-  }
-  
-  .imagePlaceholder {
-    margin: 1.5rem 0;
-    height: 180px;
-    background-color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
-    font-style: italic;
-  }
-  
-  .final {
-    text-align: center;
-    background-color: #f1f1f1;
-    padding: 2rem;
-    border-radius: 8px;
-  }
-  
+}

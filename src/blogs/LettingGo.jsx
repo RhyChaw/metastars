@@ -3,6 +3,7 @@ import styles from "./LettingGo.module.css";
 
 const LettingGo = () => {
   return (
+    <div className={styles.bigContainer}>
     <div className={styles.container}>
       <header className={styles.header}>
         <h1>The Art of Letting Go</h1>
@@ -132,6 +133,8 @@ const LettingGo = () => {
         </p>
       </section>
     </div>
+    </div>
+
   );
 };
 
