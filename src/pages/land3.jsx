@@ -93,31 +93,29 @@ const Land3 = () => {
 
   return (
     <div className={styles.landingPage}>
-      <div className={styles.heroSection}>
-        <div className={styles.heroTextContainer}>
-          <div className={styles.heroText}>
-            <h1 className={styles.fadeIn}>
-              Welcome to <br />
-              <span className={styles.headline}>Metta Stars</span>
-            </h1>
-            <button className={styles.heroBtn} onClick={handleClick}>
-              Get Started
-            </button>
-          </div>
-        </div>
+<div className={styles.heroSection}>
+  <img
+    src={landUrl}
+    alt="UNIVERSE"
+    loading="eager"
+    width={1200}
+    height={600}
+    className={styles.heroImage}
+  />
 
-        <div className={styles.heroImageContainer}>
-          <img
-            src={landUrl}
-            alt="UNIVERSE"
-            loading="eager"
-            width={1200}
-            height={600}
-            className={styles.heroImage}
-          />
-        </div>
-      </div>
- 
+  <div className={styles.heroOverlay}>
+    <div className={styles.heroText}>
+      <h1 className={styles.fadeIn}>
+        Welcome to <br />
+        <span className={styles.headline}>Metta Stars</span>
+      </h1>
+      <button className={styles.heroBtn} onClick={handleClick}>
+        Get Started
+      </button>
+    </div>
+  </div>
+</div>
+
       {/* Our Mission */}
       <section className={styles.mission}>
         <div className={styles.missionLeft}>

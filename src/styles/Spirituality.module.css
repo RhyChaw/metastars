@@ -218,135 +218,67 @@
 /* NEW ABOUT SECTION */
 .aboutSection {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 500px; /* Set height for the section */
-  margin-bottom: 5rem;
-  border-radius: 20px;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* To keep content from spilling out */
-}
-
-.leftSide {
-  width: 0%; /* We don't need the left side anymore */
-  height: 100%;
-}
-
-.rightSide {
-  padding: 40px;
-  width: 80%;
-  text-align: left;
-  background: #f0e4d7; /* Parchment-like color */
-  background-image: url('https://www.transparenttextures.com/patterns/old-wallpaper.png'); /* Texture to simulate parchment */
-  background-size: cover;
-  border-radius: 20px;
-  border: 5px solid #d4a76e; /* Gold border to give an ancient touch */
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3); /* Subtle shadow inside */
-  font-family: 'Times New Roman', serif; /* Ancient-style font */
-  font-size: 1.2rem;
-  color: #4e3b31; /* Dark brown text */
-  line-height: 1.8;
-  position: relative;
+  width: 100%;
+  height: 500px;
   overflow: hidden;
-  max-width: 90%;
 }
 
-/* Add a parchment roll effect on the edges */
-.rightSide:before,
-.rightSide:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 50px;
+/* Left Side - Image */
+.imageContainer {
+  flex: 1;
   height: 100%;
-  background-color: #d4a76e; /* Golden color to simulate scroll edges */
-  border-radius: 0 0 10px 10px;
 }
 
-.rightSide:before {
-  left: -50px; /* Left side of the scroll */
+.happyPeopleImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.rightSide:after {
-  right: -50px; /* Right side of the scroll */
+/* Right Side - Text */
+.textContainer {
+  flex: 1;
+  background-color: #fff;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
 }
 
-.rightSide h2 {
+.textContainer h2 {
   font-size: 2.5rem;
-  font-family: 'Times New Roman', serif;
-  color: #3e2a1f; /* Dark brown for heading */
-  margin-bottom: 20px;
-  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #085AC9; /* Optional: tie into your Metta Stars palette */
 }
 
-.rightSide p {
-  font-size: 1.2rem;
-  color: #3e2a1f;
-  line-height: 1.8;
-  font-weight: 400;
-  margin-bottom: 30px;
-  text-align: justify;
+.textContainer p {
+  font-size: 1.15rem;
+  line-height: 1.7;
 }
 
-/* Existing Hero Button */
-.heroBtn {
-  padding: 12px 30px;
-  font-size: 1.2rem;
-  background-color: #d4a76e !important; /* Gold-like color */
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.heroBtn:hover {
-  background-color: #c2935b;
-}
-
-/* New Secondary Button */
-.secondaryBtn {
-  padding: 12px 30px;
-  font-size: 1.2rem;
-  background-color: #664700; /* Dark blue color */
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 20px; /* Adds space between the buttons */
-}
-
-.secondaryBtn:hover {
-  background-color: #1a4976;
-}
-
-
-/* Mobile Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
   .aboutSection {
     flex-direction: column;
     height: auto;
   }
 
-  .rightSide {
-    width: 100%;
-    padding: 20px;
+  .imageContainer {
+    height: 300px;
+  }
+
+  .textContainer {
+    padding: 2rem;
     text-align: center;
-    max-width: 90%;
   }
 
-  .rightSide h2 {
-    font-size: 2.5rem;
+  .textContainer h2 {
+    font-size: 2rem;
   }
 
-  .rightSide p {
-    font-size: 1.2rem;
-  }
-
-  .heroBtn {
-    padding: 12px 30px;
-    font-size: 1.2rem;
+  .textContainer p {
+    font-size: 1rem;
   }
 }

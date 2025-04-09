@@ -72,7 +72,6 @@
   border-radius: 10px;
   width: 220px ; /* Increased from 200px */
   margin-top: 10px;
-  overflow-x: scroll;
 }
 
 .dropdownMenu ul {

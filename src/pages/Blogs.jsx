@@ -3,12 +3,29 @@ import { Link } from "react-router-dom";
 import styles from "../styles/Blogs.module.css";
 
 const blogData = [
-    { id: 1, title: "Breaking Free from Financial Anxiety", author: "Jane Doe", description: "How I overcame financial anxiety and gained confidence in money management...", category: "Finance" },
-    { id: 2, title: "From Burnout to Balance", author: "John Smith", description: "A guide to overcoming burnout and finding peace in daily life...", category: "Wellness" },
-    { id: 3, title: "The Art of Letting Go", author: "Emily Johnson", description: "Learn how to embrace change and personal growth...", category: "Self-Improvement" },
-    { id: 4, title: "Mindfulness in Action", author: "Michael Lee", description: "Simple daily practices to transform your life with mindfulness...", category: "Mindfulness" },
-];
-
+    {
+      path: "financialFree",
+      title: "Breaking Free from Financial Anxiety",
+      author: "Rahul Dhingra",
+      description: "How I overcame financial anxiety and gained confidence in money management...",
+      category: "Finance",
+    },
+    {
+      path: "burnout",
+      title: "From Burnout to Balance",
+      author: "Rahul Dhingra",
+      description: "A guide to overcoming burnout and finding peace in daily life...",
+      category: "Wellness",
+    },
+    {
+      path: "lettingGo",
+      title: "The Art of Letting Go",
+      author: "Rahul Dhingra",
+      description: "Learn how to embrace change and personal growth...",
+      category: "Self-Improvement",
+    },
+  ];
+  
 const Blogs = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -43,7 +60,6 @@ const Blogs = () => {
                             <option value="Finance">Finance</option>
                             <option value="Wellness">Wellness</option>
                             <option value="Self-Improvement">Self-Improvement</option>
-                            <option value="Mindfulness">Mindfulness</option>
                         </select>
                     </aside>
                     
@@ -58,7 +74,7 @@ const Blogs = () => {
                                         <h2 className={styles.blogTitle}>{blog.title}</h2>
                                         <p className={styles.blogAuthor}>By {blog.author}</p>
                                         <p className={styles.blogDescription}>{blog.description}</p>
-                                        <Link to={`/blog/${blog.id}`} className={styles.readMoreButton}>Read More</Link>
+                                        <Link to={`/${blog.path}`} className={styles.readMoreButton}>Read More</Link>
                                         {/* <Link to="/submit-blog" className={styles.submitBlogButton}>Submit Your Own Blog</Link> */}
 
                                     </div>
@@ -68,7 +84,7 @@ const Blogs = () => {
                             <p className={styles.noResults}>No blogs found.</p>
                         )}
                         
-                        <div className={styles.readMoreButton}>
+                        <div>
                             <Link to="/submit-blog" className={styles.submitBlogButton}>Submit Your Own Blog</Link>
                         </div>
                     </div>

@@ -8,7 +8,8 @@ const MentalHealth = () => {
     stressImage: '',
     therapyImage: '',
     selfCareImage: '',
-    quoteImage: ''
+    quoteImage: '',
+    happyPpl: '',
   });
 
   const [isReady, setIsReady] = useState(false);
@@ -21,13 +22,15 @@ const MentalHealth = () => {
           { data: stressImg },
           { data: therapyImg },
           { data: selfCareImg },
-          { data: quoteImg }
+          { data: quoteImg },
+          { data: happyPplImg }
         ] = await Promise.all([
           supabase.storage.from('asset').getPublicUrl('mentalhealth.webp'),
           supabase.storage.from('asset').getPublicUrl('stressManagementCard.webp'),
           supabase.storage.from('asset').getPublicUrl('TherapyCard.webp'),
           supabase.storage.from('asset').getPublicUrl('selfCareCardd.webp'),
           supabase.storage.from('asset').getPublicUrl('SeasonTree.webp'),
+          supabase.storage.from('asset').getPublicUrl('colorfulboxes.jpg'),
         ]);
 
         setImages({
@@ -36,6 +39,7 @@ const MentalHealth = () => {
           therapyImage: therapyImg.publicUrl,
           selfCareImage: selfCareImg.publicUrl,
           quoteImage: quoteImg.publicUrl,
+          happyPpl: happyPplImg.publicUrl,
         });
 
         setIsReady(true);
@@ -92,6 +96,9 @@ const MentalHealth = () => {
         </div>
       </div>
 
+
+
+
       {/* Focus Areas with Flip Cards */}
       <div className={styles.focusCards}>
         {cardsData.map((item, index) => (
@@ -113,6 +120,26 @@ const MentalHealth = () => {
           </div>
         ))}
       </div>
+
+
+      {/* About Section */}
+      <div className={styles.aboutSection}>
+        <div className={styles.imageContainer}>
+          <img src={images.happyPpl} alt="Happy People" className={styles.happyPeopleImage} />
+        </div>
+
+        <div className={styles.textContainer}>
+          <h2>Your Mind Matters. So Do You.</h2>
+          <p>
+            Mental health is strength – not weakness. At Metta Stars, we hold space for the real, the raw, and the healing. Whether 
+            you’re battling anxiety, burnout, or just feeling stuck, we’re here to remind you: you’re not alone.
+            We collaborate with mental health professionals, therapists, and credible organizations to bring you insights 
+            and tools that actually help. Through awareness, community, and compassion, we guide you toward resilience, 
+            self-understanding, and emotional clarity. Healing begins with being seen.
+          </p>
+        </div>
+      </div>
+
 
       {/* Quote Section */}
       <div className={styles.quoteSection}>

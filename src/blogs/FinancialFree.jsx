@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../styles/TempBlog.module.css'; // Assuming you're using CSS Modules
+import styles from './FinancialFree.module.css'; // Assuming you're using CSS Modules
 
 // importing images
 import topBanner from '../tempImages/topBanner.png';

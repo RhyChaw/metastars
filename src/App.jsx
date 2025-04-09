@@ -26,10 +26,15 @@ import AdminRoute from './components/AdminRoute';
 
 // Admin imports
 import AdminDashboard from './admin/AdminDashboard';
-import TempBlog from './pages/TempBlog';
+import TempBlog from './blogs/FinancialFree';
 import Team from './pages/Team';
 import MemberDirectory from './admin/MemberDirectory';
 import MemberDetails from './admin/MemberDetails';
+
+// blog imports
+import Burnout from "./blogs/burnout";
+import LettingGo from "./blogs/LettingGo";
+import FinancialFree from "./blogs/FinancialFree";
 
 function App() {
 
@@ -52,6 +57,10 @@ function App() {
     <Route path='/tnc' element={<TNC />} />
     <Route path='/privacy' element={<PrivacyPolicy />} />
     <Route path='/aboutMS' element={<AboutMS />} />
+
+    <Route path="/burnout" element={<Burnout />} />
+    <Route path="/lettingGo" element={<LettingGo />} />
+    <Route path="/financialFree" element={<FinancialFree />} />
 
     {/* Protected Admin Routes */}
     <Route path='/admin/*' element={<AdminRoute />}>

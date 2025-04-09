@@ -21,13 +21,15 @@ const Finance = () => {
           { data: budgetImg },
           { data: passiveIncomeImg },
           { data: finDepImg },
-          { data: quoteImg }
+          { data: quoteImg },
+          { data: grennBox }
         ] = await Promise.all([
           supabase.storage.from('asset').getPublicUrl('Financee.webp'),
           supabase.storage.from('asset').getPublicUrl('budgetingCard.webp'),
           supabase.storage.from('asset').getPublicUrl('passiveIncomeCard.webp'),
           supabase.storage.from('asset').getPublicUrl('FinDependance.webp'),
           supabase.storage.from('asset').getPublicUrl('finlit.webp'),
+          supabase.storage.from('asset').getPublicUrl('greenbox.jpg'),
         ]);
 
         setImages({
@@ -36,6 +38,7 @@ const Finance = () => {
           passiveIncomeImage: passiveIncomeImg.publicUrl,
           finDepImage: finDepImg.publicUrl,
           quoteImage: quoteImg.publicUrl,
+          happyPpl: grennBox.publicUrl
         });
 
         setIsReady(true);
@@ -104,6 +107,21 @@ const Finance = () => {
           </div>
         ))}
       </div>
+
+      {/* About Section */}
+            <div className={styles.aboutSection}>
+              <div className={styles.imageContainer}>
+                <img src={images.happyPpl} alt="Happy People" className={styles.happyPeopleImage} />
+              </div>
+      
+              <div className={styles.textContainer}>
+                <h2>Take Control. Build Freedom.</h2>
+                <p>
+                At Metta Stars, we believe financial literacy isn’t just about numbers – it’s about reclaiming your power. Whether you’re getting out of debt, saving for your dreams, or trying to make sense of money for the first time, we’re here to simplify the complex.
+                Through our network of trusted advisors, educators, and credible financial sources, we bring you guidance that’s real, relevant, and rooted in wisdom. This is about freedom, confidence, and building a future you’re proud of – with every decision, one step closer to peace of mind.
+                </p>
+              </div>
+            </div>
 
       {/* Quote Section */}
       <div className={styles.quoteSection}>
