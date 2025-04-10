@@ -68,16 +68,34 @@ const Contact = () => {
     return (
         <div className={styles.landingPage}>
             <div className={styles.heroSection}>
-                <div className={styles.heroText}>
-                    <h1 className={styles.heroTextAnimate}>Contact us</h1>
-                    <p className={styles.heroTextAnimate}>
-                        We’d love to hear from you! Whether you have questions, feedback, or just want to say hi, feel free to reach out.
-                    </p>
-                </div>
+            <div className={styles.heroText}>
+                <h1 className={styles.heroTextAnimate}>Contact Us</h1>
+                <p className={styles.heroTextAnimate}>
+                    Every message matters to us. We reply with care, because at Metta Stars, you’re not just reaching out<br />
+                    <strong>you’re being welcomed in.</strong>
+                </p>
+            </div>
                 <div className={styles.heroImageContainer}>
                     <img src={landUrl} alt="UNIVERSE" className={styles.heroImage} />
                 </div>
             </div>
+
+            <div className={styles.sideBySide}>
+            <div className={styles.someMoreStuff}>
+                <p>
+                    <strong>We’d Love to Hear From You.</strong>
+                </p>
+                <p>
+                    If something you read here moved you, made you pause, or made you feel seen - <strong>don’t let it end here.</strong> Tell us your story. Share your thoughts. Whether you’re looking for guidance, collaboration, or just need someone to listen, <strong>Metta Stars is more than a platform - it’s a community.</strong>
+                </p>
+                <p>
+                    And if you feel called to be part of our mission - <strong>to contribute, collaborate, or join our team in spreading wisdom, healing, and hope - reach out.</strong> We’re always looking for kindred spirits who want to make a real impact.
+                </p>
+                <p>
+                    Drop us a message. <strong>Let’s connect, heart to heart.</strong>
+                </p>
+            </div>
+
 
 
             <div className={styles.formContainer}>
@@ -121,6 +139,10 @@ const Contact = () => {
                     {successMessage && <p className={styles.successMessage}>{successMessage}</p>}
                 </form>
             </div>
+
+            </div>
+            
+
         </div>
     );
 };
