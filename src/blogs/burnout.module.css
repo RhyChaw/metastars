@@ -104,3 +104,116 @@ blockquote {
     font-size: 1rem;
   }
 }
+
+
+/* Meta Info */
+.metaContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+  gap: 8px;
+}
+
+.dateIcon {
+  font-size: 1.2rem;
+  color: #4A90E2;
+}
+
+/* Author Info */
+.authorSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: right;
+}
+
+.authorText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.author {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1a73e8;
+}
+
+.role {
+  font-style: italic;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.authorImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.horizontalLine {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 30px 0;
+}
+
+.burnoutList {
+  list-style-type: decimal; /* or armenian if you prefer, just make sure it's valid */
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.burnoutList li {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #2C3E50;
+}
+
+.burnoutList li strong {
+  color: #085AC9;
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-height: 300px;
+  align-self: center;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+
+}
+
+.tired {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.sideBySide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}

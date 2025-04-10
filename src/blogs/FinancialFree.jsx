@@ -94,7 +94,7 @@ function TempBlog() {
         Ever felt your heart race when checking your bank account? Or avoided looking at bills altogether? 
         Financial anxiety can show up in different ways:
       </p>
-      <div className={styles.financialAnxietySigns}>
+      <div className={styles.sideBySide}>
         <ul className={styles.list}>
           <li>Constant worry about money, even if nothing urgent is happening.</li>
           <li>Feeling ashamed of financial mistakes and not wanting to talk about them.</li>

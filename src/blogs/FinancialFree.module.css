@@ -9,7 +9,7 @@
 
 .container {
   width: 100%;
-  /* max-width: 1300px; */
+  max-width: 900px;
   margin: 0 auto;
   padding: 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,6 +24,10 @@
   width: 100%;
   border-radius: 12px;
   object-fit: cover;
+}
+
+.financialAnxietyImage {
+  max-width: 200px;
 }
 
 /* SIDE BY SIDE STUFF */
@@ -240,4 +244,12 @@
   .subsubheading {
     font-size: 1.3rem;
   }
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+
 }
