@@ -29,7 +29,7 @@ const LettingGo = () => {
           supabase.storage.from('letgo').getPublicUrl('topQuote.png'),
           supabase.storage.from('asset').getPublicUrl('rah.webp'),
           supabase.storage.from('letgo').getPublicUrl('book.png'),
-          supabase.storage.from('letgo').getPublicUrl('breakup.png'),
+          supabase.storage.from('letgo').getPublicUrl('breakup3.jpeg'),
           supabase.storage.from('letgo').getPublicUrl('balloonGirl.png'),
           supabase.storage.from('letgo').getPublicUrl('liberation.png'),
           supabase.storage.from('letgo').getPublicUrl('mirrorMan.png'),
@@ -165,28 +165,57 @@ const LettingGo = () => {
 
 
       <section className={styles.section}>
-        <h2>My Story: What I Had to Let Go Of</h2>
-        <p>
-        When I went through my heartbreak…It didn’t feel like “just” a breakup. It felt like my world 
-        cracked in places I didn’t know existed. There were so many layers collapsing all at once — 
-        financial stress, business struggles, family far away, not knowing what direction to take in 
-        life… and then losing the one person who made me feel seen in the chaos? It was like someone 
-        turned off the lights in my world, and I was still expected to keep walking. I didn’t talk about
-         it much. Honestly, I felt ashamed. Ashamed of not having it together. Ashamed of feeling so lost. 
-         Ashamed of breaking down in the quiet moments when no one was watching. Ashamed of crying alone 
-         through long nights. 
-        </p>
+  <h2>My Story: The Lesson Life Whispered Through Loss</h2>
+  <p>
+    Letting go sounds like something strong people do. But what I’ve learned is—
+    sometimes it’s not about strength. It’s about survival. There was a season in my life
+    where everything hit at once. Debt was mounting. My family was far. The business I poured
+    my soul into didn’t go where I dreamed it would. I was waking up with a pressure in my chest,
+    trying to smile through the weight of questions I didn’t have answers to.
+    And in the middle of all that, I lost the one person who felt like home.
+    The breakup wasn’t explosive. It wasn’t cruel. It was just… full of weight. Timing. Life.
+    Fear. Confusion. She had her walls, and I had my wounds. But even now, I don’t think either of us
+    stopped feeling. What I felt for her wasn’t some casual love story. It was deep, layered, and honest.
+    She made my world feel softer when everything else was hard. And when it ended, it wasn’t just a relationship
+    I lost—it felt like I lost my safe place.
+  </p>
 
-        <div className={styles.sideBySide}>
-        <blockquote> I kept wondering: Are people going to judge me? 
-               Think I’m weak? Think I messed it all up? 
-               Don’t I deserve to be chosen? To be loved?
-</blockquote>
-        <img className={styles.breakup} src={blogImages.breakup} alt="breakup" />
-        </div>
-        <p>But what I didn’t realize at the time was this -  I wasn’t afraid of what others would say. I was afraid of me. I was afraid to sit with the truth. Afraid to face the pain. Afraid to let go of something I had poured so much love into.
-        </p>
-      </section>
+  <div className={styles.sideBySide}>
+    <blockquote>
+      What made it harder was that I couldn’t talk about it. <br />
+      Not really. <br />
+      I didn’t want to seem broken. <br />
+      I didn’t want to be that guy, still holding on to something that’s already gone.
+    </blockquote>
+    <img className={styles.book} src={blogImages.breakup} alt="breakup" />
+  </div>
+
+  <p>
+    But here’s the truth—I was holding on.
+    Not because I didn’t want to move on…
+    But because I didn’t know how to let go of something that still felt so real in my bones.
+    I’d walk through the day with purpose, but every now and then, a memory would blindside me—a laugh,
+    a dream, a future we once spoke about as if it were certain.
+    The shame didn’t just come from losing her. It came from losing myself in the process.
+    I kept reaching out—to people, to distractions—hoping someone would save me from the heaviness.
+    But no one could. Because I hadn’t looked inside. I was afraid of what I’d find.
+    Eventually, I stopped running. I sat with the mess. I looked at every shattered piece of who
+    I thought I had to be… and I forgave him.
+    I started letting go of needing to be perfect, of needing to have all the answers.
+    And slowly—painfully, patiently—I started learning how to be there for myself.
+    That’s when I realized…
+    Letting go doesn’t mean forgetting.
+    It means making space.
+    Space to grow, space to breathe, space to love again—even if that love, for now, is just for yourself.
+    I haven’t “moved on” completely. There are still quiet moments where I think of her.
+    Not in desperation, not in regret… Just in remembrance—of what was good, what was real,
+    and what will always be part of my story.
+    And maybe, just maybe…
+    That kind of love doesn’t need a neat ending.
+    It just needs to be honored—as the chapter that shaped me the most.
+  </p>
+</section>
+
       <div className={styles.horizontalLine} />
 
 
