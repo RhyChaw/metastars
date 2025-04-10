@@ -234,6 +234,7 @@ blockquote {
   .tired {
     width: 100%;
     max-width: 300px;
+    min-height: 450px;
     height: auto;
     margin: 0 auto;
   }
