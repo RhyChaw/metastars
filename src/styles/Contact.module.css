@@ -270,11 +270,9 @@
     font-size: .5rem;
     color: #333; /* Slightly darker color for readability */
     line-height: 1.8;
-    text-align: left;
+    text-align: center;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9; /* Light background for better contrast */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     letter-spacing: 0.5px;
 }
