@@ -172,6 +172,11 @@
   .sidebar {
       max-width: 100%;
   }
+
+  .blogGrid {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+
 }
 
 /* submit blog button */
