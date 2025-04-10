@@ -26,11 +26,17 @@ function TempBlog() {
           { data: rahulImage },
           { data: rhythmImage },
           { data: logo },
+          { data: selfGrow },
+          { data: book },
+          { data: funFact },
           { data: standingMan },
         ] = await Promise.all([
           supabase.storage.from('asset').getPublicUrl('rah.webp'),
           supabase.storage.from('asset').getPublicUrl('me.webp'),
           supabase.storage.from('asset').getPublicUrl('logo.webp'),
+          supabase.storage.from('asset').getPublicUrl('selfGrow.png'),
+          supabase.storage.from('asset').getPublicUrl('book.png'),
+          supabase.storage.from('asset').getPublicUrl('FunFact.png'),
           supabase.storage.from('asset').getPublicUrl('standingMan.png'),
         ]);
 
@@ -38,6 +44,9 @@ function TempBlog() {
           rahul: rahulImage.publicUrl,
           rhythm: rhythmImage.publicUrl,
           logo: logo.publicUrl,
+          selfGrow: selfGrow.publicUrl,
+          book: book.publicUrl,
+          funFact: funFact.publicUrl,
           standingMan: standingMan.publicUrl,
         });
 
@@ -91,6 +100,8 @@ function TempBlog() {
         Let's break it down.
       </blockquote>
       <div className={styles.horizontalLine} />
+      <section className={styles.section}>
+
       <h2 className={styles.subheading}>Recognizing Financial Anxiety</h2>
 
       <p className={styles.content}>
@@ -115,24 +126,28 @@ function TempBlog() {
       <blockquote className={styles.quote}>
         Deep Question: When was the last time you avoided checking your bank balance? What was the fear behind it?
       </blockquote>
+
+      </section>
       
       <div className={styles.horizontalLine} />
+
       {/* Domino Effect */}
+      <section className={styles.section}>
       <h2 className={styles.subheading}>The Domino Effect: How Financial Anxiety Impacts Your Life</h2>
       <p className={styles.content}>Money stress affects mental health, relationships, and decision-making.</p>
       
       <div className={styles.sideBySide}>
         <div>
-        <h3 className={styles.subsubheading}>Mental & Physical Health</h3>
+        <h2 className={styles.subsubheading}>Mental & Physical Health</h2>
         <p className={styles.content}>Stress about money can cause anxiety, depression, and even physical issues 
           like high blood pressure. It’s a silent weight on your shoulders, making everyday life harder.</p>
         
-        <h3 className={styles.subsubheading}>Personal Relationships</h3>
+        <h2 className={styles.subsubheading}>Personal Relationships</h2>
         <p className={styles.content}>Money problems are one of the leading causes of relationship issues. Whether 
           it’s arguing with your partner, feeling guilty about not supporting family, or isolating yourself from 
           friends - you’re not alone in this.</p>
         
-        <h3 className={styles.subsubheading}>Decision-Making & Confidence</h3>
+        <h2 className={styles.subsubheading}>Decision-Making & Confidence</h2>
         <p className={styles.content}>Financial stress clouds judgment. You might take a job you hate just for security,
           avoid investing in yourself, or hesitate to take necessary risks. Over time, this creates a cycle of fear 
           rather than growth.</p>
@@ -140,46 +155,65 @@ function TempBlog() {
         </div>
         <img className={styles.dominoImage} src={Domino} alt="Domino Effect" />
       </div>
+      <div className={styles.sideBySide}>
+      <img className={styles.book} src={teamImages.funFact} alt="Fun Fact" />
       <blockquote className={styles.quote}>
         Imagine if financial stress burned calories. We’d all have six-packs by now.
       </blockquote>
+      </div>
+      </section>
       
       <div className={styles.horizontalLine} />
 
+      <section className={styles.section}>
       <h2 className={styles.subheading}>Overcoming Financial Anxiety: Step by Step</h2>
       <p className={styles.content}>The key isn’t to “fix” everything overnight. It’s about building financial resilience—block by block.</p>
       
-      <h3 className={styles.subsubheading}>Accept & Reset</h3>
+      <h2 className={styles.subsubheading}>Accept & Reset</h2>
       <p className={styles.content}>The hardest yet most powerful step is acceptance. You are where you are, and that’s okay. The sooner you accept your reality without shame, the sooner you can create a plan to change it.</p>
       
-      <h3 className={styles.subsubheading}>Small, Daily Wins</h3>
+      <h2 className={styles.subsubheading}>Small, Daily Wins</h2>
       <ul className={styles.list}>
         <li>Check your bank account daily—just to build awareness. No judgment.</li>
         <li>Set tiny, achievable financial goals (saving $10 a week, paying $5 extra toward debt).</li>
         <li>Create a budget that doesn’t make you miserable. You need space for joy, even when saving.</li>
       </ul>
-      
-      <h3 className={styles.subsubheading}>Rewire Your Money Mindset</h3>
+
+      <h2 className={styles.subsubheading}>Rewire Your Money Mindset</h2>
+      <div className={styles.sideBySide}>
       <ul className={styles.list}>
         <li>Stop associating money with fear. See it as a tool, not a monster.</li>
         <li>Replace "I can’t afford this" with "How can I afford this?"—it shifts your brain from limitation to possibility.</li>
       </ul>
+
+      <img className={styles.selfGrow} src={teamImages.selfGrow} alt="selfGrow" />
+      </div>
+
       
-      <h3 className={styles.subsubheading}>Surround Yourself with the Right Voices</h3>
+      <h2 className={styles.subsubheading}>Surround Yourself with the Right Voices</h2>
+      <div className={styles.sideBySide}>
       <ul className={styles.list}>
         <li>Follow financial educators who make money management simple.</li>
         <li>Talk about money with trusted friends—it removes shame.</li>
         <li>Read books on financial psychology (Your Money or Your Life is a great start).</li>
       </ul>
-              
+
+      <img src={teamImages.book} alt='book' className={styles.book} />
+      </div>
+
       <blockquote className={styles.quote}>
         Deep Question: If your bank account reflected your self-worth, what would the balance be? <br />How can you change that?
       </blockquote>
-      
+
+      </section>
+
+      <section className={styles.section}>
+
       <div className={styles.horizontalLine} />
       <h2 className={styles.subheading}>My Story: From Anxiety to Action</h2>
 
-      <div className={styles.sideBySide}>
+      <div className={styles.sideBySide} />
+
         <div>
           <p className={styles.content}>
             I’ve lived through financial chaos - multiple times. From being a student drowning in debt, running a business that didn’t pan out, 
@@ -196,7 +230,9 @@ function TempBlog() {
           </p>
         </div>
         <img src={teamImages.standingMan} alt='standing man' className={styles.standingMan} />
-      </div>
+      
+
+      </section>
         
       <div className={styles.horizontalLine} />
       <blockquote className={styles.quote}>
