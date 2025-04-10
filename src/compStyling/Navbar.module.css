@@ -120,7 +120,7 @@
   z-index: 1001;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
     height: auto;

@@ -637,6 +637,7 @@
 
   .missionLogo {
     max-width: 150px;
+    display: none;
   }
 
   .missionRight h2 {
