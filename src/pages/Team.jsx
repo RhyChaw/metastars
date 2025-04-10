@@ -76,11 +76,9 @@ const Team = () => {
             <em>Software Developer</em>
             <p>
             Rhythm is a second-year Computer Science student at the University of Waterloo, 
-            with a deep passion for AI and full-stack web development. They are inspired by 
-            the vision of Metta Stars and are eager to contribute to the community's growth 
-            and betterment. With a strong desire to help bring positive change, Rhythm is 
-            committed to using their skills to support innovative projects and make a meaningful
-             impact. Happy to collaborate on more projects and ideas! :)
+            with a deep passion for AI and full-stack web development. He is inspired by 
+            the vision of Metta Stars and is eager to contribute to the community's growth 
+            and betterment. Happy to collaborate on more projects and ideas! :)
             </p>
           </div>
         </motion.div>
