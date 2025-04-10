@@ -46,6 +46,7 @@ const Spirituality = () => {
     const [isReady, setIsReady] = useState(false);
     const [backgroundUrl, setBackgroundUrl] = useState('');
     const handleClick = () => window.location.href = '/contact';
+    const handleClickButton = () => window.location.href = '/blogs';
     useEffect(() => {
         const loadAssets = async () => {
             try {
@@ -120,7 +121,7 @@ const Spirituality = () => {
                                     <li key={i}>{point}</li>
                                 ))}
                             </ul>
-                            <button className={styles.heroBtn}>Learn more</button>
+                            <button onClick={handleClickButton} className={styles.heroBtn}>Learn more</button>
                         </div>
                     </div>
                 ))}

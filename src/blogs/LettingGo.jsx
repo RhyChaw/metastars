@@ -92,7 +92,7 @@ const LettingGo = () => {
         <img className={styles.quote} src={blogImages.quote} alt="Top Quote" />
 
 
-        <p>Letting go isn’t poetic when you’re in the middle of it. It’s not graceful. It’s not peaceful.It feels like you're losing a part of yourself — the part that once made you feel alive, seen, loved, or safe.</p>
+        <p>Letting go isn’t poetic when you’re in the middle of it. It’s not graceful. It’s not peaceful.It feels like you're losing a part of yourself  - the part that once made you feel alive, seen, loved, or safe.</p>
         <p>
           And yet, life keeps whispering: “Release. You don’t need to carry this anymore.”
           But how do you let go of something that once meant everything to you? 
@@ -104,7 +104,7 @@ const LettingGo = () => {
       <div className={styles.horizontalLine} />
 
       <section className={styles.section}>
-        <h2>Letting Go Is Not Erasure — It’s Liberation
+        <h2>Letting Go Is Not Erasure  - It’s Liberation
         </h2>
         <p>
         We often think letting go means pretending it didn’t matter.But real letting go is sacred.
@@ -167,17 +167,25 @@ const LettingGo = () => {
       <section className={styles.section}>
   <h2>My Story: The Lesson Life Whispered Through Loss</h2>
   <p>
-    Letting go sounds like something strong people do. But what I’ve learned is—
-    sometimes it’s not about strength. It’s about survival. There was a season in my life
-    where everything hit at once. Debt was mounting. My family was far. The business I poured
-    my soul into didn’t go where I dreamed it would. I was waking up with a pressure in my chest,
-    trying to smile through the weight of questions I didn’t have answers to.
-    And in the middle of all that, I lost the one person who felt like home.
-    The breakup wasn’t explosive. It wasn’t cruel. It was just… full of weight. Timing. Life.
-    Fear. Confusion. She had her walls, and I had my wounds. But even now, I don’t think either of us
-    stopped feeling. What I felt for her wasn’t some casual love story. It was deep, layered, and honest.
-    She made my world feel softer when everything else was hard. And when it ended, it wasn’t just a relationship
-    I lost—it felt like I lost my safe place.
+    Letting go sounds like something strong people do. <br />
+    But what I’ve learned is - sometimes it’s not about strength. <br />
+    It’s about survival. <br /><br />
+
+    There was a season in my life where everything hit at once. <br />
+    Debt was mounting. My family was far. <br />
+    The business I poured my soul into didn’t go where I dreamed it would. <br />
+    I was waking up with a pressure in my chest, trying to smile through the weight of questions I didn’t have answers to. <br /><br />
+
+    And in the middle of all that, I lost the one person who felt like home. <br />
+    The breakup wasn’t explosive. It wasn’t cruel. <br />
+    It was just… full of weight. Timing. Life. Fear. Confusion. <br />
+    She had her walls, and I had my wounds. <br /><br />
+
+    But even now, I don’t think either of us stopped feeling. <br />
+    What I felt for her wasn’t some casual love story. <br />
+    It was deep, layered, and honest. <br />
+    She made my world feel softer when everything else was hard. <br />
+    And when it ended, it wasn’t just a relationship I lost - it felt like I lost my safe place.
   </p>
 
   <div className={styles.sideBySide}>
@@ -191,30 +199,42 @@ const LettingGo = () => {
   </div>
 
   <p>
-    But here’s the truth—I was holding on.
-    Not because I didn’t want to move on…
-    But because I didn’t know how to let go of something that still felt so real in my bones.
-    I’d walk through the day with purpose, but every now and then, a memory would blindside me—a laugh,
-    a dream, a future we once spoke about as if it were certain.
-    The shame didn’t just come from losing her. It came from losing myself in the process.
-    I kept reaching out—to people, to distractions—hoping someone would save me from the heaviness.
-    But no one could. Because I hadn’t looked inside. I was afraid of what I’d find.
-    Eventually, I stopped running. I sat with the mess. I looked at every shattered piece of who
-    I thought I had to be… and I forgave him.
-    I started letting go of needing to be perfect, of needing to have all the answers.
-    And slowly—painfully, patiently—I started learning how to be there for myself.
-    That’s when I realized…
-    Letting go doesn’t mean forgetting.
-    It means making space.
-    Space to grow, space to breathe, space to love again—even if that love, for now, is just for yourself.
-    I haven’t “moved on” completely. There are still quiet moments where I think of her.
-    Not in desperation, not in regret… Just in remembrance—of what was good, what was real,
-    and what will always be part of my story.
-    And maybe, just maybe…
-    That kind of love doesn’t need a neat ending.
-    It just needs to be honored—as the chapter that shaped me the most.
+    But here’s the truth - I was holding on. <br />
+    Not because I didn’t want to move on… <br />
+    But because I didn’t know how to let go of something that still felt so real in my bones. <br /><br />
+
+    I’d walk through the day with purpose, but every now and then, a memory would blindside me - a laugh, a dream, a future we once spoke about as if it were certain. <br />
+    The shame didn’t just come from losing her. <br />
+    It came from losing myself in the process. <br /><br />
+
+    I kept reaching out - to people, to distractions - hoping someone would save me from the heaviness. <br />
+    But no one could. <br />
+    Because I hadn’t looked inside. <br />
+    I was afraid of what I’d find. <br /><br />
+
+    Eventually, I stopped running. <br />
+    I sat with the mess. <br />
+    I looked at every shattered piece of who I thought I had to be… and I forgave him. <br /><br />
+
+    I started letting go of needing to be perfect, of needing to have all the answers. <br />
+    And slowly - painfully, patiently - I started learning how to be there for myself. <br /><br />
+
+    That’s when I realized… <br />
+    Letting go doesn’t mean forgetting. <br />
+    It means making space. <br />
+    Space to grow, space to breathe, space to love again - even if that love, for now, is just for yourself. <br /><br />
+
+    I haven’t “moved on” completely. <br />
+    There are still quiet moments where I think of her. <br />
+    Not in desperation, not in regret… <br />
+    Just in remembrance - of what was good, what was real, and what will always be part of my story. <br /><br />
+
+    And maybe, just maybe… <br />
+    That kind of love doesn’t need a neat ending. <br />
+    It just needs to be honored - as the chapter that shaped me the most.
   </p>
 </section>
+
 
       <div className={styles.horizontalLine} />
 
@@ -226,7 +246,7 @@ const LettingGo = () => {
           <li><strong>Feel it fully:</strong> You can't heal what you won’t feel.</li>
           <li><strong>Stop asking "why":</strong> Sometimes healing begins when we start accepting the lesson.</li>
           <li><strong>Talk to yourself kindly:</strong> “I did the best I could with what I knew.”</li>
-          <li><strong>Reclaim your energy:</strong> The thoughts and emotions you’ve given away — they’re yours again.</li>
+          <li><strong>Reclaim your energy:</strong> The thoughts and emotions you’ve given away  - they’re yours again.</li>
           <li><strong>Create new memories:</strong> Fill the space with joy. Music. Friends. Nature.</li>
         </ul>
         <img src={blogImages.balloon} alt="balloon" className={styles.balloon} />
@@ -250,7 +270,7 @@ const LettingGo = () => {
         </div>
         <p>But I promise you this:<br />
         <strong>One day, peace will feel louder than the pain.</strong><br />
-        One day, you’ll realize letting go didn’t break you — it brought you home.</p>
+        One day, you’ll realize letting go didn’t break you  - it brought you home.</p>
       </section>
 
 
@@ -264,7 +284,7 @@ const LettingGo = () => {
         <div className={styles.sideBySide}>
         <p>
           <strong><em>“Letting Go: The Pathway of Surrender” by Dr. David R. Hawkins</em></strong><br />
-          This book is like a soft nudge toward emotional freedom. It doesn’t force healing on you — it walks with you, page by page, until you’re ready to release.
+          This book is like a soft nudge toward emotional freedom. It doesn’t force healing on you  - it walks with you, page by page, until you’re ready to release.
         </p>
 
         <img className={styles.book} src={blogImages.book} alt="Book Cover" />
@@ -275,7 +295,7 @@ const LettingGo = () => {
 
 
       <section className={styles.final}>
-        <h2>Final Words: You're Not Broken — You're Becoming</h2>
+        <h2>Final Words: You're Not Broken  - You're Becoming</h2>
         <p>
         So, if you're standing on the edge of something you're afraid to release...<br />
         Know this: you don’t have to do it all today. <br />
@@ -288,7 +308,7 @@ const LettingGo = () => {
 
         
         <p>Let it go.</p>
-        <p>Not because it didn’t matter —<br />
+        <p>Not because it didn’t matter  -<br />
         But because you do.
         </p>
         

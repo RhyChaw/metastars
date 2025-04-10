@@ -49,6 +49,8 @@ const Finance = () => {
 
     loadAssets();
   }, []);
+  const handleClickButton = () => window.location.href = '/blogs';
+
 
   const cardData = [
     {
@@ -102,7 +104,7 @@ const Finance = () => {
                   <li key={i}>{point}</li>
                 ))}
               </ul>
-              <button className={styles.heroBtn}>Learn more</button>
+              <button className={styles.heroBtn} onClick={handleClickButton}>Learn more</button>
             </div>
           </div>
         ))}

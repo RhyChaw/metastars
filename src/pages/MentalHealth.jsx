@@ -3,6 +3,8 @@ import styles from '../styles/MentalHealth.module.css'; // Ensure this CSS file 
 import supabase from '../supabaseClient'; // Import supabase client
 
 const MentalHealth = () => {
+  const handleClickButton = () => window.location.href = '/blogs';
+
   const [images, setImages] = useState({
     heroImage: '',
     stressImage: '',
@@ -115,7 +117,7 @@ const MentalHealth = () => {
                   <li key={i}>{point}</li>
                 ))}
               </ul>
-              <button className={styles.heroBtn}>Learn more</button>
+              <button className={styles.heroBtn} onClick={handleClickButton}>Learn more</button>
             </div>
           </div>
         ))}
