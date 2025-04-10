@@ -75,8 +75,11 @@ const Team = () => {
             <h3>Rhythm Chawla</h3>
             <em>Software Developer</em>
             <p>
-              A Computer Science enthusiast who played a key role in website development
-              and design, ensuring a seamless and stunning user experience.
+            Rhythm is a second-year Computer Science student at the University of Waterloo, 
+            with a deep passion for AI and full-stack web development. They are inspired by 
+            the vision of Metta Stars and are eager to contribute to the community's growth 
+            and betterment. With a strong desire to help bring positive change, Rhythm is 
+            committed to using their skills to support innovative projects and make a meaningful impact.
             </p>
           </div>
         </motion.div>
