@@ -1,93 +1,110 @@
-.Bigcontainer {
+.bigContainer {
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f5f7fa;
-  padding: 40px 20px;
 }
 
-.container {
-  width: 100%;
+.blogWrapper {
+  padding: 4rem 2rem;
   max-width: 900px;
   margin: 0 auto;
-  padding: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.7;
-  color: #333;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #222;
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-.topBanner {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.financialAnxietyImage {
-  max-width: 200px;
-}
-
-/* SIDE BY SIDE STUFF */
-
-.sideBySide {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.sideBySide > div {
-  flex: 1;
-  min-width: 300px;
-}
-
-.content {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #2C3E50;
-  margin-bottom: 20px;
-}
-
-.standingMan {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* Responsive layout for smaller screens */
-@media (max-width: 768px) {
-  .sideBySide {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .sideBySide > div {
-    order: 2;
-  }
-
-  .standingMan {
-    order: 1;
-    max-width: 80%;
-    margin-bottom: 20px;
-  }
-}
-
-/* END OF SIDE BY SIDE STUFF */
-
-/* Title */
-.title {
-  font-size: 2.4rem;
-  font-weight: 700;
+/* Header */
+.header {
+  margin-bottom: 3rem;
   text-align: center;
-  margin: 20px 0;
-  color: #2c3e50;
 }
+
+.header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: #085AC9;
+  font-weight: 700;
+}
+
+.meta {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Section Layout */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #085AC9;
+  font-weight: 600;
+}
+
+.section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.section ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+
+.section li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+/* Blockquote */
+blockquote {
+  font-style: italic;
+  color: #444;
+  background: #f1f8ff;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #085AC9;
+  margin: 2rem 0;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blogWrapper {
+    padding: 2rem 1rem;
+    border-radius: 8px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section h3 {
+    font-size: 1.3rem;
+  }
+
+  .section p,
+  .section li {
+    font-size: 1rem;
+  }
+}
+
 
 /* Meta Info */
 .metaContainer {
@@ -146,73 +163,6 @@
   object-fit: cover;
 }
 
-/* Image Placeholder */
-.placeholderImage {
-  width: 100%;
-  height: 300px;
-  background-color: #e0e0e0;
-  margin: 25px 0;
-  border-radius: 10px;
-}
-
-/* Content Styling */
-.content {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-  color: #333;
-}
-
-.subheading {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-top: 40px;
-  color: #2c3e50;
-}
-
-.subsubheading {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-top: 30px;
-  color: #2c3e50;
-}
-
-.list {
-  padding-left: 25px;
-  margin-top: 10px;
-}
-
-.list li {
-  margin-bottom: 10px;
-}
-
-/* Quote Block */
-.quote {
-  font-style: italic;
-  background: #f1f8ff;
-  padding: 15px 20px;
-  border-left: 5px solid #4A90E2;
-  margin: 30px 0;
-  color: #333;
-  border-radius: 6px;
-}
-
-/* Inline Image */
-.dominoImage {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  margin: 25px auto;
-  border-radius: 10px;
-}
-
-/* Flex layout for signs/symptoms */
-.financialAnxietySigns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-
 .horizontalLine {
   border: 0;
   height: 1px;
@@ -220,30 +170,30 @@
   margin: 30px 0;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .authorSection {
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-  }
+.burnoutList {
+  list-style-type: decimal; /* or armenian if you prefer, just make sure it's valid */
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 20px;
+}
 
-  .metaContainer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
+.burnoutList li {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #2C3E50;
+}
 
-  .title {
-    font-size: 2rem;
-  }
+.burnoutList li strong {
+  color: #085AC9;
+}
 
-  .subheading {
-    font-size: 1.5rem;
-  }
-
-  .subsubheading {
-    font-size: 1.3rem;
-  }
+.book {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  max-height: 300px;
+  align-self: center;
 }
 
 .logo {
@@ -252,4 +202,44 @@
   margin: 0 auto;
   display: block;
 
+}
+
+.tired {
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.sideBySide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .sideBySide {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .sideBySide img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .book,
+  .tired {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 180px;
+  }
 }

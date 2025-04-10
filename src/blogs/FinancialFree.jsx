@@ -56,8 +56,9 @@ function TempBlog() {
 
   return (
     <div className={styles.Bigcontainer}>
-      <div className={styles.container}>
+      <div className={styles.blogWrapper}>
 
+      <header className={styles.header}>
       <img className={styles.topBanner} src={topBanner} alt="Top Banner" />
       <h1 className={styles.title}>Money makes the world go round</h1>
       
@@ -75,6 +76,8 @@ function TempBlog() {
         </div>
       </div>
 
+      </header>
+      
       
       {/* <img className={styles.placeholderImage} src="/placeholder.jpg" alt="Blog Image Placeholder" /> */}
       
