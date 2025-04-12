@@ -92,7 +92,7 @@
 /* -------------------------------- */
 /* 📱 MOBILE (<= 400px): Stack layout */
 /* -------------------------------- */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .heroSection {
     display: flex;
     flex-direction: column;
